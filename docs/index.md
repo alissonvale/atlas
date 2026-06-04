@@ -7,6 +7,7 @@
 - [Método](method/index.md)
   - [Visão geral](method/overview.md)
   - [Modelo conceitual](method/conceptual-model.md)
+  - [Princípios](method/principles.md)
   - [Sistemas de resposta](method/response-systems.md)
   - [Triagem e gatekeeper](method/triage-and-gatekeeper.md)
   - [Métricas e sinais de saúde](method/metrics.md)

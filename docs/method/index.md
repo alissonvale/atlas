@@ -11,7 +11,7 @@ Ele parte de uma mudança de linguagem: não se trata de manutenção, entendida
 - [Sistemas de resposta](response-systems.md)
 - [Triagem e gatekeeper](triage-and-gatekeeper.md)
 - [Métricas e sinais de saúde](metrics.md)
-- Princípios, pendente
+- [Princípios](principles.md)
 - Papéis e responsabilidades, pendente
 - Políticas explícitas, pendente
 

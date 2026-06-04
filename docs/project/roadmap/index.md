@@ -12,7 +12,8 @@ Histórias iniciais:
 - ATLAS.E0.S2, inventariar materiais recebidos e extrair leitura inicial. Concluída.
 - ATLAS.E0.S3, corrigir contexto removendo S4 e S5 experimentais. Concluída.
 - ATLAS.E0.S4, criar primeira documentação canônica. Concluída.
-- ATLAS.E0.S5, validar primeira documentação canônica com Alisson. Planejada.
+- ATLAS.E0.S5, criar princípios do método. Concluída.
+- ATLAS.E0.S6, validar primeira documentação canônica com Alisson. Planejada.
 
 ## Etapa 1: Modelo conceitual
 
@@ -28,7 +29,8 @@ Primeiro recorte:
 - R1, R2 e R3;
 - S1, S2 e S3;
 - gatekeeper;
-- SLE, DDP e eficiência da programação.
+- SLE, DDP e eficiência da programação;
+- princípios metodológicos.
 
 ## Etapa 2: Operação do método
 
@@ -65,8 +67,9 @@ Minha proposta é criar a documentação canônica nesta ordem:
 
 1. Visão geral do Atlas, para dar unidade narrativa ao método.
 2. Modelo conceitual, aprofundando sustentação, risco e sistemas de resposta.
-3. Sistemas de resposta, detalhando S1, S2 e S3.
-4. Triagem e gatekeeper, com critérios objetivos para classificação.
-5. Métricas e sinais de saúde, com SLE, DDP e eficiência da programação.
-6. Operação do método, com cadências e políticas explícitas.
-7. Guia de adoção, transformando o método em passo a passo aplicável.
+3. Princípios, protegendo o método contra redução a planilha ou fluxo genérico.
+4. Sistemas de resposta, detalhando S1, S2 e S3.
+5. Triagem e gatekeeper, com critérios objetivos para classificação.
+6. Métricas e sinais de saúde, com SLE, DDP e eficiência da programação.
+7. Operação do método, com cadências e políticas explícitas.
+8. Guia de adoção, transformando o método em passo a passo aplicável.
