@@ -48,31 +48,19 @@ O risco não é a falha imediata, mas a obsolescência, a perda progressiva de a
 
 S1 responde a R1. Seu propósito é conter perdas imediatas e restaurar a operação com a maior prontidão possível.
 
-A planilha original usa um SLE de 8 horas para resposta imediata.
+A planilha original usa um SLE de referência de 8 horas para resposta imediata. Esse valor deve ser tratado como parâmetro contextual, não como regra universal.
 
 ### S2: resposta rápida
 
 S2 responde a R2. Seu propósito é priorizar urgências reais sem tratá-las como emergências permanentes.
 
-A planilha original registra resposta rápida com referência de 48 horas ou 3 dias, ponto que precisa ser normalizado na documentação canônica.
+A referência inicial validada é um SLE de 48 horas. Como em S1, o valor certo é decidido por quem aplica o método no contexto real.
 
 ### S3: resposta programada
 
 S3 responde a R3. Seu propósito é manter previsibilidade de adaptação e aperfeiçoamento.
 
 A métrica central identificada no material é a eficiência da programação, relacionando o que foi programado para um ciclo com o que foi efetivamente entregue.
-
-### S4: resposta projetizada
-
-S4 aparece nas planilhas como sistema de resposta projetizada. Ele parece lidar com entregáveis maiores, com histórias, etapas de análise, desenvolvimento, teste, homologação, entrega, lead time e time to market.
-
-Ainda é uma hipótese se S4 deve entrar como parte canônica do Atlas ou como template complementar para mudanças grandes demais para S3.
-
-### S5: resposta disciplinada
-
-S5 aparece nas planilhas como sistema de resposta disciplinada. Ele registra melhorias internas necessárias, área responsável, status, sistema de origem, ticket, impacto e observação.
-
-A leitura inicial é que S5 transforma incidentes, atrasos e fragilidades recorrentes em aprendizado sistêmico. Ele pode ser o mecanismo que impede a sustentação de virar apenas reação.
 
 ## Gatekeeper
 
@@ -81,6 +69,12 @@ Atlas depende de uma triagem técnica objetiva.
 O gatekeeper é o ponto de entrada que classifica a demanda segundo critérios explícitos. Sua função é proteger os sistemas de resposta contra dois desvios: a fila única em que tudo compete com tudo e a prioridade política em que vence quem tem mais poder ou grita mais alto.
 
 ## Métricas iniciais
+
+### SLE
+
+Service Level Expectation é a expectativa explícita de tempo ou desempenho para um sistema de resposta.
+
+No Atlas, o SLE não é um contrato punitivo nem uma promessa universal. É um parâmetro de desenho do sistema. Ele torna visível o tipo de resposta que o contexto precisa e permite observar se o sistema consegue cumprir seu propósito.
 
 ### DDP
 

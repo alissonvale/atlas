@@ -28,14 +28,19 @@ Esses riscos pedem sistemas de resposta distintos:
 - S2, resposta rápida para R2.
 - S3, resposta programada para R3.
 
-As planilhas recebidas expandem esse mapa com dois sistemas adicionais:
+S1 e S2 formam o Sistema de Pronto-Atendimento. S3 forma o Sistema de Adaptação e Aperfeiçoamento.
 
-- S4, resposta projetizada, aparentemente voltada a entregáveis maiores e coordenados como projeto.
-- S5, resposta disciplinada, aparentemente voltada ao aprendizado sistêmico e às melhorias internas necessárias após sinais vindos dos demais sistemas.
+## Parâmetros e nomenclatura
+
+A nomenclatura correta é SLE, Service Level Expectation.
+
+A referência inicial para S2 é 48 horas. Esse valor não é uma regra universal do método. Quem aplica o Atlas define o SLE adequado ao contexto, desde que a expectativa fique explícita e seja usada para orientar gestão, aprendizado e melhoria do sistema.
 
 ## Artefatos recebidos
 
 A pasta `materials/` contém o descritivo conceitual e um conjunto de CSVs exportados do painel original do Atlas. O inventário está em `docs/attachments/index.md`.
+
+As planilhas de S4 e S5 foram removidas porque eram experimentais e foram enviadas por engano. Elas não fazem parte do contexto ativo desta jornada.
 
 ## Fronteira inicial
 
@@ -47,8 +52,6 @@ A primeira tarefa de documentação é separar três camadas:
 - operação, com cadências, métricas, fluxos e critérios de triagem;
 - adoção, com templates, guias e exemplos para aplicar Atlas em produtos reais.
 
-## Hipóteses a validar
+## Próxima decisão documental
 
-S4 e S5 podem ser a chave para transformar Atlas de um modelo de pronto-atendimento e adaptação em um sistema completo de sustentação. S4 parece cuidar de mudanças grandes demais para o fluxo programado comum. S5 parece cuidar da disciplina de melhoria interna, isto é, do aprendizado que impede o sistema de repetir as mesmas falhas.
-
-Essa hipótese precisa ser validada antes de virar cânone.
+A próxima página canônica recomendada é uma visão geral do Atlas. Ela deve condensar a mudança de manutenção para sustentação, apresentar os riscos R1 a R3, os sistemas S1 a S3, o papel do gatekeeper e a diferença entre medir para controlar e medir para escutar o sistema.

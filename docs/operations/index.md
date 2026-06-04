@@ -4,15 +4,17 @@ Esta seção reunirá práticas operacionais do Atlas: cadências, checklists, i
 
 ## Artefatos operacionais identificados
 
-O painel recebido sugere uma operação dividida em sistemas de resposta.
+O painel recebido sugere uma operação dividida em três sistemas de resposta.
 
 | Sistema | Nome operacional | Sinal principal | Métrica ou controle |
 | --- | --- | --- | --- |
-| S1 | Resposta imediata | Emergência operacional | DDP contra SLE de 8 horas |
-| S2 | Resposta rápida | Urgência operacional | DDP contra SLE de 48 horas ou 3 dias |
+| S1 | Resposta imediata | Emergência operacional | DDP contra SLE contextual, com 8 horas como referência do material original |
+| S2 | Resposta rápida | Urgência operacional | DDP contra SLE contextual, com 48 horas como referência inicial validada |
 | S3 | Resposta programada | Adaptação e aperfeiçoamento | Eficiência da programação |
-| S4 | Resposta projetizada | Entregável maior | Lead time e time to market |
-| S5 | Resposta disciplinada | Melhoria interna necessária | Status, impacto, origem e acompanhamento |
+
+## Nota sobre parâmetros
+
+O Atlas usa SLE como expectativa explícita de serviço. Os valores presentes no painel são referências de uma aplicação concreta do método. Quem aplica o Atlas deve definir os SLEs adequados ao contexto, deixando os critérios visíveis e revisáveis.
 
 ## Próximas páginas operacionais
 
@@ -21,4 +23,4 @@ O painel recebido sugere uma operação dividida em sistemas de resposta.
 - Cadência semanal de revisão de S1 e S2.
 - Cadência de programação de S3.
 - Política de entrada e saída entre sistemas.
-- Uso de S5 como ciclo de aprendizado e melhoria interna.
+- Política de revisão de SLEs.
