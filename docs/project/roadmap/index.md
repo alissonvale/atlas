@@ -13,7 +13,8 @@ Histórias iniciais:
 - ATLAS.E0.S3, corrigir contexto removendo S4 e S5 experimentais. Concluída.
 - ATLAS.E0.S4, criar primeira documentação canônica. Concluída.
 - ATLAS.E0.S5, criar princípios do método. Concluída.
-- ATLAS.E0.S6, validar primeira documentação canônica com Alisson. Planejada.
+- ATLAS.E0.S6, configurar site MkDocs do Atlas. Concluída.
+- ATLAS.E0.S7, validar primeira documentação canônica com Alisson. Planejada.
 
 ## Etapa 1: Modelo conceitual
 

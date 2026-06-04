@@ -8,8 +8,18 @@ O método será desenvolvido de forma análoga à jornada Ariad: primeiro como l
 
 Esta pasta foi criada como repositório local da jornada. O conteúdo canônico ainda será consolidado a partir do descritivo do método, planilhas e demais anexos fornecidos pelo Alisson.
 
+## Documentação
+
+A documentação é publicada localmente com MkDocs.
+
+```bash
+uv run mkdocs serve
+uv run mkdocs build
+```
+
 ## Estrutura inicial
 
+- `mkdocs.yml` — configuração do site de documentação.
 - `docs/index.md` — mapa da documentação.
 - `docs/project/briefing.md` — briefing vivo da jornada.
 - `docs/project/roadmap/index.md` — roadmap inicial.

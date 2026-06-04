@@ -1,0 +1,37 @@
+site_name: Atlas
+site_description: Método de gestão para sustentação de produtos de software.
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+nav:
+  - Início: index.md
+  - Método:
+      - method/index.md
+      - Visão geral: method/overview.md
+      - Modelo conceitual: method/conceptual-model.md
+      - Princípios: method/principles.md
+      - Sistemas de resposta: method/response-systems.md
+      - Triagem e gatekeeper: method/triage-and-gatekeeper.md
+      - Métricas e sinais de saúde: method/metrics.md
+  - Operação:
+      - operations/index.md
+      - Cadências e políticas: operations/cadences-and-policies.md
+  - Adoção:
+      - adoption/index.md
+      - Guia de adoção: adoption/guide.md
+  - Projeto:
+      - Briefing: project/briefing.md
+      - Roadmap: project/roadmap/index.md
+  - Anexos:
+      - attachments/index.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code

@@ -1,0 +1,13 @@
+[project]
+name = "atlas-method"
+version = "0.1.0"
+description = "Método de gestão para sustentação de produtos de software."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.5.0",
+]
+
+[tool.uv]
+package = false
