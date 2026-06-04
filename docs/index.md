@@ -17,4 +17,4 @@
   - [Cadências e políticas](operations/cadences-and-policies.md)
 - [Anexos](attachments/index.md)
 
-Esta documentação segue o padrão de Ariad: separar método, adoção, operação e gestão da própria jornada, mantendo uma fonte de verdade legível por humanos e agentes.
+Esta documentação separa método, adoção, operação e gestão da própria jornada, mantendo uma fonte de verdade legível por humanos e agentes.

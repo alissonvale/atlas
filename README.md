@@ -2,7 +2,7 @@
 
 Atlas é uma jornada de construção de um método de gestão voltado para a sustentação de produtos de software.
 
-O método será desenvolvido de forma análoga à jornada Ariad: primeiro como linguagem e documentação canônica, depois como práticas, templates, anexos e possíveis mecanismos operacionais.
+O método será desenvolvido primeiro como linguagem e documentação canônica, depois como práticas, templates, anexos e possíveis mecanismos operacionais.
 
 ## Estado inicial
 
