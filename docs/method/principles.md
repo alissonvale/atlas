@@ -46,11 +46,11 @@ O problema não é a urgência real. O problema é a urgência indiferenciada.
 
 ## Previsibilidade precisa ser protegida
 
-S3 existe porque produtos vivos precisam se adaptar sem depender de interrupção permanente.
+Sistema de Adaptação e Aperfeiçoamento existe porque produtos vivos precisam se adaptar sem depender de interrupção permanente.
 
 Se toda adaptação planejável envelhece até virar urgência, o sistema falhou antes da emergência aparecer. A previsibilidade não é rigidez. É a capacidade de sustentar um compromisso realista enquanto o mundo continua mudando.
 
-S1 e S2 protegem o presente. S3 protege a continuidade adaptativa.
+S1 e S2 protegem o presente. O Sistema de Adaptação e Aperfeiçoamento protege a continuidade adaptativa.
 
 ## Métricas são escuta, não punição
 
@@ -64,7 +64,7 @@ A métrica usada para punir empobrece o método. A métrica usada para escutar r
 
 Atlas não assume que boa vontade resolve falta de capacidade.
 
-S1, S2 e S3 precisam de desenho explícito de capacidade. Quem responde? Quando responde? O que pode ser interrompido? O que não pode? Qual expectativa é realista? Que custo existe para cumprir essa expectativa?
+S1, S2 e O Sistema de Adaptação e Aperfeiçoamento precisam de desenho explícito de capacidade. Quem responde? Quando responde? O que pode ser interrompido? O que não pode? Qual expectativa é realista? Que custo existe para cumprir essa expectativa?
 
 Um sistema que promete mais do que pode sustentar produz cinismo. Um sistema que vê sua capacidade com honestidade pode melhorar.
 

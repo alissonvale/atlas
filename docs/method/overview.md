@@ -20,17 +20,17 @@ Essa mudança desloca o método de uma gestão de tickets para uma gestão de ri
 
 ## O núcleo do método
 
-Atlas organiza a sustentação em três riscos e três sistemas de resposta.
+Atlas organiza a sustentação em três riscos e três formas de resposta.
 
 | Risco | Natureza | Sistema de resposta |
 | --- | --- | --- |
 | R1 | Perda imediata de valor relevante enquanto o problema persiste | S1, resposta imediata |
 | R2 | Operação bloqueada ou comprometida, com urgência real | S2, resposta rápida |
-| R3 | Necessidade de adaptação, aperfeiçoamento ou ajuste planejável | S3, resposta programada |
+| R3 | Necessidade de adaptação, aperfeiçoamento ou ajuste planejável | Sistema de Adaptação e Aperfeiçoamento |
 
 S1 e S2 formam o Sistema de Pronto-Atendimento. Eles protegem o negócio contra emergências e urgências reais.
 
-S3 forma o Sistema de Adaptação e Aperfeiçoamento. Ele protege o produto contra obsolescência, deterioração progressiva e perda de aderência ao negócio.
+O O Sistema de Adaptação e Aperfeiçoamento protege o produto contra obsolescência, deterioração progressiva e perda de aderência ao negócio.
 
 ## O papel do gatekeeper
 
@@ -44,7 +44,7 @@ Sem gatekeeper, o sistema tende ao heroísmo reativo. Com gatekeeper, a sustenta
 
 Atlas usa métricas para escutar o sistema, não para punir pessoas.
 
-SLE explicita a expectativa de resposta de um sistema. DDP mede o percentual de demandas concluídas dentro dessa expectativa. Eficiência da programação mede a relação entre o que foi programado e o que foi entregue em S3.
+SLE explicita a expectativa de resposta de um sistema. DDP mede o percentual de demandas concluídas dentro dessa expectativa. Eficiência da programação mede a relação entre o que foi programado e o que foi entregue na resposta programada.
 
 Quando uma demanda fica fora do SLE ou quando a programação falha repetidamente, o método não pergunta quem errou. Ele pergunta o que o sistema está revelando sobre capacidade, triagem, fluxo, interrupções, dependências e decisões.
 

@@ -8,13 +8,15 @@ Objetivo: reunir materiais, consolidar briefing, mapear anexos e definir o prime
 
 Histórias iniciais:
 
-- ATLAS.E0.S1, criar jornada Atlas e scaffold inicial. Concluída.
-- ATLAS.E0.S2, inventariar materiais recebidos e extrair leitura inicial. Concluída.
-- ATLAS.E0.S3, corrigir contexto removendo S4 e S5 experimentais. Concluída.
-- ATLAS.E0.S4, criar primeira documentação canônica. Concluída.
-- ATLAS.E0.S5, criar princípios do método. Concluída.
-- ATLAS.E0.S6, configurar site MkDocs do Atlas. Concluída.
-- ATLAS.E0.S7, validar primeira documentação canônica com Alisson. Planejada.
+- ATLAS.E0.01, criar jornada Atlas e scaffold inicial. Concluída.
+- ATLAS.E0.02, inventariar materiais recebidos e extrair leitura inicial. Concluída.
+- ATLAS.E0.03, corrigir contexto removendo materiais experimentais. Concluída.
+- ATLAS.E0.04, criar primeira documentação canônica. Concluída.
+- ATLAS.E0.05, criar princípios do método. Concluída.
+- ATLAS.E0.06, configurar site MkDocs do Atlas. Concluída.
+- ATLAS.E0.07, anexar artigos de manutenção ágil e extrair implicações. Em curso.
+- ATLAS.E0.08, criar papéis e fronteira sustentação versus desenvolvimento. Em curso.
+- ATLAS.E0.09, validar primeira documentação canônica com Alisson. Planejada.
 
 ## Etapa 1: Modelo conceitual
 
@@ -28,10 +30,12 @@ Primeiro recorte:
 - marco de entrada em sustentação;
 - risco operacional como unidade de leitura;
 - R1, R2 e R3;
-- S1, S2 e S3;
+- S1, S2 e Sistema de Adaptação e Aperfeiçoamento;
 - gatekeeper;
 - SLE, DDP e eficiência da programação;
-- princípios metodológicos.
+- princípios metodológicos;
+- papéis;
+- fronteira entre sustentação adaptativa e desenvolvimento de novas capacidades.
 
 ## Etapa 2: Operação do método
 
@@ -45,7 +49,7 @@ Primeiros candidatos:
 - política de classificação de risco;
 - política de interrupção;
 - revisão semanal de S1 e S2;
-- programação de S3;
+- programação do Sistema de Adaptação e Aperfeiçoamento;
 - política de revisão de SLEs.
 
 ## Etapa 3: Templates e adoção
@@ -69,8 +73,10 @@ Minha proposta é criar a documentação canônica nesta ordem:
 1. Visão geral do Atlas, para dar unidade narrativa ao método.
 2. Modelo conceitual, aprofundando sustentação, risco e sistemas de resposta.
 3. Princípios, protegendo o método contra redução a planilha ou fluxo genérico.
-4. Sistemas de resposta, detalhando S1, S2 e S3.
+4. Sistemas de resposta, detalhando S1, S2 e Sistema de Adaptação e Aperfeiçoamento.
 5. Triagem e gatekeeper, com critérios objetivos para classificação.
 6. Métricas e sinais de saúde, com SLE, DDP e eficiência da programação.
-7. Operação do método, com cadências e políticas explícitas.
-8. Guia de adoção, transformando o método em passo a passo aplicável.
+7. Papéis, esclarecendo responsabilidades como funções do sistema.
+8. Sustentação e desenvolvimento, protegendo a fronteira entre adaptação e novas capacidades.
+9. Operação do método, com cadências e políticas explícitas.
+10. Guia de adoção, transformando o método em passo a passo aplicável.

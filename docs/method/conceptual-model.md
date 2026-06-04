@@ -56,9 +56,9 @@ S2 responde a R2. Seu propósito é priorizar urgências reais sem tratá-las co
 
 A referência inicial validada é um SLE de 48 horas. Como em S1, o valor certo é decidido por quem aplica o método no contexto real.
 
-### S3: resposta programada
+### Sistema de Adaptação e Aperfeiçoamento: resposta programada
 
-S3 responde a R3. Seu propósito é manter previsibilidade de adaptação e aperfeiçoamento.
+O Sistema de Adaptação e Aperfeiçoamento responde a R3. Seu propósito é manter previsibilidade de adaptação e aperfeiçoamento.
 
 A métrica central identificada no material é a eficiência da programação, relacionando o que foi programado para um ciclo com o que foi efetivamente entregue.
 

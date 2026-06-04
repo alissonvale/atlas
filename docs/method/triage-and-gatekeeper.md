@@ -20,7 +20,7 @@ A pergunta de triagem do Atlas é:
 
 > Que risco esta demanda impõe ao negócio sustentado pelo produto?
 
-A partir dela, a demanda é encaminhada para S1, S2 ou S3.
+A partir dela, a demanda é encaminhada para S1, S2 ou Sistema de Adaptação e Aperfeiçoamento.
 
 ## Critérios iniciais
 

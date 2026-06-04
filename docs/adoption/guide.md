@@ -43,9 +43,9 @@ Para S1 e S2, defina:
 
 Use 8 horas para S1 e 48 horas para S2 apenas como referências iniciais do material original. O valor certo depende do contexto.
 
-## Desenhar S3
+## Desenhar Sistema de Adaptação e Aperfeiçoamento
 
-Para S3, defina:
+Para o Sistema de Adaptação e Aperfeiçoamento, defina:
 
 - cadência de programação;
 - quem seleciona demandas;
@@ -55,7 +55,7 @@ Para S3, defina:
 - como medir eficiência da programação;
 - como revisar desvios.
 
-S3 precisa ser protegido. Se toda demanda entra no meio do ciclo, a programação deixa de ser programação e vira teatro.
+O Sistema de Adaptação e Aperfeiçoamento precisa ser protegido. Se toda demanda entra no meio do ciclo, a programação deixa de ser programação e vira teatro.
 
 ## Usar as planilhas
 
@@ -72,7 +72,7 @@ Após o primeiro ciclo de uso, revise:
 - se a triagem distinguiu bem R1, R2 e R3;
 - se os SLEs foram realistas;
 - se DDP revelou gargalos úteis;
-- se S3 conseguiu manter programação;
+- se o Sistema de Adaptação e Aperfeiçoamento conseguiu manter programação;
 - se a equipe entendeu a diferença entre urgência real e pressão;
 - se o negócio percebeu mais clareza no atendimento;
 - se alguma regra precisa ser simplificada.

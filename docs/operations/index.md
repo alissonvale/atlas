@@ -10,7 +10,7 @@ O painel recebido sugere uma operação dividida em três sistemas de resposta.
 | --- | --- | --- | --- |
 | S1 | Resposta imediata | Emergência operacional | DDP contra SLE contextual, com 8 horas como referência do material original |
 | S2 | Resposta rápida | Urgência operacional | DDP contra SLE contextual, com 48 horas como referência inicial validada |
-| S3 | Resposta programada | Adaptação e aperfeiçoamento | Eficiência da programação |
+| Sistema de Adaptação e Aperfeiçoamento | Resposta programada | Adaptação e aperfeiçoamento | Eficiência da programação |
 
 ## Nota sobre parâmetros
 
@@ -25,4 +25,4 @@ O Atlas usa SLE como expectativa explícita de serviço. Os valores presentes no
 - Critérios objetivos para R1, R2 e R3.
 - Política de entrada e saída entre sistemas.
 - Template de revisão semanal de S1 e S2.
-- Template de programação de S3.
+- Template de programação de Sistema de Adaptação e Aperfeiçoamento.

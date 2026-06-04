@@ -18,6 +18,8 @@ nav:
       - Sistemas de resposta: method/response-systems.md
       - Triagem e gatekeeper: method/triage-and-gatekeeper.md
       - Métricas e sinais de saúde: method/metrics.md
+      - Papéis: method/roles.md
+      - Sustentação e desenvolvimento: method/sustaining-vs-development.md
   - Operação:
       - operations/index.md
       - Cadências e políticas: operations/cadences-and-policies.md

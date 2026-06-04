@@ -31,13 +31,13 @@ Em uma operação ativa, a revisão pode ser diária ou semanal, dependendo do v
 - causas recorrentes de atraso;
 - mudanças necessárias no sistema.
 
-## Cadência de S3
+## Cadência de Sistema de Adaptação e Aperfeiçoamento
 
-S3 precisa de programação explícita.
+O Sistema de Adaptação e Aperfeiçoamento precisa de programação explícita.
 
 O ciclo pode ser semanal, quinzenal ou mensal. O método não fixa a duração. O que importa é que exista um compromisso visível entre seleção, capacidade e entrega.
 
-Cada ciclo de S3 deve observar:
+Cada ciclo do Sistema de Adaptação e Aperfeiçoamento deve observar:
 
 - itens programados;
 - itens adicionados no meio do ciclo;
@@ -53,14 +53,14 @@ S1 pode interromper trabalho planejado porque representa perda imediata.
 
 S2 pode alterar prioridade porque representa urgência real.
 
-S3 não deve ser interrompido por demandas comuns disfarçadas de urgência.
+O Sistema de Adaptação e Aperfeiçoamento não deve ser interrompido por demandas comuns disfarçadas de urgência.
 
 A política de interrupção deve deixar claro:
 
 - quem pode acionar S1;
 - quem valida S1;
 - como S2 entra na fila priorizada;
-- quando S3 pode ser alterado;
+- quando Sistema de Adaptação e Aperfeiçoamento pode ser alterado;
 - como registrar o impacto da interrupção;
 - como revisar interrupções recorrentes.
 

@@ -26,9 +26,9 @@ Esses riscos pedem sistemas de resposta distintos:
 
 - S1, resposta imediata para R1.
 - S2, resposta rápida para R2.
-- S3, resposta programada para R3.
+- Sistema de Adaptação e Aperfeiçoamento, resposta programada para R3.
 
-S1 e S2 formam o Sistema de Pronto-Atendimento. S3 forma o Sistema de Adaptação e Aperfeiçoamento.
+S1 e S2 formam o Sistema de Pronto-Atendimento. O Sistema de Adaptação e Aperfeiçoamento cuida da resposta programada às adaptações planejáveis.
 
 ## Parâmetros e nomenclatura
 
@@ -40,7 +40,7 @@ A referência inicial para S2 é 48 horas. Esse valor não é uma regra universa
 
 A pasta `materials/` contém o descritivo conceitual e um conjunto de CSVs exportados do painel original do Atlas. O inventário está em `docs/attachments/index.md`.
 
-As planilhas de S4 e S5 foram removidas porque eram experimentais e foram enviadas por engano. Elas não fazem parte do contexto ativo desta jornada.
+As planilhas de materiais experimentais foram removidas porque eram experimentais e foram enviadas por engano. Elas não fazem parte do contexto ativo desta jornada.
 
 ## Fronteira inicial
 
@@ -54,4 +54,4 @@ A primeira tarefa de documentação é separar três camadas:
 
 ## Próxima decisão documental
 
-A próxima página canônica recomendada é uma visão geral do Atlas. Ela deve condensar a mudança de manutenção para sustentação, apresentar os riscos R1 a R3, os sistemas S1 a S3, o papel do gatekeeper e a diferença entre medir para controlar e medir para escutar o sistema.
+A próxima página canônica recomendada é uma visão geral do Atlas. Ela deve condensar a mudança de manutenção para sustentação, apresentar os riscos R1 a R3, o Sistema de Pronto-Atendimento, o Sistema de Adaptação e Aperfeiçoamento, o papel do gatekeeper e a diferença entre medir para controlar e medir para escutar o sistema.

@@ -12,7 +12,8 @@ Ele parte de uma mudança de linguagem: não se trata de manutenção, entendida
 - [Triagem e gatekeeper](triage-and-gatekeeper.md)
 - [Métricas e sinais de saúde](metrics.md)
 - [Princípios](principles.md)
-- Papéis e responsabilidades, pendente
+- [Papéis](roles.md)
+- [Sustentação e desenvolvimento](sustaining-vs-development.md)
 - Políticas explícitas, pendente
 
 ## Eixo do método

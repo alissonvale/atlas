@@ -20,17 +20,17 @@ Essa mudança desloca o método de uma gestão de tickets para uma gestão de ri
 
 ## O núcleo do método
 
-Atlas organiza a sustentação em três riscos e três sistemas de resposta.
+Atlas organiza a sustentação em três riscos e três formas de resposta.
 
 | Risco | Natureza | Sistema de resposta |
 | --- | --- | --- |
 | R1 | Perda imediata de valor relevante enquanto o problema persiste | S1, resposta imediata |
 | R2 | Operação bloqueada ou comprometida, com urgência real | S2, resposta rápida |
-| R3 | Necessidade de adaptação, aperfeiçoamento ou ajuste planejável | S3, resposta programada |
+| R3 | Necessidade de adaptação, aperfeiçoamento ou ajuste planejável | Sistema de Adaptação e Aperfeiçoamento |
 
 S1 e S2 formam o Sistema de Pronto-Atendimento. Eles protegem o negócio contra emergências e urgências reais.
 
-S3 forma o Sistema de Adaptação e Aperfeiçoamento. Ele protege o produto contra obsolescência, deterioração progressiva e perda de aderência ao negócio.
+O O Sistema de Adaptação e Aperfeiçoamento protege o produto contra obsolescência, deterioração progressiva e perda de aderência ao negócio.
 
 ## Navegação
 
@@ -39,5 +39,7 @@ S3 forma o Sistema de Adaptação e Aperfeiçoamento. Ele protege o produto cont
 - [Sistemas de resposta](method/response-systems.md)
 - [Triagem e gatekeeper](method/triage-and-gatekeeper.md)
 - [Métricas e sinais de saúde](method/metrics.md)
+- [Papéis](method/roles.md)
+- [Sustentação e desenvolvimento](method/sustaining-vs-development.md)
 - [Operação](operations/index.md)
 - [Guia de adoção](adoption/guide.md)

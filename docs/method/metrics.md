@@ -41,7 +41,7 @@ Possíveis causas:
 
 Eficiência da programação mede a relação entre o que foi programado para um ciclo e o que foi efetivamente entregue.
 
-Ela é central para S3 porque a resposta programada depende de previsibilidade.
+Ela é central para o Sistema de Adaptação e Aperfeiçoamento porque a resposta programada depende de previsibilidade.
 
 A baixa eficiência da programação pode revelar:
 
@@ -49,7 +49,7 @@ A baixa eficiência da programação pode revelar:
 - programação maior do que a capacidade real;
 - estimativas frágeis;
 - dependências não consideradas;
-- invasão de S1 e S2 sobre S3;
+- invasão de S1 e S2 sobre o Sistema de Adaptação e Aperfeiçoamento;
 - desalinhamento entre seleção de demandas e delivery;
 - falta de clareza sobre pronto, entregue e concluído.
 
@@ -61,7 +61,7 @@ Quando uma demanda S1 fica fora do SLE, a pergunta não é quem atrasou. A pergu
 
 Quando S2 acumula atrasos, a pergunta não é por que a equipe não foi mais rápida. A pergunta é se a triagem, a fila, a capacidade e as dependências estão desenhadas para o risco assumido.
 
-Quando S3 perde eficiência, a pergunta não é por que o time não cumpriu o combinado. A pergunta é se o combinado era realista e se o sistema foi protegido para cumpri-lo.
+Quando o Sistema de Adaptação e Aperfeiçoamento perde eficiência, a pergunta não é por que o time não cumpriu o combinado. A pergunta é se o combinado era realista e se o sistema foi protegido para cumpri-lo.
 
 ## Sinais mínimos de saúde
 
@@ -70,7 +70,7 @@ Um sistema Atlas saudável tende a mostrar:
 - critérios de triagem compreendidos;
 - SLEs explícitos e revisáveis;
 - DDP acompanhado em S1 e S2;
-- eficiência da programação acompanhada em S3;
+- eficiência da programação acompanhada no Sistema de Adaptação e Aperfeiçoamento;
 - revisão dos casos fora da expectativa;
 - aprendizado convertido em mudança de processo;
 - menor dependência de heroísmo;

@@ -42,15 +42,15 @@ S2 exige:
 
 A referência validada para S2 é 48 horas, mas o valor correto é decidido por quem aplica o método.
 
-## S3: resposta programada
+## Sistema de Adaptação e Aperfeiçoamento: resposta programada
 
-S3 responde a R3, risco de adaptação.
+O Sistema de Adaptação e Aperfeiçoamento responde a R3, risco de adaptação.
 
-Uma demanda é candidata a S3 quando o produto precisa se adaptar a uma necessidade de negócio, legislação, mercado, eficiência operacional ou melhoria de funcionalidade existente.
+Uma demanda é candidata ao Sistema de Adaptação e Aperfeiçoamento quando o produto precisa se adaptar a uma necessidade de negócio, legislação, mercado, eficiência operacional ou melhoria de funcionalidade existente.
 
-O propósito de S3 é preservar a capacidade adaptativa do produto com previsibilidade.
+O propósito do Sistema de Adaptação e Aperfeiçoamento é preservar a capacidade adaptativa do produto com previsibilidade.
 
-S3 exige:
+O Sistema de Adaptação e Aperfeiçoamento exige:
 
 - programação explícita por ciclo;
 - separação entre itens planejados e extras;
@@ -59,13 +59,13 @@ S3 exige:
 - revisão das causas de baixa previsibilidade;
 - conexão saudável entre seleção de demandas e delivery.
 
-S3 não é uma fila menor de desenvolvimento. É o sistema de adaptação do produto em sustentação.
+Sistema de Adaptação e Aperfeiçoamento não é uma fila menor de desenvolvimento. É o sistema de adaptação do produto em sustentação.
 
-## Relação entre S1, S2 e S3
+## Relação entre S1, S2 e Sistema de Adaptação e Aperfeiçoamento
 
-S1 e S2 protegem o presente operacional. S3 protege a adaptação futura.
+S1 e S2 protegem o presente operacional. O Sistema de Adaptação e Aperfeiçoamento protege a adaptação futura.
 
-Se S1 e S2 não existem, S3 é continuamente invadido por interrupções. Se S3 não existe, demandas planejáveis envelhecem até virar urgência. Se a triagem falha, tudo se mistura e a organização volta para a fila única.
+Se S1 e S2 não existem, O Sistema de Adaptação e Aperfeiçoamento é continuamente invadido por interrupções. Se O Sistema de Adaptação e Aperfeiçoamento não existe, demandas planejáveis envelhecem até virar urgência. Se a triagem falha, tudo se mistura e a organização volta para a fila única.
 
 O desenho do Atlas depende da integridade entre os três sistemas.
 
@@ -73,6 +73,6 @@ O desenho do Atlas depende da integridade entre os três sistemas.
 
 Uma demanda pode mudar de sistema quando sua natureza de risco muda.
 
-Um R3 negligenciado pode virar R2. Um R2 mal interpretado pode se revelar R1. Um item inicialmente tratado como urgência pode, após triagem, voltar para S3.
+Um R3 negligenciado pode virar R2. Um R2 mal interpretado pode se revelar R1. Um item inicialmente tratado como urgência pode, após triagem, voltar para o Sistema de Adaptação e Aperfeiçoamento.
 
 Essa mobilidade precisa ser governada por critérios explícitos. Caso contrário, a mudança de sistema vira instrumento de pressão, não de leitura do risco.
