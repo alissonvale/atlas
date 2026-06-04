@@ -19,6 +19,7 @@ O Atlas usa SLE como expectativa explícita de serviço. Os valores presentes no
 ## Páginas operacionais
 
 - [Cadências e políticas](cadences-and-policies.md)
+- [Workflows das demandas](../method/workflows.md)
 
 ## Próximas páginas operacionais
 

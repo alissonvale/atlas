@@ -59,13 +59,13 @@ O Sistema de Adaptação e Aperfeiçoamento exige:
 - revisão das causas de baixa previsibilidade;
 - conexão saudável entre seleção de demandas e delivery.
 
-Sistema de Adaptação e Aperfeiçoamento não é uma fila menor de desenvolvimento. É o sistema de adaptação do produto em sustentação.
+O Sistema de Adaptação e Aperfeiçoamento não é uma fila menor de desenvolvimento. É o sistema de adaptação do produto em sustentação.
 
 ## Relação entre S1, S2 e Sistema de Adaptação e Aperfeiçoamento
 
 S1 e S2 protegem o presente operacional. O Sistema de Adaptação e Aperfeiçoamento protege a adaptação futura.
 
-Se S1 e S2 não existem, O Sistema de Adaptação e Aperfeiçoamento é continuamente invadido por interrupções. Se O Sistema de Adaptação e Aperfeiçoamento não existe, demandas planejáveis envelhecem até virar urgência. Se a triagem falha, tudo se mistura e a organização volta para a fila única.
+Se S1 e S2 não existem, o Sistema de Adaptação e Aperfeiçoamento é continuamente invadido por interrupções. Se o Sistema de Adaptação e Aperfeiçoamento não existe, demandas planejáveis envelhecem até virar urgência. Se a triagem falha, tudo se mistura e a organização volta para a fila única.
 
 O desenho do Atlas depende da integridade entre os três sistemas.
 

@@ -37,6 +37,7 @@ O O Sistema de Adaptação e Aperfeiçoamento protege o produto contra obsolesc�
 - [Método](method/index.md)
 - [Princípios](method/principles.md)
 - [Sistemas de resposta](method/response-systems.md)
+- [Workflows das demandas](method/workflows.md)
 - [Triagem e gatekeeper](method/triage-and-gatekeeper.md)
 - [Métricas e sinais de saúde](method/metrics.md)
 - [Papéis](method/roles.md)

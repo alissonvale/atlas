@@ -15,8 +15,9 @@ Histórias iniciais:
 - ATLAS.E0.05, criar princípios do método. Concluída.
 - ATLAS.E0.06, configurar site MkDocs do Atlas. Concluída.
 - ATLAS.E0.07, anexar artigos de manutenção ágil e extrair implicações. Em curso.
-- ATLAS.E0.08, criar papéis e fronteira sustentação versus desenvolvimento. Em curso.
-- ATLAS.E0.09, validar primeira documentação canônica com Alisson. Planejada.
+- ATLAS.E0.08, criar papéis e fronteira sustentação versus desenvolvimento. Concluída.
+- ATLAS.E0.09, explicitar workflows das demandas. Concluída.
+- ATLAS.E0.10, validar primeira documentação canônica com Alisson. Planejada.
 
 ## Etapa 1: Modelo conceitual
 
@@ -76,7 +77,8 @@ Minha proposta é criar a documentação canônica nesta ordem:
 4. Sistemas de resposta, detalhando S1, S2 e Sistema de Adaptação e Aperfeiçoamento.
 5. Triagem e gatekeeper, com critérios objetivos para classificação.
 6. Métricas e sinais de saúde, com SLE, DDP e eficiência da programação.
-7. Papéis, esclarecendo responsabilidades como funções do sistema.
-8. Sustentação e desenvolvimento, protegendo a fronteira entre adaptação e novas capacidades.
-9. Operação do método, com cadências e políticas explícitas.
-10. Guia de adoção, transformando o método em passo a passo aplicável.
+7. Workflows das demandas, explicitando chegada, identificação, reação, correção, entrega, programação, desenvolvimento, teste e produção.
+8. Papéis, esclarecendo responsabilidades como funções do sistema.
+9. Sustentação e desenvolvimento, protegendo a fronteira entre adaptação e novas capacidades.
+10. Operação do método, com cadências e políticas explícitas.
+11. Guia de adoção, transformando o método em passo a passo aplicável.
