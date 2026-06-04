@@ -6,12 +6,13 @@ Ele parte de uma mudança de linguagem: não se trata de manutenção, entendida
 
 ## Núcleo conceitual
 
+- [Visão geral](overview.md)
 - [Modelo conceitual](conceptual-model.md)
-- Visão geral, pendente
+- [Sistemas de resposta](response-systems.md)
+- [Triagem e gatekeeper](triage-and-gatekeeper.md)
+- [Métricas e sinais de saúde](metrics.md)
 - Princípios, pendente
 - Papéis e responsabilidades, pendente
-- Sistemas de resposta, pendente
-- Métricas e sinais de saúde, pendente
 - Políticas explícitas, pendente
 
 ## Eixo do método

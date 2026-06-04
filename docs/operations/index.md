@@ -16,11 +16,13 @@ O painel recebido sugere uma operação dividida em três sistemas de resposta.
 
 O Atlas usa SLE como expectativa explícita de serviço. Os valores presentes no painel são referências de uma aplicação concreta do método. Quem aplica o Atlas deve definir os SLEs adequados ao contexto, deixando os critérios visíveis e revisáveis.
 
+## Páginas operacionais
+
+- [Cadências e políticas](cadences-and-policies.md)
+
 ## Próximas páginas operacionais
 
-- Triagem e gatekeeper.
 - Critérios objetivos para R1, R2 e R3.
-- Cadência semanal de revisão de S1 e S2.
-- Cadência de programação de S3.
 - Política de entrada e saída entre sistemas.
-- Política de revisão de SLEs.
+- Template de revisão semanal de S1 e S2.
+- Template de programação de S3.

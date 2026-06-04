@@ -11,11 +11,12 @@ Histórias iniciais:
 - ATLAS.E0.S1, criar jornada Atlas e scaffold inicial. Concluída.
 - ATLAS.E0.S2, inventariar materiais recebidos e extrair leitura inicial. Concluída.
 - ATLAS.E0.S3, corrigir contexto removendo S4 e S5 experimentais. Concluída.
-- ATLAS.E0.S4, validar plano de documentação canônica. Planejada.
+- ATLAS.E0.S4, criar primeira documentação canônica. Concluída.
+- ATLAS.E0.S5, validar primeira documentação canônica com Alisson. Planejada.
 
 ## Etapa 1: Modelo conceitual
 
-Status: iniciada.
+Status: primeira versão canônica criada.
 
 Objetivo: explicitar princípios, vocabulário, áreas de trabalho e fronteiras do método Atlas.
 
