@@ -1,3 +1,16 @@
+---
+title: "Atlas: sustentação como gestão de risco"
+source_type: "capítulo de livro"
+source_book:
+  title: "Gestão Sistêmica e Complexidade para Projetos de Software"
+  author: "Alisson Vale"
+  publisher: "Software Zen"
+  chapter: 11
+provenance: "Texto do capítulo 11 que descreve o framework que deu origem ao Atlas. Importado do arquivo local descritivo-atlas.txt."
+source_project_path: "/Users/alissonvale/Library/Mobile Documents/com~apple~CloudDocs/Software Zen/Produtos/Livros/Gestão Sistêmica e Complexidade para Projetos de Software"
+canonical_status: "Material conceitual histórico; preserva a linguagem original do livro e não substitui a documentação canônica do Atlas."
+---
+
 Ao longo de nossa jornada neste livro, temos nos dedicado a construir um novo modelo de pensamento para a gestão, um que nos permita mais eficácia e maiores condições para navegarmos pela complexidade e incerteza inerentes ao desenvolvimento de produtos. 
 Falamos sobre a liderança e a necessidade de orientação ao negócio, sobre o produto como um organismo vivo, sobre a eficiência de fluxo e a importância de manter um ritmo sustentável. 
 Agora, chegamos a um território frequentemente negligenciado, mas de grande importância: o que acontece depois do desenvolvimento? O que significa, sob uma ótica sistêmica, sustentar uma operação?

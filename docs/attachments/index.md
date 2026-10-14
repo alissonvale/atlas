@@ -6,8 +6,8 @@ Este índice registra os materiais usados para construir o Atlas e separa fonte 
 
 | Material | Tipo | Uso na jornada |
 | --- | --- | --- |
-| `materials/descritivo-atlas.txt` | Texto conceitual | Fonte principal da linguagem do método, da crítica à manutenção tradicional e da definição dos riscos e sistemas de resposta. |
-| `materials/artigos-manutencao-agil-2019.md` | Série de artigos | Base histórica sobre manutenção ágil, uso de métodos como repertório, transição para sustentação, gestão de riscos e consciência sistêmica. |
+| `materials/conceituais/capitulo-11-atlas-sustentacao-como-gestao-de-risco.md` | Capítulo de livro | Capítulo 11 de *Gestão Sistêmica e Complexidade para Projetos de Software*, de Alisson Vale (Software Zen); fonte conceitual histórica da linguagem do método, da crítica à manutenção tradicional e da definição dos riscos e sistemas de resposta. |
+| `materials/conceituais/artigos-manutencao-agil-2019.md` | Série de artigos | Base histórica sobre manutenção ágil, uso de métodos como repertório, transição para sustentação, gestão de riscos e consciência sistêmica. |
 | `materials/planilhas/Atlas - Painel de Controle - Dashboard_ Pronto-Atendimento.csv` | Dashboard CSV | Visão agregada do Sistema de Pronto-Atendimento, com DDP, volume, entradas e saídas. |
 | `materials/planilhas/Atlas - Painel de Controle - Dashboard_ Adaptação e Aperfeiçoamento.csv` | Dashboard CSV | Visão agregada do Sistema de Adaptação e Aperfeiçoamento, com eficiência da programação, acréscimos e entregas. |
 | `materials/planilhas/Atlas - Painel de Controle - S1_ Resposta Imediata.csv` | Planilha operacional CSV | Ciclos semanais de resposta imediata, com SLE de 8 horas, DDP, alocação e delays por etapa. |
@@ -24,7 +24,7 @@ Planilhas experimentais enviadas por engano foram removidas do repositório e do
 
 ## Leitura inicial
 
-O descritivo estabelece a mudança central de linguagem: sair de manutenção como reparo de objeto e entrar em sustentação como gestão de um ecossistema vivo, no momento em que a operação do cliente passa a depender do software para funcionar.
+O capítulo 11 do livro estabelece a mudança central de linguagem: sair de manutenção como reparo de objeto e entrar em sustentação como gestão de um ecossistema vivo, no momento em que a operação do cliente passa a depender do software para funcionar.
 
 A série de artigos de 2019 aprofunda a origem do método. Ela mostra que a resposta não é implantar Kanban, Scrum ou qualquer método como receita, mas usar métodos como repertório para desenhar um sistema aderente à realidade concreta da sustentação.
 
@@ -47,6 +47,6 @@ As planilhas mostram que Atlas já não é apenas um ensaio conceitual. Há um p
 
 ## Lacunas abertas
 
-- Separar o que pertence ao livro original, o que pertence ao método Atlas e o que pertence a templates de adoção.
+- Separar o que pertence ao livro original, o que pertence ao método Atlas e o que pertence a templates de adoção. A procedência do capítulo 11 está registrada no seu front matter.
 - Definir como transformar o painel atual em template vivo sem confundir ferramenta com método.
 - Aprofundar a relação entre os cinco riscos dos artigos de 2019 e o recorte atual do Atlas.
