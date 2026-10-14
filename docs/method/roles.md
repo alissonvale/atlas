@@ -101,4 +101,4 @@ Devem ser ouvidos principalmente para:
 
 Atlas evita dois extremos: centralização absoluta e responsabilidade difusa.
 
-Se tudo depende de uma pessoa, o sistema é frágil. Se ninguém responde por nada, o sistema é invisível. Os papéis existem para dar forma à responsabilidade sem transformar o método em organograma rígido.
+Se tudo depende de uma pessoa, o sistema é frágil. Se ninguém responde por nada, o sistema é invisível. Os papéis existem para dar forma à responsabilidade sem transformar o framework em organograma rígido.

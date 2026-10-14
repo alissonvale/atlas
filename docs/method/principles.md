@@ -1,8 +1,8 @@
 # Princípios
 
-Os princípios do Atlas existem para proteger o método de duas reduções: virar uma planilha de controle ou virar um fluxo genérico de atendimento.
+Os princípios do Atlas existem para proteger o framework de duas reduções: virar uma planilha de controle ou virar um fluxo genérico de atendimento.
 
-Atlas é um método de sustentação. Seus instrumentos importam, mas sua força está na forma de enxergar o produto, o negócio e o sistema de trabalho que os une.
+Atlas é um framework de sustentação. Seus instrumentos importam, mas sua força está na forma de enxergar o produto, o negócio e o sistema de trabalho que os une.
 
 ## Sustentação, não manutenção
 
@@ -40,7 +40,7 @@ A classificação pode ser revista, mas deve ser revista por evidência, não po
 
 Atlas não demoniza urgência.
 
-Existem situações em que o negócio perde valor agora. Existem situações em que uma operação relevante está bloqueada e precisa de resposta rápida. O método reconhece essas situações e cria sistemas para absorvê-las.
+Existem situações em que o negócio perde valor agora. Existem situações em que uma operação relevante está bloqueada e precisa de resposta rápida. O framework reconhece essas situações e cria sistemas para absorvê-las.
 
 O problema não é a urgência real. O problema é a urgência indiferenciada.
 
@@ -58,7 +58,7 @@ SLE, DDP e eficiência da programação são formas de escutar o sistema.
 
 Quando uma demanda fica fora do SLE, o Atlas pergunta onde o sistema perdeu tempo. Quando a programação falha, pergunta o que rompeu a coerência entre intenção, capacidade e entrega.
 
-A métrica usada para punir empobrece o método. A métrica usada para escutar revela onde o sistema precisa de cuidado.
+A métrica usada para punir empobrece o framework. A métrica usada para escutar revela onde o sistema precisa de cuidado.
 
 ## Capacidade é parte do desenho
 
@@ -76,10 +76,10 @@ Um atraso, uma classificação errada, uma urgência recorrente, uma programaç�
 
 Sustentar é responder, observar, aprender e redesenhar.
 
-## O método precede a ferramenta
+## O framework precede a ferramenta
 
-As planilhas do Atlas são importantes porque mostram o método encarnado.
+As planilhas do Atlas são importantes porque mostram o framework encarnado.
 
-Mas a planilha não é o Atlas. Ela é uma expressão possível do Atlas em um contexto. Copiar a planilha sem compreender o método produz controle vazio. Compreender o método permite adaptar a planilha, criar outra ferramenta ou operar inicialmente com artefatos simples.
+Mas a planilha não é o Atlas. Ela é uma expressão possível do Atlas em um contexto. Copiar a planilha sem compreender o framework produz controle vazio. Compreender o framework permite adaptar a planilha, criar outra ferramenta ou operar inicialmente com artefatos simples.
 
-O método dá critério. A ferramenta dá suporte.
+O framework dá critério. A ferramenta dá suporte.

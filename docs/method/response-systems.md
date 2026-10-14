@@ -40,7 +40,7 @@ S2 exige:
 - proteção contra reclassificações políticas;
 - aprendizado sobre atrasos de identificação, reação, correção e entrega.
 
-A referência validada para S2 é 48 horas, mas o valor correto é decidido por quem aplica o método.
+A referência validada para S2 é 48 horas, mas o valor correto é decidido por quem aplica o framework.
 
 ## Sistema de Adaptação e Aperfeiçoamento: resposta programada
 

@@ -61,7 +61,7 @@ O Sistema de Adaptação e Aperfeiçoamento precisa ser protegido. Se toda deman
 
 As planilhas originais podem cumprir dois papéis.
 
-Elas ajudam a entender a origem concreta do método, porque mostram uma aplicação real do Atlas. Também podem servir como base para templates, desde que sejam adaptadas ao contexto e não copiadas mecanicamente.
+Elas ajudam a entender a origem concreta do framework, porque mostram uma aplicação real do Atlas. Também podem servir como base para templates, desde que sejam adaptadas ao contexto e não copiadas mecanicamente.
 
 A adoção deve extrair delas a lógica operacional, não apenas replicar abas.
 

@@ -12,7 +12,7 @@ Na manutenção, o foco tende a cair sobre o software. Na sustentação, o foco 
 
 Um produto entra em estado de sustentação quando a operação de negócio do cliente passa a depender dele para funcionar.
 
-Esse é o ponto de virada do método. A sustentação não começa depois de uma entrega formal. Ela começa quando o software se torna parte da operação viva.
+Esse é o ponto de virada do framework. A sustentação não começa depois de uma entrega formal. Ela começa quando o software se torna parte da operação viva.
 
 ## Gestão orientada a risco operacional
 
@@ -54,7 +54,7 @@ A planilha original usa um SLE de referência de 8 horas para resposta imediata.
 
 S2 responde a R2. Seu propósito é priorizar urgências reais sem tratá-las como emergências permanentes.
 
-A referência inicial validada é um SLE de 48 horas. Como em S1, o valor certo é decidido por quem aplica o método no contexto real.
+A referência inicial validada é um SLE de 48 horas. Como em S1, o valor certo é decidido por quem aplica o framework no contexto real.
 
 ### Sistema de Adaptação e Aperfeiçoamento: resposta programada
 
@@ -90,6 +90,6 @@ Ela revela interrupções, acréscimos fora de ciclo, problemas de capacidade, e
 
 ## Leitura estrutural
 
-Atlas desenha sustentação como uma arquitetura de respostas. O método não tenta fazer a equipe trabalhar mais rápido dentro de uma fila única. Ele separa naturezas de risco, cria sistemas com propósitos distintos e usa métricas como sinais de saúde do sistema.
+Atlas desenha sustentação como uma arquitetura de respostas. O framework não tenta fazer a equipe trabalhar mais rápido dentro de uma fila única. Ele separa naturezas de risco, cria sistemas com propósitos distintos e usa métricas como sinais de saúde do sistema.
 
 O gestor, nesse desenho, não é controlador de tarefas. É arquiteto e curador do sistema de sustentação.

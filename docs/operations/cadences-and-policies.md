@@ -35,7 +35,7 @@ Em uma operação ativa, a revisão pode ser diária ou semanal, dependendo do v
 
 O Sistema de Adaptação e Aperfeiçoamento precisa de programação explícita.
 
-O ciclo pode ser semanal, quinzenal ou mensal. O método não fixa a duração. O que importa é que exista um compromisso visível entre seleção, capacidade e entrega.
+O ciclo pode ser semanal, quinzenal ou mensal. O framework não fixa a duração. O que importa é que exista um compromisso visível entre seleção, capacidade e entrega.
 
 Cada ciclo do Sistema de Adaptação e Aperfeiçoamento deve observar:
 

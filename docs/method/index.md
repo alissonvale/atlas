@@ -1,6 +1,6 @@
-# Método Atlas
+# Framework Atlas
 
-Atlas é um método de gestão para sustentação de produtos de software.
+Atlas é um framework de gestão para sustentação de produtos de software.
 
 Ele parte de uma mudança de linguagem: não se trata de manutenção, entendida como conserto de um objeto entregue, mas de sustentação, entendida como cuidado contínuo com um sistema vivo do qual a operação do negócio depende.
 
@@ -18,7 +18,7 @@ Ele parte de uma mudança de linguagem: não se trata de manutenção, entendida
 - [Sustentação e desenvolvimento](sustaining-vs-development.md)
 - Políticas explícitas, pendente
 
-## Eixo do método
+## Eixo do framework
 
 O eixo inicial do Atlas é a relação entre risco e resposta.
 

@@ -1,5 +1,5 @@
 site_name: Atlas
-site_description: Método de gestão para sustentação de produtos de software.
+site_description: Framework de gestão para sustentação de produtos de software.
 theme:
   name: material
   language: pt-BR
@@ -10,7 +10,7 @@ theme:
     - content.code.copy
 nav:
   - Início: index.md
-  - Método:
+  - Framework:
       - method/index.md
       - Visão geral: method/overview.md
       - Modelo conceitual: method/conceptual-model.md

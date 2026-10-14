@@ -2,9 +2,9 @@
 
 ## Propósito
 
-Construir o Atlas: um método de gestão voltado para a sustentação de produtos de software.
+Construir o Atlas: um framework de gestão voltado para a sustentação de produtos de software.
 
-Atlas nasce de uma recusa: tratar o trabalho posterior à entrega como manutenção, no sentido pobre de reparo, ajuste ou custo inevitável. A linguagem central do método é sustentação. Sustentar é manter vivo um sistema sociotécnico do qual a operação do negócio passou a depender.
+Atlas nasce de uma recusa: tratar o trabalho posterior à entrega como manutenção, no sentido pobre de reparo, ajuste ou custo inevitável. A linguagem central do framework é sustentação. Sustentar é manter vivo um sistema sociotécnico do qual a operação do negócio passou a depender.
 
 ## Tese central
 
@@ -34,7 +34,7 @@ S1 e S2 formam o Sistema de Pronto-Atendimento. O Sistema de Adaptação e Aperf
 
 A nomenclatura correta é SLE, Service Level Expectation.
 
-A referência inicial para S2 é 48 horas. Esse valor não é uma regra universal do método. Quem aplica o Atlas define o SLE adequado ao contexto, desde que a expectativa fique explícita e seja usada para orientar gestão, aprendizado e melhoria do sistema.
+A referência inicial para S2 é 48 horas. Esse valor não é uma regra universal do framework. Quem aplica o Atlas define o SLE adequado ao contexto, desde que a expectativa fique explícita e seja usada para orientar gestão, aprendizado e melhoria do sistema.
 
 ## Artefatos recebidos
 
@@ -44,11 +44,11 @@ As planilhas de materiais experimentais foram removidas porque eram experimentai
 
 ## Fronteira inicial
 
-Atlas é o método de sustentação de produtos de software. Planilhas, dashboards, templates, automações e rotinas são artefatos do método, não substitutos dele.
+Atlas é o framework de sustentação de produtos de software. Planilhas, dashboards, templates, automações e rotinas são artefatos do framework, não substitutos dele.
 
 A primeira tarefa de documentação é separar três camadas:
 
-- método, com vocabulário, princípios, riscos, sistemas e papéis;
+- framework, com vocabulário, princípios, riscos, sistemas e papéis;
 - operação, com cadências, métricas, fluxos e critérios de triagem;
 - adoção, com templates, guias e exemplos para aplicar Atlas em produtos reais.
 

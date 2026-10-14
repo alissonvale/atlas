@@ -87,4 +87,4 @@ O gatekeeper falha quando:
 
 O gatekeeper pode ser uma pessoa, um par, uma escala ou um pequeno grupo. O importante é que a função exista e seja reconhecida.
 
-Em contextos menores, pode ser exercida pelo responsável técnico ou pelo gestor de sustentação. Em contextos maiores, pode envolver suporte, produto, liderança técnica e negócio. O método não exige um cargo fixo. Exige uma fronteira clara.
+Em contextos menores, pode ser exercida pelo responsável técnico ou pelo gestor de sustentação. Em contextos maiores, pode envolver suporte, produto, liderança técnica e negócio. O framework não exige um cargo fixo. Exige uma fronteira clara.

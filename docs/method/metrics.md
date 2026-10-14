@@ -12,7 +12,7 @@ No Atlas, SLE é a expectativa explícita de resposta de um sistema. Ele ajuda a
 
 SLE não é valor universal. Cada contexto define o que faz sentido para S1 e S2, considerando criticidade do negócio, capacidade disponível, horário de operação, custo de atraso e maturidade da equipe.
 
-O material original usa 8 horas como referência para S1. Para S2, a referência validada é 48 horas. Esses valores são exemplos de uma aplicação concreta, não regras fixas do método.
+O material original usa 8 horas como referência para S1. Para S2, a referência validada é 48 horas. Esses valores são exemplos de uma aplicação concreta, não regras fixas do framework.
 
 ## DDP
 

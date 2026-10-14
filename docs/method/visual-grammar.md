@@ -2,11 +2,11 @@
 
 Este documento propõe uma linguagem visual para o Atlas.
 
-Ele é separado do [Modelo conceitual](conceptual-model.md) e dos [Workflows das demandas](workflows.md). O método define conceitos, riscos, sistemas de resposta, etapas, métricas e políticas. A gramática visual escolhe como esses elementos aparecem em uma interface, conversa, painel, relatório ou ferramenta operacional.
+Ele é separado do [Modelo conceitual](conceptual-model.md) e dos [Workflows das demandas](workflows.md). O framework define conceitos, riscos, sistemas de resposta, etapas, métricas e políticas. A gramática visual escolhe como esses elementos aparecem em uma interface, conversa, painel, relatório ou ferramenta operacional.
 
 ## Fronteira de desenho
 
-Componentes visuais ajudam a operar o Atlas, mas não definem o método.
+Componentes visuais ajudam a operar o Atlas, mas não definem o framework.
 
 Uma demanda R1 continua sendo R1 se aparecer como card, linha de tabela, alerta, registro de planilha ou resumo narrativo. Uma reclassificação continua sendo reclassificação mesmo sem animação, seta ou cor. A gramática visual torna a leitura mais rápida, mas a verdade metodológica permanece nos critérios de risco, nas políticas de resposta e nas evidências registradas.
 
@@ -70,7 +70,7 @@ cinza       encerrado, histórico, contexto
 preto       ruptura grave ou recorrência não aprendida
 ```
 
-A paleta exata pertence à ferramenta ou interface. O método preserva apenas a semântica.
+A paleta exata pertence à ferramenta ou interface. O framework preserva apenas a semântica.
 
 ## Anatomia de um card Atlas
 

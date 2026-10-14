@@ -14,7 +14,7 @@ O painel recebido sugere uma operação dividida em três sistemas de resposta.
 
 ## Nota sobre parâmetros
 
-O Atlas usa SLE como expectativa explícita de serviço. Os valores presentes no painel são referências de uma aplicação concreta do método. Quem aplica o Atlas deve definir os SLEs adequados ao contexto, deixando os critérios visíveis e revisáveis.
+O Atlas usa SLE como expectativa explícita de serviço. Os valores presentes no painel são referências de uma aplicação concreta do framework. Quem aplica o Atlas deve definir os SLEs adequados ao contexto, deixando os critérios visíveis e revisáveis.
 
 ## Páginas operacionais
 

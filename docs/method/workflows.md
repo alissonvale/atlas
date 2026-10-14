@@ -231,7 +231,7 @@ As planilhas originais simplificam esse fluxo como:
 Programação -> Desenvolvimento -> Teste -> Produção
 ```
 
-A documentação do método explicita duas fronteiras adicionais. Antes da programação existe a entrada qualificada de R3. Depois da produção existe o encerramento como aprendizado sobre previsibilidade, capacidade e aderência.
+A documentação do framework explicita duas fronteiras adicionais. Antes da programação existe a entrada qualificada de R3. Depois da produção existe o encerramento como aprendizado sobre previsibilidade, capacidade e aderência.
 
 ### Entrada R3
 

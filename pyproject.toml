@@ -1,7 +1,7 @@
 [project]
 name = "atlas-method"
 version = "0.1.0"
-description = "Método de gestão para sustentação de produtos de software."
+description = "Framework de gestão para sustentação de produtos de software."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

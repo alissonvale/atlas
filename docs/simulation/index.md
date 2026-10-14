@@ -20,13 +20,13 @@ A HygiaTech roda em uma instalação própria do Mirror para evitar contaminaç�
 
 ```text
 Mirror pessoal de Alisson
-  método Atlas, decisões e documentação
+  framework Atlas, decisões e documentação
 
 Mirror sandbox da HygiaTech
   atores, personas, jornadas, demandas, memórias e conversas da simulação
 ```
 
-A jornada Atlas no Mirror pessoal acompanha o método. A instalação HygiaTech acompanha a operação simulada.
+A jornada Atlas no Mirror pessoal acompanha o framework. A instalação HygiaTech acompanha a operação simulada.
 
 ## Documentos
 

@@ -1,6 +1,6 @@
 # Visão geral do Atlas
 
-Atlas é um método de gestão para sustentação de produtos de software.
+Atlas é um framework de gestão para sustentação de produtos de software.
 
 Ele nasce da percepção de que a palavra manutenção empobrece o trabalho que acontece quando um produto já está integrado à operação de um negócio. Manutenção sugere reparo de objeto. Sustentação sugere cuidado com um sistema vivo.
 
@@ -16,9 +16,9 @@ A pergunta central é:
 
 > Que risco esta situação impõe ao negócio que o produto sustenta?
 
-Essa mudança desloca o método de uma gestão de tickets para uma gestão de riscos e respostas.
+Essa mudança desloca o framework de uma gestão de tickets para uma gestão de riscos e respostas.
 
-## O núcleo do método
+## O núcleo do framework
 
 Atlas organiza a sustentação em três riscos e três formas de resposta.
 
@@ -46,15 +46,15 @@ Atlas usa métricas para escutar o sistema, não para punir pessoas.
 
 SLE explicita a expectativa de resposta de um sistema. DDP mede o percentual de demandas concluídas dentro dessa expectativa. Eficiência da programação mede a relação entre o que foi programado e o que foi entregue na resposta programada.
 
-Quando uma demanda fica fora do SLE ou quando a programação falha repetidamente, o método não pergunta quem errou. Ele pergunta o que o sistema está revelando sobre capacidade, triagem, fluxo, interrupções, dependências e decisões.
+Quando uma demanda fica fora do SLE ou quando a programação falha repetidamente, o framework não pergunta quem errou. Ele pergunta o que o sistema está revelando sobre capacidade, triagem, fluxo, interrupções, dependências e decisões.
 
 ## As planilhas no Atlas
 
 As planilhas recebidas têm dupla natureza.
 
-Elas são material histórico porque registram uma aplicação concreta do pensamento que deu origem ao método. Também são base de template porque mostram como os conceitos podem virar painel operacional, cadência, indicadores e dados de acompanhamento.
+Elas são material histórico porque registram uma aplicação concreta do pensamento que deu origem ao framework. Também são base de template porque mostram como os conceitos podem virar painel operacional, cadência, indicadores e dados de acompanhamento.
 
-A documentação canônica não deve copiar a planilha como se ela fosse o método. Também não deve descartá-la como simples exemplo. A planilha é um artefato encarnado do Atlas: uma expressão operacional do método em um contexto real.
+A documentação canônica não deve copiar a planilha como se ela fosse o framework. Também não deve descartá-la como simples exemplo. A planilha é um artefato encarnado do Atlas: uma expressão operacional do framework em um contexto real.
 
 ## Transformação proposta
 

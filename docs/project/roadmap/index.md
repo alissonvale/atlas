@@ -4,7 +4,7 @@
 
 Status: em curso.
 
-Objetivo: reunir materiais, consolidar briefing, mapear anexos e definir o primeiro recorte do método.
+Objetivo: reunir materiais, consolidar briefing, mapear anexos e definir o primeiro recorte do framework.
 
 Histórias iniciais:
 
@@ -12,7 +12,7 @@ Histórias iniciais:
 - ATLAS.E0.02, inventariar materiais recebidos e extrair leitura inicial. Concluída.
 - ATLAS.E0.03, corrigir contexto removendo materiais experimentais. Concluída.
 - ATLAS.E0.04, criar primeira documentação canônica. Concluída.
-- ATLAS.E0.05, criar princípios do método. Concluída.
+- ATLAS.E0.05, criar princípios do framework. Concluída.
 - ATLAS.E0.06, configurar site MkDocs do Atlas. Concluída.
 - ATLAS.E0.07, anexar artigos de manutenção ágil e extrair implicações. Em curso.
 - ATLAS.E0.08, criar papéis e fronteira sustentação versus desenvolvimento. Concluída.
@@ -23,7 +23,7 @@ Histórias iniciais:
 
 Status: primeira versão canônica criada.
 
-Objetivo: explicitar princípios, vocabulário, áreas de trabalho e fronteiras do método Atlas.
+Objetivo: explicitar princípios, vocabulário, áreas de trabalho e fronteiras do framework Atlas.
 
 Primeiro recorte:
 
@@ -38,7 +38,7 @@ Primeiro recorte:
 - papéis;
 - fronteira entre sustentação adaptativa e desenvolvimento de novas capacidades.
 
-## Etapa 2: Operação do método
+## Etapa 2: Operação do framework
 
 Status: planejada.
 
@@ -71,14 +71,14 @@ Candidatos:
 
 Minha proposta é criar a documentação canônica nesta ordem:
 
-1. Visão geral do Atlas, para dar unidade narrativa ao método.
+1. Visão geral do Atlas, para dar unidade narrativa ao framework.
 2. Modelo conceitual, aprofundando sustentação, risco e sistemas de resposta.
-3. Princípios, protegendo o método contra redução a planilha ou fluxo genérico.
+3. Princípios, protegendo o framework contra redução a planilha ou fluxo genérico.
 4. Sistemas de resposta, detalhando S1, S2 e Sistema de Adaptação e Aperfeiçoamento.
 5. Triagem e gatekeeper, com critérios objetivos para classificação.
 6. Métricas e sinais de saúde, com SLE, DDP e eficiência da programação.
 7. Workflows das demandas, explicitando chegada, identificação, reação, correção, entrega, programação, desenvolvimento, teste e produção.
 8. Papéis, esclarecendo responsabilidades como funções do sistema.
 9. Sustentação e desenvolvimento, protegendo a fronteira entre adaptação e novas capacidades.
-10. Operação do método, com cadências e políticas explícitas.
-11. Guia de adoção, transformando o método em passo a passo aplicável.
+10. Operação do framework, com cadências e políticas explícitas.
+11. Guia de adoção, transformando o framework em passo a passo aplicável.

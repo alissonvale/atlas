@@ -6,7 +6,7 @@ Este índice registra os materiais usados para construir o Atlas e separa fonte 
 
 | Material | Tipo | Uso na jornada |
 | --- | --- | --- |
-| `materials/conceituais/capitulo-11-atlas-sustentacao-como-gestao-de-risco.md` | Capítulo de livro | Capítulo 11 de *Gestão Sistêmica e Complexidade para Projetos de Software*, de Alisson Vale (Software Zen); fonte conceitual histórica da linguagem do método, da crítica à manutenção tradicional e da definição dos riscos e sistemas de resposta. |
+| `materials/conceituais/capitulo-11-atlas-sustentacao-como-gestao-de-risco.md` | Capítulo de livro | Capítulo 11 de *Gestão Sistêmica e Complexidade para Projetos de Software*, de Alisson Vale (Software Zen); fonte conceitual histórica da linguagem do framework, da crítica à manutenção tradicional e da definição dos riscos e sistemas de resposta. |
 | `materials/conceituais/artigos-manutencao-agil-2019.md` | Série de artigos | Base histórica sobre manutenção ágil, uso de métodos como repertório, transição para sustentação, gestão de riscos e consciência sistêmica. |
 | `materials/planilhas/Atlas - Painel de Controle - Dashboard_ Pronto-Atendimento.csv` | Dashboard CSV | Visão agregada do Sistema de Pronto-Atendimento, com DDP, volume, entradas e saídas. |
 | `materials/planilhas/Atlas - Painel de Controle - Dashboard_ Adaptação e Aperfeiçoamento.csv` | Dashboard CSV | Visão agregada do Sistema de Adaptação e Aperfeiçoamento, com eficiência da programação, acréscimos e entregas. |
@@ -26,9 +26,9 @@ Planilhas experimentais enviadas por engano foram removidas do repositório e do
 
 O capítulo 11 do livro estabelece a mudança central de linguagem: sair de manutenção como reparo de objeto e entrar em sustentação como gestão de um ecossistema vivo, no momento em que a operação do cliente passa a depender do software para funcionar.
 
-A série de artigos de 2019 aprofunda a origem do método. Ela mostra que a resposta não é implantar Kanban, Scrum ou qualquer método como receita, mas usar métodos como repertório para desenhar um sistema aderente à realidade concreta da sustentação.
+A série de artigos de 2019 aprofunda a origem do framework. Ela mostra que a resposta não é implantar Kanban, Scrum ou qualquer framework como receita, mas usar métodos como repertório para desenhar um sistema aderente à realidade concreta da sustentação.
 
-As planilhas mostram que Atlas já não é apenas um ensaio conceitual. Há um painel operacional com sistemas de resposta, métricas, parâmetros, cadências semanais e dados brutos. A documentação canônica precisa preservar essa dupla natureza: método de pensamento e instrumento de gestão.
+As planilhas mostram que Atlas já não é apenas um ensaio conceitual. Há um painel operacional com sistemas de resposta, métricas, parâmetros, cadências semanais e dados brutos. A documentação canônica precisa preservar essa dupla natureza: framework de pensamento e instrumento de gestão.
 
 ## Conceitos extraídos
 
@@ -42,11 +42,11 @@ As planilhas mostram que Atlas já não é apenas um ensaio conceitual. Há um p
 - S1 e S2 compõem o Sistema de Pronto-Atendimento.
 - O Sistema de Adaptação e Aperfeiçoamento cuida da resposta programada às adaptações planejáveis.
 - SLE é a nomenclatura correta para expectativa de nível de serviço.
-- O SLE de resposta rápida usado como referência é 48 horas, mas o valor deve ser decidido por quem aplica o método.
+- O SLE de resposta rápida usado como referência é 48 horas, mas o valor deve ser decidido por quem aplica o framework.
 - A fronteira entre sustentação adaptativa e desenvolvimento de novas capacidades precisa ser explícita.
 
 ## Lacunas abertas
 
-- Separar o que pertence ao livro original, o que pertence ao método Atlas e o que pertence a templates de adoção. A procedência do capítulo 11 está registrada no seu front matter.
-- Definir como transformar o painel atual em template vivo sem confundir ferramenta com método.
+- Separar o que pertence ao livro original, o que pertence ao framework Atlas e o que pertence a templates de adoção. A procedência do capítulo 11 está registrada no seu front matter.
+- Definir como transformar o painel atual em template vivo sem confundir ferramenta com framework.
 - Aprofundar a relação entre os cinco riscos dos artigos de 2019 e o recorte atual do Atlas.
