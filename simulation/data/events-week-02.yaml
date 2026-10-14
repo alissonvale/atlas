@@ -1,0 +1,435 @@
+version: 1.0.0
+kind: hygiatech_event_batch
+batch:
+  id: EVENTS-2026-W02
+  ticket_batch_id: BATCH-2026-W02
+  name: Eventos da Semana 02 da simulação HygiaTech
+  period:
+    start: '2026-06-08'
+    end: '2026-06-12'
+  intent: Histórico operacional fechado.
+events:
+- id: EVT-W02-01-01
+  ticket_id: TCK-2026-W02-001
+  occurred_at: '2026-06-08T08:20:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Integração de laboratório acumula mensagens no Hospital
+    Regional Pedra Branca.'
+  mirror_used: false
+- id: EVT-W02-01-02
+  ticket_id: TCK-2026-W02-001
+  occurred_at: '2026-06-08T09:00:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_comprometida
+  mirror_used: false
+- id: EVT-W02-01-03
+  ticket_id: TCK-2026-W02-001
+  occurred_at: '2026-06-08T10:20:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-C-001
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W02-01-04
+  ticket_id: TCK-2026-W02-001
+  occurred_at: '2026-06-08T11:20:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-011
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W02-02-01
+  ticket_id: TCK-2026-W02-002
+  occurred_at: '2026-06-08T09:05:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Servidor DataSnap oscila no Hospital Rio Dourado.'
+  mirror_used: false
+- id: EVT-W02-02-02
+  ticket_id: TCK-2026-W02-002
+  occurred_at: '2026-06-08T09:45:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_comprometida
+  mirror_used: false
+- id: EVT-W02-02-03
+  ticket_id: TCK-2026-W02-002
+  occurred_at: '2026-06-08T11:05:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-001
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W02-02-04
+  ticket_id: TCK-2026-W02-002
+  occurred_at: '2026-06-08T12:05:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-014
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W02-03-01
+  ticket_id: TCK-2026-W02-003
+  occurred_at: '2026-06-08T11:10:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Fechamento de guia sem código obrigatório volta a gerar
+    retrabalho.'
+  mirror_used: false
+- id: EVT-W02-03-02
+  ticket_id: TCK-2026-W02-003
+  occurred_at: '2026-06-08T11:50:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W02-03-03
+  ticket_id: TCK-2026-W02-003
+  occurred_at: '2026-06-08T13:10:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W02-04-01
+  ticket_id: TCK-2026-W02-004
+  occurred_at: '2026-06-09T07:55:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Prescrição apresenta erro ao salvar dose fracionada.'
+  mirror_used: false
+- id: EVT-W02-04-02
+  ticket_id: TCK-2026-W02-004
+  occurred_at: '2026-06-09T08:35:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_comprometida
+  mirror_used: false
+- id: EVT-W02-04-03
+  ticket_id: TCK-2026-W02-004
+  occurred_at: '2026-06-09T09:55:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-002
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W02-04-04
+  ticket_id: TCK-2026-W02-004
+  occurred_at: '2026-06-09T10:55:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-016
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W02-05-01
+  ticket_id: TCK-2026-W02-005
+  occurred_at: '2026-06-09T10:30:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Customização de relatório financeiro solicitada pelo Hospital
+    Metropolitano Lumen.'
+  mirror_used: false
+- id: EVT-W02-05-02
+  ticket_id: TCK-2026-W02-005
+  occurred_at: '2026-06-09T11:10:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: incomodo
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W02-05-03
+  ticket_id: TCK-2026-W02-005
+  occurred_at: '2026-06-09T12:30:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W02-06-01
+  ticket_id: TCK-2026-W02-006
+  occurred_at: '2026-06-10T08:40:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Rotina noturna de dados falha e deixa registros pendentes.'
+  mirror_used: false
+- id: EVT-W02-06-02
+  ticket_id: TCK-2026-W02-006
+  occurred_at: '2026-06-10T09:20:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_comprometida
+  mirror_used: false
+- id: EVT-W02-06-03
+  ticket_id: TCK-2026-W02-006
+  occurred_at: '2026-06-10T10:40:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-001
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W02-06-04
+  ticket_id: TCK-2026-W02-006
+  occurred_at: '2026-06-10T11:40:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-020
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W02-07-01
+  ticket_id: TCK-2026-W02-007
+  occurred_at: '2026-06-10T13:15:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Agenda médica mostra conflito inexistente no Centro Médico
+    Primavera.'
+  mirror_used: false
+- id: EVT-W02-07-02
+  ticket_id: TCK-2026-W02-007
+  occurred_at: '2026-06-10T13:55:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: false
+- id: EVT-W02-07-03
+  ticket_id: TCK-2026-W02-007
+  occurred_at: '2026-06-10T15:15:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-003
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W02-07-04
+  ticket_id: TCK-2026-W02-007
+  occurred_at: '2026-06-10T16:15:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-010
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W02-08-01
+  ticket_id: TCK-2026-W02-008
+  occurred_at: '2026-06-11T09:00:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Melhorar diagnóstico de falha externa em integração de
+    imagem.'
+  mirror_used: false
+- id: EVT-W02-08-02
+  ticket_id: TCK-2026-W02-008
+  occurred_at: '2026-06-11T09:40:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W02-08-03
+  ticket_id: TCK-2026-W02-008
+  occurred_at: '2026-06-11T11:00:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W02-09-01
+  ticket_id: TCK-2026-W02-009
+  occurred_at: '2026-06-11T11:20:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-007
+  to_status: new_signal
+  summary: 'Demanda aberta: Dúvida sobre reimpressão de etiqueta de laboratório.'
+  mirror_used: false
+- id: EVT-W02-09-02
+  ticket_id: TCK-2026-W02-009
+  occurred_at: '2026-06-11T11:45:00-03:00'
+  event_type: closed
+  actor_type: help_desk
+  actor_id: HD-007
+  from_status: new_signal
+  to_status: support_resolved
+  from_class: incerta
+  to_class: suporte_sem_atlas
+  summary: Help desk resolve sem entrada no Atlas.
+  mirror_used: false
+- id: EVT-W02-10-01
+  ticket_id: TCK-2026-W02-010
+  occurred_at: '2026-06-12T09:25:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Fechamento mensal do Hospital Mar Azul ganha prazo crítico.'
+  mirror_used: false
+- id: EVT-W02-10-02
+  ticket_id: TCK-2026-W02-010
+  occurred_at: '2026-06-12T10:05:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_bloqueada
+  mirror_used: false
+- id: EVT-W02-10-03
+  ticket_id: TCK-2026-W02-010
+  occurred_at: '2026-06-12T11:25:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-003
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W02-10-04
+  ticket_id: TCK-2026-W02-010
+  occurred_at: '2026-06-12T12:25:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-019
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W02-11-01
+  ticket_id: TCK-2026-W02-011
+  occurred_at: '2026-06-12T14:10:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Farmácia solicita alerta antes de baixa duplicada.'
+  mirror_used: false
+- id: EVT-W02-11-02
+  ticket_id: TCK-2026-W02-011
+  occurred_at: '2026-06-12T14:50:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W02-11-03
+  ticket_id: TCK-2026-W02-011
+  occurred_at: '2026-06-12T16:10:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W02-99-01
+  ticket_id: TCK-2026-W02-011
+  occurred_at: '2026-06-12T16:30:00-03:00'
+  event_type: learning_review_created
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  summary: Revisão semanal week-02 consolida sinais para o relatório mensal.
+  evidence: volume, gargalos e candidatos S3 revisados
+  mirror_used: true
+  mirror_prompt_summary: sintetizar aprendizados da semana

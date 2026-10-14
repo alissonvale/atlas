@@ -1,0 +1,213 @@
+version: "1.0.0"
+kind: hygiatech_modules
+
+modules:
+  - id: MOD-001
+    slug: pronto_atendimento
+    name: Pronto Atendimento
+    domain: assistencial
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: alta
+    typical_risks:
+      - bloqueio de atendimento inicial
+      - lentidão em plantão
+      - falha ao localizar paciente
+      - indisponibilidade de registro de entrada
+    atlas_bias: S1/S2
+    notes: módulo sensível a interrupções porque afeta fluxo de entrada do hospital em tempo real
+
+  - id: MOD-002
+    slug: internacao
+    name: Internação
+    domain: assistencial
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: alta
+    typical_risks:
+      - bloqueio de internação
+      - inconsistência de leito
+      - falha em movimentação de paciente
+      - atraso em transferência interna
+    atlas_bias: S1/S2
+    notes: tende a escalar quando bloqueia admissão, transferência ou alta de pacientes
+
+  - id: MOD-003
+    slug: prescricao
+    name: Prescrição
+    domain: assistencial
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: alta
+    typical_risks:
+      - prescrição não carrega
+      - falha ao salvar item prescrito
+      - inconsistência de dose ou frequência
+      - lentidão em unidade inteira
+    atlas_bias: S1
+    notes: módulo de maior sensibilidade assistencial; exige cuidado para separar erro crítico de dúvida de uso
+
+  - id: MOD-004
+    slug: farmacia
+    name: Farmácia
+    domain: assistencial_logistico
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: alta
+    typical_risks:
+      - bloqueio de dispensação
+      - divergência de estoque
+      - falha em baixa de medicamento
+      - atraso na separação por prescrição
+    atlas_bias: S2
+    notes: pode virar S1 quando impede dispensação crítica ou afeta muitos pacientes
+
+  - id: MOD-005
+    slug: faturamento
+    name: Faturamento
+    domain: financeiro
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: alta
+    typical_risks:
+      - fechamento mensal travado
+      - guia não gerada
+      - regra de convênio incorreta
+      - inconsistência em cobrança
+    atlas_bias: S2
+    notes: muda de criticidade conforme janela de fechamento, auditoria ou obrigação regulatória
+
+  - id: MOD-006
+    slug: financeiro
+    name: Financeiro
+    domain: administrativo
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: media
+    typical_risks:
+      - erro em baixa financeira
+      - relatório inconsistente
+      - conciliação incompleta
+      - falha em exportação
+    atlas_bias: S2/S3
+    notes: frequentemente gera demandas planejáveis, mas pode ganhar urgência em fechamento
+
+  - id: MOD-007
+    slug: agenda
+    name: Agenda
+    domain: atendimento
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: media
+    typical_risks:
+      - indisponibilidade de marcação
+      - conflito de horários
+      - erro em remarcação
+      - lentidão em agenda médica
+    atlas_bias: S2/S3
+    notes: risco depende do tipo de agenda e da proximidade do atendimento
+
+  - id: MOD-008
+    slug: ambulatorio
+    name: Ambulatório
+    domain: assistencial
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: media
+    typical_risks:
+      - atendimento eletivo bloqueado
+      - falha em evolução
+      - impressão de documento incorreta
+      - busca lenta de histórico
+    atlas_bias: S2/S3
+    notes: bom módulo para diferenciar urgência operacional de melhoria de usabilidade
+
+  - id: MOD-009
+    slug: laboratorio
+    name: Laboratório
+    domain: apoio_diagnostico
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: alta
+    typical_risks:
+      - resultado não integrado
+      - coleta não registrada
+      - exame não aparece para unidade
+      - fila de exames travada
+    atlas_bias: S2
+    notes: pode envolver integração e exige leitura cuidadosa do impacto no cuidado
+
+  - id: MOD-010
+    slug: imagem
+    name: Imagem
+    domain: apoio_diagnostico
+    primary_technology: csharp_api
+    operational_criticality: media
+    typical_risks:
+      - integração com laudo falha
+      - exame não sincroniza
+      - arquivo não disponível
+      - retorno parcial para o core
+    atlas_bias: S2/S3
+    notes: representa demandas onde C# e integrações aparecem com mais frequência
+
+  - id: MOD-011
+    slug: integracoes
+    name: Integrações
+    domain: plataforma
+    primary_technology: csharp_api
+    operational_criticality: alta
+    typical_risks:
+      - API indisponível
+      - falha de sincronização
+      - mensagem rejeitada por contrato
+      - integração externa fora do ar
+    atlas_bias: S2
+    notes: exige separar falha interna, contrato externo e indisponibilidade de terceiro
+
+  - id: MOD-012
+    slug: auditoria
+    name: Auditoria
+    domain: financeiro_regulatorio
+    primary_technology: csharp_api
+    operational_criticality: media
+    typical_risks:
+      - inconsistência em trilha de auditoria
+      - exportação incompleta
+      - regra regulatória desatualizada
+      - evidência não recuperada
+    atlas_bias: S2/S3
+    notes: tende a entrar em S3 quando há prazo conhecido e em S2 quando janela regulatória aperta
+
+  - id: MOD-013
+    slug: estoque
+    name: Estoque
+    domain: logistico
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: media
+    typical_risks:
+      - saldo divergente
+      - movimentação não registrada
+      - baixa duplicada
+      - compra baseada em dado incorreto
+    atlas_bias: S2/S3
+    notes: recorrências devem virar S3 para reduzir custo de sustentação
+
+  - id: MOD-014
+    slug: compras
+    name: Compras
+    domain: administrativo_logistico
+    primary_technology: delphi_2007_datasnap
+    operational_criticality: baixa
+    typical_risks:
+      - pedido não gerado
+      - aprovação travada
+      - relatório de compra incorreto
+      - parâmetro de fornecedor errado
+    atlas_bias: S3
+    notes: normalmente planejável, salvo quando afeta abastecimento crítico
+
+  - id: MOD-015
+    slug: dados
+    name: Dados e Rotinas Técnicas
+    domain: plataforma
+    primary_technology: delphi_seattle
+    operational_criticality: alta
+    typical_risks:
+      - script de correção necessário
+      - inconsistência cadastral em massa
+      - rotina noturna falha
+      - migração parcial de dados
+    atlas_bias: S2/S3
+    notes: concentra risco técnico e operacional; exige governança forte para scripts e correções manuais

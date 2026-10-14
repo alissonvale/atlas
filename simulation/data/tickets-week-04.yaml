@@ -1,0 +1,252 @@
+version: 1.0.0
+kind: hygiatech_ticket_batch
+batch:
+  id: BATCH-2026-W04
+  name: Semana 04 da simulação HygiaTech
+  period:
+    start: '2026-06-22'
+    end: '2026-06-26'
+  intent: Histórico fechado para simulação mensal Atlas.
+summary:
+  total_tickets: 10
+  expected_distribution:
+    S2: 4
+    S1: 1
+    S3: 5
+  simulation_themes:
+  - histórico fechado
+  - capacidade Delphi
+  - aprendizado Atlas
+tickets:
+- id: TCK-2026-W04-001
+  title: Fechamento mensal trava no Hospital Metropolitano Lumen
+  hospital_id: HOS-012
+  demand_type: defeito_bloqueante
+  module: faturamento
+  opened_at: '2026-06-22T08:10:00-03:00'
+  source: telefone
+  reported_by: auditoria financeira
+  description: Fechamento mensal trava em lote principal e reunião de auditoria ocorre
+    no mesmo dia.
+  perceived_urgency: critica
+  operational_impact: operação_bloqueada
+  affected_users: setor
+  workaround_available: nao
+  evidence_quality: alta
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-001
+  sle_policy: S2
+- id: TCK-2026-W04-002
+  title: Prescrição indisponível após atualização em unidade do Hospital São Gabriel
+  hospital_id: HOS-001
+  demand_type: incidente_indisponibilidade
+  module: prescricao
+  opened_at: '2026-06-22T09:30:00-03:00'
+  source: telefone
+  reported_by: enfermagem
+  description: Após atualização, prescrição não abre para unidade de internação.
+  perceived_urgency: critica
+  operational_impact: perda_imediata
+  affected_users: setor
+  workaround_available: nao
+  evidence_quality: media
+  initial_atlas_class: R1
+  response_system: S1
+  status: s1_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-001
+  sle_policy: S1
+- id: TCK-2026-W04-003
+  title: Validação preventiva de guia implementada em piloto
+  hospital_id: HOS-006
+  demand_type: correcao_preventiva
+  module: faturamento
+  opened_at: '2026-06-22T14:00:00-03:00'
+  source: learning_review
+  reported_by: produto
+  description: Item S3 implementado em piloto para reduzir guias incompletas.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-003
+  sle_policy: S3
+- id: TCK-2026-W04-004
+  title: Token de integração de laboratório expira sem alerta
+  hospital_id: HOS-007
+  demand_type: melhoria_observabilidade
+  module: laboratorio
+  opened_at: '2026-06-23T09:05:00-03:00'
+  source: monitoramento
+  reported_by: alerta interno
+  description: Nova expiração de token reforça necessidade de alerta preventivo.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: csharp_api
+  assigned_team: csharp_api
+  assigned_staff: DEV-C-001
+  sle_policy: S3
+- id: TCK-2026-W04-005
+  title: Rotina de dados deixa internações duplicadas no Hospital Rio Dourado
+  hospital_id: HOS-014
+  demand_type: inconsistencia_dados
+  module: dados
+  opened_at: '2026-06-23T11:30:00-03:00'
+  source: portal
+  reported_by: administração
+  description: Registros duplicados de internação exigem script controlado.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_seattle
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-002
+  sle_policy: S2
+- id: TCK-2026-W04-006
+  title: Farmácia valida alerta contra baixa duplicada
+  hospital_id: HOS-009
+  demand_type: melhoria_usabilidade
+  module: farmacia
+  opened_at: '2026-06-24T10:00:00-03:00'
+  source: learning_review
+  reported_by: produto
+  description: Alerta de baixa duplicada pronto para teste com usuário chave.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3
+- id: TCK-2026-W04-007
+  title: API de imagem retorna erro para anexos grandes
+  hospital_id: HOS-017
+  demand_type: integracao_falhando
+  module: imagem
+  opened_at: '2026-06-24T13:20:00-03:00'
+  source: portal
+  reported_by: diagnóstico
+  description: Anexos grandes falham em integração, laudo textual permanece disponível.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: poucos_usuarios
+  workaround_available: parcial
+  evidence_quality: alta
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: csharp_api
+  assigned_team: csharp_api
+  assigned_staff: DEV-C-002
+  sle_policy: S2
+- id: TCK-2026-W04-008
+  title: Compras pede aprovação em lote para fornecedores recorrentes
+  hospital_id: HOS-015
+  demand_type: solicitacao_customizacao
+  module: compras
+  opened_at: '2026-06-25T09:40:00-03:00'
+  source: portal
+  reported_by: compras
+  description: Pedido de melhoria para aprovar múltiplos fornecedores recorrentes.
+  perceived_urgency: baixa
+  operational_impact: incomodo
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3
+- id: TCK-2026-W04-009
+  title: Lentidão em agenda médica durante pico da manhã
+  hospital_id: HOS-003
+  demand_type: lentidao
+  module: agenda
+  opened_at: '2026-06-25T10:15:00-03:00'
+  source: telefone
+  reported_by: recepção
+  description: Agenda demora a carregar no pico da manhã, mas atendimento continua.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: baixa
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-003
+  sle_policy: S2
+- id: TCK-2026-W04-010
+  title: Revisão mensal de sustentação Atlas
+  hospital_id: HOS-002
+  demand_type: melhoria_observabilidade
+  module: dados
+  opened_at: '2026-06-26T16:00:00-03:00'
+  source: interno_hygiatech
+  reported_by: coordenação
+  description: Coordenação cria item para consolidar relatório mensal e ajustar políticas
+    Atlas.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: multiplos_setores
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: sustentacao
+  assigned_staff: COORD-001
+  sle_policy: S3

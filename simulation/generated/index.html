@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>HygiaTech Atlas Console</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 2rem; background: #f7f7f7; color: #222; }
+    h1, h2 { margin-bottom: .2rem; }
+    .summary, .week { background: white; border-radius: 12px; padding: 1rem 1.2rem; margin: 1rem 0; box-shadow: 0 1px 4px #ddd; }
+    .ticket { border-left: 5px solid #999; padding: .6rem .8rem; margin: .6rem 0; background: #fafafa; }
+    .S1 { border-color: #d33; } .S2 { border-color: #f28c28; } .S3 { border-color: #2775d1; } .suporte { border-color: #777; }
+    code { background: #eee; padding: .1rem .3rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>HygiaTech Atlas Console</h1>
+  <div class="summary">
+    <h2>Resumo</h2>
+    <p>Tickets carregados: 54</p>
+    <p>Distribuição: {&#x27;S1&#x27;: 5, &#x27;S2&#x27;: 25, &#x27;S3&#x27;: 20, &#x27;suporte&#x27;: 4}</p>
+    <p>Fonte: YAML em <code>simulation/data</code>. Este HTML é derivado e regenerável.</p>
+  </div>
+  <section class='week'><h2>week-01</h2>
+        <div class="ticket S1">
+          <strong>TCK-2026-W01-001</strong> [S1] Servidor DataSnap indisponível para o Hospital Santa Aurora<br>
+          Hospital: Hospital Santa Aurora<br>
+          Módulo: Pronto Atendimento<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S1">
+          <strong>TCK-2026-W01-002</strong> [S1] Prescrição não carrega na unidade de internação do Hospital Central das Araucárias<br>
+          Hospital: Hospital Central das Araucárias<br>
+          Módulo: Prescrição<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W01-003</strong> [S2] Fechamento de convênio trava no Hospital São Gabriel<br>
+          Hospital: Hospital São Gabriel<br>
+          Módulo: Faturamento<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W01-004</strong> [S2] Integração de laboratório não sincroniza resultados no Hospital Monte Azul<br>
+          Hospital: Hospital Monte Azul<br>
+          Módulo: Laboratório<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W01-005</strong> [S2] Lentidão no Delphi client durante busca de pacientes na Santa Casa de Veredas<br>
+          Hospital: Santa Casa de Veredas<br>
+          Módulo: Internação<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W01-006</strong> [S2] Laudos de imagem retornam sem anexos para o Hospital Vida Serena<br>
+          Hospital: Hospital Vida Serena<br>
+          Módulo: Imagem<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W01-007</strong> [S2] Saldo de estoque diverge após baixa de medicamentos no Hospital Esperança Norte<br>
+          Hospital: Hospital Esperança Norte<br>
+          Módulo: Estoque<br>
+          Status: <code>delivering</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W01-008</strong> [S2] Relatório de auditoria exporta registros incompletos no Hospital Metropolitano Lumen<br>
+          Hospital: Hospital Metropolitano Lumen<br>
+          Módulo: Auditoria<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W01-009</strong> [S3] Melhorar mensagem de erro no fechamento de conta hospitalar<br>
+          Hospital: Instituto Clínico Horizonte<br>
+          Módulo: Faturamento<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W01-010</strong> [S3] Automatizar coleta de log DataSnap para incidentes de conexão<br>
+          Hospital: Hospital Santa Aurora<br>
+          Módulo: Dados e Rotinas Técnicas<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W01-011</strong> [S3] Ajustar regra de convênio para novo contrato do Hospital Mar Azul<br>
+          Hospital: Hospital Mar Azul<br>
+          Módulo: Faturamento<br>
+          Status: <code>s3_candidate</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W01-012</strong> [S3] Criar validação preventiva antes de enviar guia sem código obrigatório<br>
+          Hospital: Hospital São Lucas do Cerrado<br>
+          Módulo: Faturamento<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W01-013</strong> [S3] Solicitação de tela customizada para agenda do Centro Médico Primavera<br>
+          Hospital: Centro Médico Primavera<br>
+          Módulo: Agenda<br>
+          Status: <code>s3_candidate</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket suporte">
+          <strong>TCK-2026-W01-014</strong> [suporte] Usuário não sabe reabrir atendimento ambulatorial na Clínica São Bento<br>
+          Hospital: Clínica São Bento<br>
+          Módulo: Ambulatório<br>
+          Status: <code>support_resolved</code> | SLE: <code>not_applicable</code>
+        </div>
+        </section><section class='week'><h2>week-02</h2>
+        <div class="ticket S2">
+          <strong>TCK-2026-W02-001</strong> [S2] Integração de laboratório acumula mensagens no Hospital Regional Pedra Branca<br>
+          Hospital: Hospital Regional Pedra Branca<br>
+          Módulo: Laboratório<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W02-002</strong> [S2] Servidor DataSnap oscila no Hospital Rio Dourado<br>
+          Hospital: Hospital Rio Dourado<br>
+          Módulo: Internação<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W02-003</strong> [S3] Fechamento de guia sem código obrigatório volta a gerar retrabalho<br>
+          Hospital: Hospital São Lucas do Cerrado<br>
+          Módulo: Faturamento<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W02-004</strong> [S2] Prescrição apresenta erro ao salvar dose fracionada<br>
+          Hospital: Instituto Materno Clara Luz<br>
+          Módulo: Prescrição<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W02-005</strong> [S3] Customização de relatório financeiro solicitada pelo Hospital Metropolitano Lumen<br>
+          Hospital: Hospital Metropolitano Lumen<br>
+          Módulo: Financeiro<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W02-006</strong> [S2] Rotina noturna de dados falha e deixa registros pendentes<br>
+          Hospital: Hospital Central das Araucárias<br>
+          Módulo: Dados e Rotinas Técnicas<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W02-007</strong> [S2] Agenda médica mostra conflito inexistente no Centro Médico Primavera<br>
+          Hospital: Centro Médico Primavera<br>
+          Módulo: Agenda<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W02-008</strong> [S3] Melhorar diagnóstico de falha externa em integração de imagem<br>
+          Hospital: Centro Hospitalar Arvoredo<br>
+          Módulo: Imagem<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket suporte">
+          <strong>TCK-2026-W02-009</strong> [suporte] Dúvida sobre reimpressão de etiqueta de laboratório<br>
+          Hospital: Clínica São Bento<br>
+          Módulo: Laboratório<br>
+          Status: <code>support_resolved</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W02-010</strong> [S2] Fechamento mensal do Hospital Mar Azul ganha prazo crítico<br>
+          Hospital: Hospital Mar Azul<br>
+          Módulo: Faturamento<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W02-011</strong> [S3] Farmácia solicita alerta antes de baixa duplicada<br>
+          Hospital: Hospital Vida Serena<br>
+          Módulo: Farmácia<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+        </section><section class='week'><h2>week-03</h2>
+        <div class="ticket S1">
+          <strong>TCK-2026-W03-001</strong> [S1] Pronto atendimento indisponível na Santa Casa de Veredas<br>
+          Hospital: Santa Casa de Veredas<br>
+          Módulo: Pronto Atendimento<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W03-002</strong> [S2] Erro de dose fracionada retorna em outro hospital<br>
+          Hospital: Hospital Nossa Senhora do Vale<br>
+          Módulo: Prescrição<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W03-003</strong> [S2] API de auditoria demora em consulta de grandes períodos<br>
+          Hospital: Hospital Metropolitano Lumen<br>
+          Módulo: Auditoria<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W03-004</strong> [S3] Validação preventiva de guia entra em ciclo S3<br>
+          Hospital: Hospital São Lucas do Cerrado<br>
+          Módulo: Faturamento<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W03-005</strong> [S2] Integração externa de imagem fora do ar gera chamados duplicados<br>
+          Hospital: Centro Hospitalar Arvoredo<br>
+          Módulo: Imagem<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W03-006</strong> [S2] Estoque apresenta divergência após transferência entre setores<br>
+          Hospital: Hospital Esperança Norte<br>
+          Módulo: Estoque<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W03-007</strong> [S3] Criar alerta para baixa duplicada em farmácia<br>
+          Hospital: Hospital Vida Serena<br>
+          Módulo: Farmácia<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W03-008</strong> [S3] Ambulatório pede simplificação de busca de histórico<br>
+          Hospital: Instituto Clínico Horizonte<br>
+          Módulo: Ambulatório<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W03-009</strong> [S2] Relatório financeiro com divergência de arredondamento<br>
+          Hospital: Clínica Integrada Atlântica<br>
+          Módulo: Financeiro<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket suporte">
+          <strong>TCK-2026-W03-010</strong> [suporte] Dúvida sobre cancelamento de guia já enviada<br>
+          Hospital: Centro Médico Primavera<br>
+          Módulo: Faturamento<br>
+          Status: <code>support_resolved</code> | SLE: <code>not_applicable</code>
+        </div>
+        </section><section class='week'><h2>week-04</h2>
+        <div class="ticket S2">
+          <strong>TCK-2026-W04-001</strong> [S2] Fechamento mensal trava no Hospital Metropolitano Lumen<br>
+          Hospital: Hospital Metropolitano Lumen<br>
+          Módulo: Faturamento<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S1">
+          <strong>TCK-2026-W04-002</strong> [S1] Prescrição indisponível após atualização em unidade do Hospital São Gabriel<br>
+          Hospital: Hospital São Gabriel<br>
+          Módulo: Prescrição<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W04-003</strong> [S3] Validação preventiva de guia implementada em piloto<br>
+          Hospital: Hospital São Lucas do Cerrado<br>
+          Módulo: Faturamento<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W04-004</strong> [S3] Token de integração de laboratório expira sem alerta<br>
+          Hospital: Hospital Monte Azul<br>
+          Módulo: Laboratório<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W04-005</strong> [S2] Rotina de dados deixa internações duplicadas no Hospital Rio Dourado<br>
+          Hospital: Hospital Rio Dourado<br>
+          Módulo: Dados e Rotinas Técnicas<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W04-006</strong> [S3] Farmácia valida alerta contra baixa duplicada<br>
+          Hospital: Hospital Vida Serena<br>
+          Módulo: Farmácia<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W04-007</strong> [S2] API de imagem retorna erro para anexos grandes<br>
+          Hospital: Hospital Santa Helena<br>
+          Módulo: Imagem<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W04-008</strong> [S3] Compras pede aprovação em lote para fornecedores recorrentes<br>
+          Hospital: Hospital Esperança Norte<br>
+          Módulo: Compras<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-W04-009</strong> [S2] Lentidão em agenda médica durante pico da manhã<br>
+          Hospital: Instituto Clínico Horizonte<br>
+          Módulo: Agenda<br>
+          Status: <code>closed</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-W04-010</strong> [S3] Revisão mensal de sustentação Atlas<br>
+          Hospital: Hospital Santa Aurora<br>
+          Módulo: Dados e Rotinas Técnicas<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+        </section><section class='week'><h2>current-week</h2>
+        <div class="ticket S1">
+          <strong>TCK-2026-CW-001</strong> [S1] Prescrição não salva em unidade crítica do Hospital Santa Helena<br>
+          Hospital: Hospital Santa Helena<br>
+          Módulo: Prescrição<br>
+          Status: <code>delivering</code> | SLE: <code>in</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-CW-002</strong> [S2] Fechamento de convênio do Hospital Mar Azul pode perder prazo hoje<br>
+          Hospital: Hospital Mar Azul<br>
+          Módulo: Faturamento<br>
+          Status: <code>prioritized</code> | SLE: <code>open</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-CW-003</strong> [S2] Lentidão intermitente no pronto atendimento do Hospital Regional Pedra Branca<br>
+          Hospital: Hospital Regional Pedra Branca<br>
+          Módulo: Pronto Atendimento<br>
+          Status: <code>awaiting_evidence</code> | SLE: <code>open</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-CW-004</strong> [S2] API de imagem rejeita anexos grandes no Hospital Central das Araucárias<br>
+          Hospital: Hospital Central das Araucárias<br>
+          Módulo: Imagem<br>
+          Status: <code>investigating</code> | SLE: <code>open</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-CW-005</strong> [S3] Diretoria do Centro Médico Primavera pede customização urgente da agenda<br>
+          Hospital: Centro Médico Primavera<br>
+          Módulo: Agenda<br>
+          Status: <code>s3_candidate</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-CW-006</strong> [S3] Implementar alerta preventivo para expiração de token de laboratório<br>
+          Hospital: Hospital Monte Azul<br>
+          Módulo: Laboratório<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S3">
+          <strong>TCK-2026-CW-007</strong> [S3] Piloto de validação preventiva de guia precisa decisão de expansão<br>
+          Hospital: Hospital São Lucas do Cerrado<br>
+          Módulo: Faturamento<br>
+          Status: <code>qualified</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket suporte">
+          <strong>TCK-2026-CW-008</strong> [suporte] Dúvida sobre reimpressão de etiqueta no Hospital Vida Serena<br>
+          Hospital: Hospital Vida Serena<br>
+          Módulo: Laboratório<br>
+          Status: <code>support_resolved</code> | SLE: <code>not_applicable</code>
+        </div>
+
+        <div class="ticket S2">
+          <strong>TCK-2026-CW-009</strong> [S2] Divergência de estoque reaparece no Hospital Esperança Norte<br>
+          Hospital: Hospital Esperança Norte<br>
+          Módulo: Estoque<br>
+          Status: <code>s2_confirmed</code> | SLE: <code>open</code>
+        </div>
+        </section>
+</body>
+</html>

@@ -17,6 +17,7 @@ nav:
       - Princípios: method/principles.md
       - Sistemas de resposta: method/response-systems.md
       - Workflows das demandas: method/workflows.md
+      - Gramática visual: method/visual-grammar.md
       - Triagem e gatekeeper: method/triage-and-gatekeeper.md
       - Métricas e sinais de saúde: method/metrics.md
       - Papéis: method/roles.md
@@ -24,6 +25,15 @@ nav:
   - Operação:
       - operations/index.md
       - Cadências e políticas: operations/cadences-and-policies.md
+  - Simulação:
+      - simulation/index.md
+      - Modelo de dados: simulation/data-model.md
+      - Runbook: simulation/runbook.md
+      - Semana atual: simulation/current-week.md
+      - Design de fluxo operacional: simulation/operational-flow-design.md
+      - Revisão mensal: simulation/monthly-review.md
+      - Uso do Mirror HygiaTech: simulation/mirror-usage.md
+      - Roteiro de instalação Mirror: simulation/mirror-installation-runbook.md
   - Adoção:
       - adoption/index.md
       - Guia de adoção: adoption/guide.md

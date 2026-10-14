@@ -1,0 +1,278 @@
+version: 1.0.0
+kind: hygiatech_ticket_batch
+batch:
+  id: BATCH-2026-W02
+  name: Semana 02 da simulação HygiaTech
+  period:
+    start: '2026-06-08'
+    end: '2026-06-12'
+  intent: Histórico fechado para simulação mensal Atlas.
+summary:
+  total_tickets: 11
+  expected_distribution:
+    S2: 6
+    S3: 4
+    suporte: 1
+  simulation_themes:
+  - histórico fechado
+  - capacidade Delphi
+  - aprendizado Atlas
+tickets:
+- id: TCK-2026-W02-001
+  title: Integração de laboratório acumula mensagens no Hospital Regional Pedra Branca
+  hospital_id: HOS-011
+  demand_type: integracao_falhando
+  module: laboratorio
+  opened_at: '2026-06-08T08:20:00-03:00'
+  source: monitoramento
+  reported_by: alerta interno
+  description: Mensagens de exames ficam acumuladas e atrasam retorno para o pronto
+    atendimento.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: alta
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: csharp_api
+  assigned_team: csharp_api
+  assigned_staff: DEV-C-001
+  sle_policy: S2
+- id: TCK-2026-W02-002
+  title: Servidor DataSnap oscila no Hospital Rio Dourado
+  hospital_id: HOS-014
+  demand_type: incidente_indisponibilidade
+  module: internacao
+  opened_at: '2026-06-08T09:05:00-03:00'
+  source: telefone
+  reported_by: coordenação local
+  description: Client desconecta intermitentemente durante registros de internação.
+  perceived_urgency: critica
+  operational_impact: operação_comprometida
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: baixa
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-001
+  sle_policy: S2
+- id: TCK-2026-W02-003
+  title: Fechamento de guia sem código obrigatório volta a gerar retrabalho
+  hospital_id: HOS-006
+  demand_type: correcao_preventiva
+  module: faturamento
+  opened_at: '2026-06-08T11:10:00-03:00'
+  source: learning_review
+  reported_by: coordenação de sustentação
+  description: Recorrência de guias incompletas confirma necessidade de validação
+    preventiva.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3
+- id: TCK-2026-W02-004
+  title: Prescrição apresenta erro ao salvar dose fracionada
+  hospital_id: HOS-016
+  demand_type: defeito_bloqueante
+  module: prescricao
+  opened_at: '2026-06-09T07:55:00-03:00'
+  source: portal
+  reported_by: farmácia clínica
+  description: Erro impede salvar dose fracionada em cenário específico, com contorno
+    manual.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: poucos_usuarios
+  workaround_available: parcial
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-002
+  sle_policy: S2
+- id: TCK-2026-W02-005
+  title: Customização de relatório financeiro solicitada pelo Hospital Metropolitano
+    Lumen
+  hospital_id: HOS-012
+  demand_type: solicitacao_customizacao
+  module: financeiro
+  opened_at: '2026-06-09T10:30:00-03:00'
+  source: executivo_cliente
+  reported_by: diretoria financeira
+  description: Cliente pede layout específico de relatório para reunião executiva.
+  perceived_urgency: alta
+  operational_impact: incomodo
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3
+- id: TCK-2026-W02-006
+  title: Rotina noturna de dados falha e deixa registros pendentes
+  hospital_id: HOS-020
+  demand_type: inconsistencia_dados
+  module: dados
+  opened_at: '2026-06-10T08:40:00-03:00'
+  source: monitoramento
+  reported_by: alerta interno
+  description: Rotina noturna não processou parte dos registros de internação.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: alta
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_seattle
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-001
+  sle_policy: S2
+- id: TCK-2026-W02-007
+  title: Agenda médica mostra conflito inexistente no Centro Médico Primavera
+  hospital_id: HOS-010
+  demand_type: defeito_nao_bloqueante
+  module: agenda
+  opened_at: '2026-06-10T13:15:00-03:00'
+  source: portal
+  reported_by: recepção
+  description: Sistema acusa conflito de agenda em horários livres.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-003
+  sle_policy: S2
+- id: TCK-2026-W02-008
+  title: Melhorar diagnóstico de falha externa em integração de imagem
+  hospital_id: HOS-018
+  demand_type: melhoria_observabilidade
+  module: imagem
+  opened_at: '2026-06-11T09:00:00-03:00'
+  source: interno_hygiatech
+  reported_by: dev C#
+  description: Logs não diferenciam indisponibilidade externa de falha interna.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: csharp_api
+  assigned_team: csharp_api
+  assigned_staff: DEV-C-001
+  sle_policy: S3
+- id: TCK-2026-W02-009
+  title: Dúvida sobre reimpressão de etiqueta de laboratório
+  hospital_id: HOS-013
+  demand_type: duvida_operacional
+  module: laboratorio
+  opened_at: '2026-06-11T11:20:00-03:00'
+  source: telefone
+  reported_by: técnica de laboratório
+  description: Usuária não sabe reimprimir etiqueta após coleta cancelada.
+  perceived_urgency: baixa
+  operational_impact: incomodo
+  affected_users: usuario_unico
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: suporte_sem_atlas
+  response_system: suporte
+  status: support_resolved
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: help_desk
+  assigned_staff: HD-007
+  sle_policy: suporte
+- id: TCK-2026-W02-010
+  title: Fechamento mensal do Hospital Mar Azul ganha prazo crítico
+  hospital_id: HOS-019
+  demand_type: requisito_regulatorio
+  module: faturamento
+  opened_at: '2026-06-12T09:25:00-03:00'
+  source: email
+  reported_by: financeiro
+  description: Regra regulatória já cadastrada como S3 precisa entrar antes do fechamento
+    de segunda.
+  perceived_urgency: alta
+  operational_impact: operação_bloqueada
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-003
+  sle_policy: S2
+- id: TCK-2026-W02-011
+  title: Farmácia solicita alerta antes de baixa duplicada
+  hospital_id: HOS-009
+  demand_type: melhoria_usabilidade
+  module: farmacia
+  opened_at: '2026-06-12T14:10:00-03:00'
+  source: portal
+  reported_by: farmácia
+  description: Chamados recorrentes indicam baixa duplicada por tela ambígua.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3

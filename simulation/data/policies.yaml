@@ -1,0 +1,248 @@
+version: "1.0.0"
+kind: hygiatech_policies
+
+classification:
+  central_question: Que risco esta demanda impõe à operação hospitalar sustentada pelo produto?
+
+  classes:
+    - id: R1
+      system: S1
+      name: Incidente crítico imediato
+      response_system: resposta_imediata
+      description: perda imediata de valor relevante ou ameaça direta à continuidade operacional enquanto o problema persiste
+      criteria:
+        - paralisa processo essencial do hospital
+        - afeta múltiplos usuários ou setor crítico
+        - não há contorno viável
+        - gera risco assistencial, financeiro, regulatório, reputacional ou operacional imediato
+        - a espera aumenta diretamente o dano
+      examples:
+        - servidor DataSnap indisponível para hospital inteiro
+        - prescrição não carrega para unidade inteira
+        - sistema não permite registrar internação
+        - fechamento de convênio crítico travado no último dia útil
+        - falha de dados impede operação assistencial em andamento
+      required_decision: interromper, mobilizar imediatamente e conter perda
+
+    - id: R2
+      system: S2
+      name: Defeito relevante ou operação comprometida
+      response_system: resposta_rapida
+      description: urgência real com operação bloqueada ou comprometida, mas sem perda imediata contínua no grau de R1
+      criteria:
+        - afeta módulo importante ou operação relevante
+        - existe contorno temporário ou impacto limitado
+        - impacto concentrado em setor, usuário, cliente ou cenário específico
+        - há janela curta para evitar consequência relevante
+        - precisa prioridade rápida sem parada total do sistema
+      examples:
+        - relatório de alta sai com campo inconsistente
+        - integração falha para alguns registros
+        - lentidão em rotina específica no Delphi client
+        - erro em faturamento com prazo de fechamento próximo
+        - resultado de laboratório não sincroniza para alguns exames
+      required_decision: priorizar rapidamente, alocar capacidade e preservar janela relevante
+
+    - id: R3
+      system: S3
+      name: Adaptação, melhoria ou aprendizado estrutural
+      response_system: adaptacao_e_aperfeicoamento
+      description: demanda planejável que melhora aderência do produto, reduz recorrência ou adapta regra sem dano imediato relevante
+      criteria:
+        - melhoria de usabilidade
+        - ajuste de regra de negócio sem urgência imediata
+        - automação ou redução de atrito
+        - correção preventiva de recorrência
+        - melhoria de observabilidade
+        - dívida técnica pequena que reduz custo de sustentação
+        - adaptação funcional de capacidade existente
+      examples:
+        - melhorar mensagem de erro no fechamento de conta
+        - automatizar coleta de log DataSnap
+        - criar validação antes de enviar guia
+        - ajustar fluxo solicitado por hospital sem urgência operacional
+        - reduzir recorrência de erro de estoque por regra preventiva
+      required_decision: programar em ciclo e proteger previsibilidade
+
+intake_policy:
+  minimum_fields:
+    - cliente
+    - modulo
+    - versao
+    - ambiente
+    - descricao
+    - quando_comecou
+    - impacto_operacional
+    - usuarios_afetados
+    - existe_contorno
+    - evidencias
+    - urgencia_percebida
+  evidence_examples:
+    - print ou gravação curta do erro
+    - horário aproximado de início
+    - usuário, setor e estação afetados
+    - mensagem de erro completa
+    - quantidade de pacientes, atendimentos ou registros afetados
+    - rotina ou passo a passo para reprodução
+    - logs quando disponíveis
+  help_desk_rule: urgência percebida pelo cliente deve ser registrada, mas não aceita automaticamente como classificação Atlas
+
+sle_policies:
+  - system: S1
+    name: Resposta imediata
+    first_response: 15 minutos
+    triage_target: 30 minutos
+    update_frequency: 60 minutos durante incidente ativo
+    resolution_intent: contorno ou correção emergencial no mesmo dia
+    measurement:
+      primary: DDP de SLE emergencial
+      delay_stages:
+        - chegada
+        - identificacao
+        - reacao
+        - correcao
+        - entrega
+    review_trigger:
+      - qualquer caso fora do SLE
+      - recorrência de mesma causa em 30 dias
+      - interrupção que consome capacidade planejada relevante
+
+  - system: S2
+    name: Resposta rápida
+    first_response: 4 horas úteis
+    triage_target: 1 dia útil
+    investigation_target: 2 a 5 dias úteis
+    resolution_intent: correção em janela de sustentação compatível com risco
+    measurement:
+      primary: DDP de SLE rápido
+      delay_stages:
+        - chegada
+        - identificacao
+        - reacao
+        - correcao
+        - entrega
+    review_trigger:
+      - SLE rompido
+      - reclassificação para S1
+      - mais de 2 ocorrências similares no mesmo módulo em 30 dias
+      - espera por dev Delphi acima do limite do ciclo
+
+  - system: S3
+    name: Adaptação e aperfeiçoamento
+    first_response: 2 dias úteis
+    triage_target: ciclo semanal
+    planning_cadence: quinzenal ou mensal
+    resolution_intent: entrar em ciclo de adaptação quando houver valor, recorrência ou redução de risco suficientes
+    measurement:
+      primary: eficiência da programação
+      cycle_fields:
+        - itens_programados
+        - extras
+        - programados_entregues
+        - acrescidos_entregues
+        - nao_concluidos
+        - eficiencia
+    review_trigger:
+      - excesso de extras no ciclo
+      - baixa entrega de itens programados
+      - demanda S3 envelhecendo até virar S2
+      - capacidade Delphi consumida por recorrências evitáveis
+
+reclassification_policy:
+  rule: reclassificação exige evidência nova ou mudança real de risco, nunca apenas pressão de prioridade
+  allowed_movements:
+    - from: S3
+      to: S2
+      when: demanda planejável passa a bloquear operação ou ganha janela crítica real
+      required_record: evidência da janela, impacto operacional e motivo para não aguardar ciclo S3
+    - from: S3
+      to: S1
+      when: postergação passa a gerar perda imediata relevante
+      required_record: evidência da perda acumulando e revisão de por que o risco envelheceu
+    - from: S2
+      to: S1
+      when: urgência revela perda imediata em curso
+      required_record: nova evidência de dano imediato, setor afetado e interrupção acionada
+    - from: S1
+      to: S2
+      when: perda imediata foi contida, mas resta urgência residual
+      required_record: ação de contenção, risco residual e novo SLE aplicável
+    - from: S1
+      to: S3
+      when: incidente foi contido e resta melhoria planejável
+      required_record: causa provável, aprendizado e candidato de adaptação
+    - from: S2
+      to: S3
+      when: urgência não se confirma ou foi resolvida por contorno suficiente
+      required_record: razão para remover prioridade rápida e critério de programação futura
+
+capacity_policy:
+  weekly_capacity_model:
+    delphi_core:
+      people: 3
+      focus: core Delphi 2007/DataSnap
+      protected_s3_capacity: baixa
+      interruption_risk: alto
+      notes: capacidade Delphi é o gargalo estrutural da simulação e deve aparecer nos ciclos
+    csharp_api:
+      people: 2
+      focus: backend, APIs e integrações
+      protected_s3_capacity: media
+      interruption_risk: medio
+      notes: menor volume de tickets, mas alta criticidade em integrações específicas
+    help_desk:
+      people: 8
+      focus: chegada, evidência e comunicação
+      protected_s3_capacity: nao_aplicavel
+      interruption_risk: alto
+      notes: alta entrada pode degradar qualidade de triagem se evidências forem fracas
+  interruption_rules:
+    - S1 pode interromper trabalho planejado quando há perda imediata relevante
+    - S2 pode alterar prioridade sem paralisar toda a capacidade
+    - S3 não deve ser interrompido por demanda comum disfarçada de urgência
+    - impacto de interrupção deve ser registrado no ciclo afetado
+
+cadences:
+  daily_operational:
+    name: Revisão diária de sustentação operacional
+    questions:
+      - O que entrou?
+      - Há S1 aberto?
+      - Há S2 em risco?
+      - Algum hospital está sem retorno?
+      - Capacidade Delphi está sendo consumida onde?
+  weekly_flow_review:
+    name: Revisão semanal de fluxo
+    questions:
+      - Quantos S1, S2 e S3 entraram?
+      - Quantos foram mal classificados?
+      - Quais clientes concentraram demanda?
+      - Quais módulos concentraram falha?
+      - O que virou aprendizado?
+  s3_planning:
+    name: Programação S3
+    cadence: quinzenal ou mensal
+    questions:
+      - Quais adaptações reduzem recorrência?
+      - Quais melhorias protegem capacidade Delphi?
+      - Quais demandas têm valor para vários hospitais?
+      - O que produto deve assumir?
+
+learning_policy:
+  cycle_questions:
+    - Isso foi recorrente?
+    - A triagem foi correta?
+    - Faltou evidência?
+    - O SLE foi realista?
+    - A capacidade Delphi foi consumida por quê?
+    - Há algo que deve virar S3?
+    - Há regra de produto mal definida?
+  learning_outputs:
+    - ajuste de checklist de chegada
+    - refinamento de critério R1/R2/R3
+    - revisão de SLE
+    - melhoria de comunicação
+    - melhoria técnica pequena
+    - candidato S3
+    - decisão de produto
+    - revisão de capacidade

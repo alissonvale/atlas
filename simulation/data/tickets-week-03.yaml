@@ -1,0 +1,253 @@
+version: 1.0.0
+kind: hygiatech_ticket_batch
+batch:
+  id: BATCH-2026-W03
+  name: Semana 03 da simulação HygiaTech
+  period:
+    start: '2026-06-15'
+    end: '2026-06-19'
+  intent: Histórico fechado para simulação mensal Atlas.
+summary:
+  total_tickets: 10
+  expected_distribution:
+    S1: 1
+    S2: 5
+    S3: 3
+    suporte: 1
+  simulation_themes:
+  - histórico fechado
+  - capacidade Delphi
+  - aprendizado Atlas
+tickets:
+- id: TCK-2026-W03-001
+  title: Pronto atendimento indisponível na Santa Casa de Veredas
+  hospital_id: HOS-008
+  demand_type: incidente_indisponibilidade
+  module: pronto_atendimento
+  opened_at: '2026-06-15T06:55:00-03:00'
+  source: telefone
+  reported_by: plantão
+  description: Client não abre em estações do pronto atendimento durante plantão.
+  perceived_urgency: critica
+  operational_impact: perda_imediata
+  affected_users: setor
+  workaround_available: nao
+  evidence_quality: baixa
+  initial_atlas_class: R1
+  response_system: S1
+  status: s1_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-001
+  sle_policy: S1
+- id: TCK-2026-W03-002
+  title: Erro de dose fracionada retorna em outro hospital
+  hospital_id: HOS-004
+  demand_type: defeito_bloqueante
+  module: prescricao
+  opened_at: '2026-06-15T10:20:00-03:00'
+  source: portal
+  reported_by: enfermagem
+  description: Mesmo padrão de dose fracionada afeta centro cirúrgico com contorno
+    manual.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-002
+  sle_policy: S2
+- id: TCK-2026-W03-003
+  title: API de auditoria demora em consulta de grandes períodos
+  hospital_id: HOS-012
+  demand_type: lentidao
+  module: auditoria
+  opened_at: '2026-06-15T15:00:00-03:00'
+  source: portal
+  reported_by: auditoria
+  description: Consulta de auditoria demora mais de 2 minutos em períodos longos.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: csharp_api
+  assigned_team: csharp_api
+  assigned_staff: DEV-C-001
+  sle_policy: S2
+- id: TCK-2026-W03-004
+  title: Validação preventiva de guia entra em ciclo S3
+  hospital_id: HOS-006
+  demand_type: correcao_preventiva
+  module: faturamento
+  opened_at: '2026-06-16T09:00:00-03:00'
+  source: learning_review
+  reported_by: produto
+  description: Item priorizado por recorrência multi-cliente e redução de chamados.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-003
+  sle_policy: S3
+- id: TCK-2026-W03-005
+  title: Integração externa de imagem fora do ar gera chamados duplicados
+  hospital_id: HOS-018
+  demand_type: falha_comunicacao
+  module: imagem
+  opened_at: '2026-06-16T11:40:00-03:00'
+  source: telefone
+  reported_by: diagnóstico
+  description: Cliente entende como falha HygiaTech, mas fornecedor externo está indisponível.
+  perceived_urgency: alta
+  operational_impact: operação_comprometida
+  affected_users: setor
+  workaround_available: parcial
+  evidence_quality: alta
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: csharp_api
+  assigned_team: csharp_api
+  assigned_staff: DEV-C-002
+  sle_policy: S2
+- id: TCK-2026-W03-006
+  title: Estoque apresenta divergência após transferência entre setores
+  hospital_id: HOS-015
+  demand_type: inconsistencia_dados
+  module: estoque
+  opened_at: '2026-06-17T08:35:00-03:00'
+  source: email
+  reported_by: almoxarifado
+  description: Transferência entre setores mostra saldo divergente após baixa.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: poucos_usuarios
+  workaround_available: parcial
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-002
+  sle_policy: S2
+- id: TCK-2026-W03-007
+  title: Criar alerta para baixa duplicada em farmácia
+  hospital_id: HOS-009
+  demand_type: melhoria_usabilidade
+  module: farmacia
+  opened_at: '2026-06-17T13:50:00-03:00'
+  source: learning_review
+  reported_by: produto
+  description: Alerta preventivo entra como candidato S3 após recorrências.
+  perceived_urgency: baixa
+  operational_impact: retrabalho
+  affected_users: setor
+  workaround_available: sim
+  evidence_quality: alta
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3
+- id: TCK-2026-W03-008
+  title: Ambulatório pede simplificação de busca de histórico
+  hospital_id: HOS-003
+  demand_type: melhoria_usabilidade
+  module: ambulatorio
+  opened_at: '2026-06-18T09:45:00-03:00'
+  source: portal
+  reported_by: coordenação ambulatorial
+  description: Busca de histórico exige muitos cliques em rotina de alto volume.
+  perceived_urgency: baixa
+  operational_impact: incomodo
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: R3
+  response_system: S3
+  status: s3_candidate
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: produto
+  assigned_staff: PROD-001
+  sle_policy: S3
+- id: TCK-2026-W03-009
+  title: Relatório financeiro com divergência de arredondamento
+  hospital_id: HOS-005
+  demand_type: defeito_nao_bloqueante
+  module: financeiro
+  opened_at: '2026-06-18T15:20:00-03:00'
+  source: email
+  reported_by: financeiro
+  description: Valor arredondado diverge em relatório, mas operação segue com conferência
+    manual.
+  perceived_urgency: media
+  operational_impact: retrabalho
+  affected_users: poucos_usuarios
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: R2
+  response_system: S2
+  status: s2_confirmed
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: delphi_core
+  assigned_staff: DEV-D-003
+  sle_policy: S2
+- id: TCK-2026-W03-010
+  title: Dúvida sobre cancelamento de guia já enviada
+  hospital_id: HOS-010
+  demand_type: duvida_operacional
+  module: faturamento
+  opened_at: '2026-06-19T10:10:00-03:00'
+  source: telefone
+  reported_by: faturamento
+  description: Usuária pede orientação sobre cancelamento de guia enviada por engano.
+  perceived_urgency: baixa
+  operational_impact: incomodo
+  affected_users: usuario_unico
+  workaround_available: sim
+  evidence_quality: media
+  initial_atlas_class: suporte_sem_atlas
+  response_system: suporte
+  status: support_resolved
+  version: 7.14.3
+  environment: produção
+  primary_technology: delphi_2007_datasnap
+  assigned_team: help_desk
+  assigned_staff: HD-004
+  sle_policy: suporte

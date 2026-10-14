@@ -1,0 +1,321 @@
+version: "1.0.0"
+kind: hygiatech_staff
+
+teams:
+  - id: TEAM-001
+    slug: help_desk
+    name: Help Desk
+    size: 8
+    role_in_atlas: chegada e qualificação inicial das demandas
+    responsibilities:
+      - registrar demanda com evidência mínima
+      - identificar cliente, módulo, versão e ambiente
+      - separar dúvida, incidente, defeito e melhoria
+      - descrever impacto operacional percebido
+      - acionar gatekeeper quando houver risco operacional
+      - comunicar retorno inicial ao cliente
+    constraints:
+      - pressão direta dos hospitais durante incidentes
+      - qualidade variável de evidências recebidas
+      - risco de aceitar urgência percebida como prioridade real
+    mirror_usage:
+      - organizar relato do cliente
+      - formular perguntas de evidência mínima
+      - preparar resumo para triagem
+      - sugerir comunicação inicial ao cliente
+
+  - id: TEAM-002
+    slug: delphi_core
+    name: Desenvolvimento Delphi Core
+    size: 3
+    role_in_atlas: correção e investigação do core legado Delphi 2007/DataSnap
+    responsibilities:
+      - investigar incidentes no client/server Delphi
+      - corrigir defeitos no core legado
+      - avaliar risco de correções emergenciais
+      - apoiar triagem técnica de S1 e S2
+      - registrar causas prováveis e contornos
+    constraints:
+      - gargalo principal da sustentação
+      - alto acoplamento legado
+      - baixa disponibilidade para S3 quando S1/S2 invadem a agenda
+      - dependência de conhecimento tácito
+    mirror_usage:
+      - reconstruir contexto operacional antes da correção
+      - explicitar hipótese técnica
+      - registrar risco de alteração
+      - transformar recorrências em candidatos S3
+
+  - id: TEAM-003
+    slug: csharp_api
+    name: Desenvolvimento C# API
+    size: 2
+    role_in_atlas: sustentação de backend/API e integrações
+    responsibilities:
+      - investigar falhas em APIs e integrações
+      - corrigir serviços C#
+      - separar falha interna de indisponibilidade externa
+      - apoiar observabilidade e logs
+      - conectar eventos técnicos com impacto operacional
+    constraints:
+      - menor volume de demanda que Delphi
+      - alta criticidade em integrações específicas
+      - dependência de contratos externos
+      - visibilidade incompleta quando o erro nasce no core Delphi
+    mirror_usage:
+      - analisar logs e hipóteses de integração
+      - explicar impacto técnico para gatekeeper
+      - documentar contratos e falhas recorrentes
+      - propor melhorias de observabilidade
+
+  - id: TEAM-004
+    slug: sustentacao
+    name: Coordenação de Sustentação
+    size: 1
+    role_in_atlas: governança do fluxo, revisão de SLE e aprendizado operacional
+    responsibilities:
+      - acompanhar S1 e S2 ativos
+      - revisar DDP e causas de atraso
+      - proteger capacidade técnica
+      - conduzir revisão semanal de fluxo
+      - decidir ajustes de processo com produto e tecnologia
+      - garantir que aprendizados virem ação
+    constraints:
+      - precisa equilibrar pressão comercial, operação hospitalar e capacidade real
+      - risco de centralização excessiva no gatekeeper
+      - precisa tornar visível a invasão de S3 por urgências
+    mirror_usage:
+      - preparar SLE Pulse
+      - conduzir Learning Review
+      - interpretar gargalos por tecnologia
+      - registrar decisões operacionais
+
+  - id: TEAM-005
+    slug: produto
+    name: Produto e Negócio
+    size: 1
+    role_in_atlas: seleção e priorização de S3, fronteira entre sustentação e evolução
+    responsibilities:
+      - priorizar adaptações de S3
+      - avaliar valor multi-cliente
+      - separar melhoria de sustentação de nova capacidade de produto
+      - revisar recorrências que apontam para decisão de produto
+      - alinhar comunicação com clientes estratégicos
+    constraints:
+      - pressão por customizações específicas de hospitais
+      - risco de transformar S3 em fila genérica de pedidos
+      - necessidade de proteger roadmap de produto sem abandonar sustentação
+    mirror_usage:
+      - comparar demandas recorrentes
+      - identificar padrões multi-cliente
+      - preparar programação S3
+      - registrar decisões de escopo e não escopo
+
+staff:
+  - id: HD-001
+    name: Marina Torres
+    team: help_desk
+    role: analista de help desk sênior
+    strengths:
+      - boa leitura operacional
+      - comunicação cuidadosa com hospitais críticos
+      - sabe quando acionar gatekeeper
+    risks:
+      - pode segurar casos tempo demais tentando qualificar perfeitamente
+    atlas_focus:
+      - chegada
+      - qualificação
+      - comunicação
+
+  - id: HD-002
+    name: Caio Mendes
+    team: help_desk
+    role: analista de help desk
+    strengths:
+      - velocidade de resposta
+      - boa coleta de prints e dados básicos
+    risks:
+      - tende a aceitar urgência percebida como urgência real
+    atlas_focus:
+      - chegada
+      - qualificação
+
+  - id: HD-003
+    name: Renata Pires
+    team: help_desk
+    role: analista de help desk
+    strengths:
+      - organização de chamados
+      - persistência com clientes de baixa maturidade
+    risks:
+      - dificuldade de traduzir impacto operacional em termos de risco
+    atlas_focus:
+      - chegada
+      - evidência mínima
+
+  - id: HD-004
+    name: Bruno Nascimento
+    team: help_desk
+    role: analista de help desk
+    strengths:
+      - conhecimento funcional de faturamento
+      - bom relacionamento com clientes financeiros
+    risks:
+      - pode supervalorizar demandas de fechamento por familiaridade com o módulo
+    atlas_focus:
+      - faturamento
+      - qualificação
+
+  - id: HD-005
+    name: Aline Farias
+    team: help_desk
+    role: analista de help desk
+    strengths:
+      - boa escuta de usuários assistenciais
+      - clareza ao pedir reprodução
+    risks:
+      - pouca familiaridade com logs e evidências técnicas
+    atlas_focus:
+      - pronto_atendimento
+      - internacao
+      - prescricao
+
+  - id: HD-006
+    name: Felipe Rocha
+    team: help_desk
+    role: analista de help desk
+    strengths:
+      - entende integrações melhor que a média do help desk
+      - sabe envolver C# API cedo
+    risks:
+      - pode pular etapas de qualificação funcional quando vê erro técnico
+    atlas_focus:
+      - integracoes
+      - laboratorio
+      - imagem
+
+  - id: HD-007
+    name: Patrícia Lima
+    team: help_desk
+    role: analista de help desk júnior
+    strengths:
+      - disciplina no registro de campos obrigatórios
+      - boa organização de evidências simples
+    risks:
+      - insegurança para questionar urgência declarada pelo cliente
+    atlas_focus:
+      - chegada
+      - registro
+
+  - id: HD-008
+    name: Diego Ramos
+    team: help_desk
+    role: analista de help desk
+    strengths:
+      - rapidez em contornos operacionais conhecidos
+      - boa memória de chamados recorrentes
+    risks:
+      - pode resolver sem registrar aprendizado suficiente
+    atlas_focus:
+      - contorno
+      - recorrencia
+
+  - id: DEV-D-001
+    name: Eduardo Salles
+    team: delphi_core
+    role: dev Delphi sênior
+    strengths:
+      - conhecimento profundo do DataSnap e do core legado
+      - boa leitura de risco em correções emergenciais
+    risks:
+      - gargalo por concentração de conhecimento tácito
+    atlas_focus:
+      - S1
+      - correção crítica
+      - causa provável
+
+  - id: DEV-D-002
+    name: Letícia Andrade
+    team: delphi_core
+    role: dev Delphi pleno
+    strengths:
+      - consistência em investigação
+      - boa documentação de hipóteses
+    risks:
+      - menor autonomia em áreas antigas do core
+    atlas_focus:
+      - S2
+      - investigação
+      - adaptação pequena
+
+  - id: DEV-D-003
+    name: Rafael Cunha
+    team: delphi_core
+    role: dev Delphi pleno
+    strengths:
+      - velocidade em correções localizadas
+      - familiaridade com faturamento e financeiro
+    risks:
+      - risco de aplicar correção rápida sem capturar aprendizado estrutural
+    atlas_focus:
+      - faturamento
+      - financeiro
+      - S2
+
+  - id: DEV-C-001
+    name: Camila Duarte
+    team: csharp_api
+    role: dev C# sênior
+    strengths:
+      - integrações e contratos de API
+      - observabilidade e logs
+    risks:
+      - pode tratar como problema técnico algo que precisa de decisão operacional
+    atlas_focus:
+      - integracoes
+      - auditoria
+      - observabilidade
+
+  - id: DEV-C-002
+    name: Lucas Barros
+    team: csharp_api
+    role: dev C# pleno
+    strengths:
+      - backend e rotinas de sincronização
+      - boa comunicação com help desk técnico
+    risks:
+      - dependência de Camila para decisões de arquitetura de integração
+    atlas_focus:
+      - imagem
+      - laboratorio
+      - sincronizacao
+
+  - id: COORD-001
+    name: Sofia Martins
+    team: sustentacao
+    role: coordenadora de sustentação e gatekeeper principal
+    strengths:
+      - protege fronteira entre urgência real e pressão
+      - boa leitura de capacidade
+      - conduz revisão semanal com clareza
+    risks:
+      - risco de centralização da triagem
+    atlas_focus:
+      - triagem
+      - SLE
+      - Learning Review
+
+  - id: PROD-001
+    name: Henrique Valença
+    team: produto
+    role: responsável de produto
+    strengths:
+      - percebe padrões multi-cliente
+      - separa adaptação de nova capacidade
+      - ajuda a transformar recorrência em decisão de produto
+    risks:
+      - pode postergar decisões difíceis quando há clientes estratégicos em conflito
+    atlas_focus:
+      - S3
+      - programação
+      - priorização

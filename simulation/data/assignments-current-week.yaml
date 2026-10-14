@@ -1,0 +1,168 @@
+version: "1.0.0"
+kind: hygiatech_assignments
+
+batch:
+  id: ASSIGN-2026-CURRENT
+  name: Escala operacional da semana atual
+  period:
+    start: "2026-06-29"
+    end: "2026-07-03"
+  intent: >
+    Registrar onde cada pessoa está alocada na semana atual para que a entrada
+    operacional do Mirror possa mostrar a visão adequada da sustentação.
+
+assignments:
+  - staff_id: HD-003
+    staff_name: Renata Pires
+    shift: manha
+    allocation: pronto_atendimento
+    response_systems:
+      - S1
+      - S2
+    role_today: help_desk_intake
+    responsibilities:
+      - qualificar entradas do pronto atendimento
+      - buscar evidência mínima para demandas incertas
+      - acionar gatekeeper quando houver risco operacional
+    focus_tickets:
+      - TCK-2026-CW-003
+
+  - staff_id: HD-005
+    staff_name: Aline Farias
+    shift: manha
+    allocation: pronto_atendimento
+    response_systems:
+      - S1
+      - S2
+    role_today: help_desk_assistencial
+    responsibilities:
+      - apoiar incidentes assistenciais
+      - organizar relatos de prescrição e internação
+      - preparar comunicação inicial para hospitais críticos
+    focus_tickets:
+      - TCK-2026-CW-001
+
+  - staff_id: HD-004
+    staff_name: Bruno Nascimento
+    shift: integral
+    allocation: faturamento
+    response_systems:
+      - S2
+      - S3
+    role_today: help_desk_faturamento
+    responsibilities:
+      - qualificar demandas de faturamento
+      - separar janela crítica de pressão financeira
+      - apoiar comunicação com financeiro dos hospitais
+    focus_tickets:
+      - TCK-2026-CW-002
+
+  - staff_id: DEV-D-001
+    staff_name: Eduardo Salles
+    shift: integral
+    allocation: resposta_imediata_delphi
+    response_systems:
+      - S1
+    role_today: delphi_s1
+    responsibilities:
+      - responder S1 no core Delphi
+      - apoiar contenção de prescrição e DataSnap
+      - registrar aprendizado após contenção
+    focus_tickets:
+      - TCK-2026-CW-001
+
+  - staff_id: DEV-D-002
+    staff_name: Letícia Andrade
+    shift: tarde
+    allocation: resposta_rapida_delphi
+    response_systems:
+      - S2
+    role_today: delphi_s2
+    responsibilities:
+      - investigar divergências de estoque
+      - registrar hipótese técnica e risco da correção
+      - indicar candidato S3 quando houver recorrência
+    focus_tickets:
+      - TCK-2026-CW-009
+
+  - staff_id: DEV-D-003
+    staff_name: Rafael Cunha
+    shift: integral
+    allocation: faturamento
+    response_systems:
+      - S2
+      - S3
+    role_today: delphi_faturamento
+    responsibilities:
+      - tratar janela crítica de faturamento
+      - apoiar validação preventiva de guia
+      - explicitar impacto sobre capacidade S3
+    focus_tickets:
+      - TCK-2026-CW-002
+      - TCK-2026-CW-007
+
+  - staff_id: DEV-C-001
+    staff_name: Camila Duarte
+    shift: integral
+    allocation: adaptacao_integracoes
+    response_systems:
+      - S3
+    role_today: csharp_s3_observabilidade
+    responsibilities:
+      - preparar alerta preventivo de token
+      - reduzir recorrência de integrações virando S2
+      - apoiar programação S3 de observabilidade
+    focus_tickets:
+      - TCK-2026-CW-006
+
+  - staff_id: DEV-C-002
+    staff_name: Lucas Barros
+    shift: tarde
+    allocation: resposta_rapida_integracoes
+    response_systems:
+      - S2
+    role_today: csharp_s2_integracoes
+    responsibilities:
+      - investigar anexos grandes na API de imagem
+      - comunicar contorno técnico ao help desk
+      - registrar necessidade de ajuste estrutural se recorrente
+    focus_tickets:
+      - TCK-2026-CW-004
+
+  - staff_id: COORD-001
+    staff_name: Sofia Martins
+    shift: integral
+    allocation: coordenacao_sustentacao
+    response_systems:
+      - S1
+      - S2
+      - S3
+    role_today: gatekeeper_coordination
+    responsibilities:
+      - estabilizar triagens críticas
+      - proteger capacidade Delphi
+      - preparar decisão de programação S3
+      - conduzir learning review parcial da semana
+    focus_tickets:
+      - TCK-2026-CW-001
+      - TCK-2026-CW-002
+      - TCK-2026-CW-003
+      - TCK-2026-CW-005
+      - TCK-2026-CW-007
+      - TCK-2026-CW-009
+
+  - staff_id: PROD-001
+    staff_name: Henrique Valença
+    shift: integral
+    allocation: adaptacao_e_aperfeicoamento
+    response_systems:
+      - S3
+    role_today: product_s3_programming
+    responsibilities:
+      - decidir programação S3
+      - proteger S3 contra pressão comercial sem risco
+      - avaliar expansão da validação preventiva de guia
+    focus_tickets:
+      - TCK-2026-CW-005
+      - TCK-2026-CW-006
+      - TCK-2026-CW-007

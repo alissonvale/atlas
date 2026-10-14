@@ -1,0 +1,284 @@
+version: "1.0.0"
+kind: hygiatech_demand_types
+
+demand_types:
+  - id: DT-001
+    slug: duvida_operacional
+    name: Dúvida operacional
+    description: solicitação de orientação sobre uso do sistema sem evidência inicial de defeito
+    usual_atlas_class: suporte_sem_atlas
+    typical_entry_channel: help_desk
+    risk_factors:
+      - usuário não sabe concluir rotina
+      - equipe local nova ou pouco treinada
+      - documentação operacional insuficiente
+    evidence_needed:
+      - rotina que o usuário tentou executar
+      - tela ou módulo envolvido
+      - resultado esperado pelo usuário
+      - orientação já tentada
+    routing_notes: pode ser resolvida pelo help desk; só vira Atlas se revelar bloqueio, defeito ou recorrência estrutural
+
+  - id: DT-002
+    slug: incidente_indisponibilidade
+    name: Incidente de indisponibilidade
+    description: sistema, módulo ou serviço indisponível para operação relevante
+    usual_atlas_class: R1
+    typical_entry_channel: help_desk_monitoramento_cliente
+    risk_factors:
+      - múltiplos usuários afetados
+      - setor crítico parado
+      - ausência de contorno
+      - perda assistencial, financeira ou regulatória acumulando
+    evidence_needed:
+      - horário de início
+      - escopo da indisponibilidade
+      - setores e usuários afetados
+      - mensagem de erro ou evidência técnica
+      - confirmação se há contorno
+    routing_notes: candidato forte a S1; se o impacto for localizado e houver contorno, pode ser S2
+
+  - id: DT-003
+    slug: defeito_bloqueante
+    name: Defeito bloqueante
+    description: erro funcional que impede concluir uma operação relevante
+    usual_atlas_class: R2
+    typical_entry_channel: help_desk
+    risk_factors:
+      - operação importante não conclui
+      - janela operacional curta
+      - contorno parcial ou custoso
+      - cliente com baixa tolerância a atraso
+    evidence_needed:
+      - passo a passo
+      - usuário e setor afetados
+      - dados ou registro envolvidos
+      - print ou mensagem de erro
+      - frequência do erro
+    routing_notes: normalmente S2; pode virar S1 se bloquear setor crítico sem contorno ou gerar perda imediata
+
+  - id: DT-004
+    slug: defeito_nao_bloqueante
+    name: Defeito não bloqueante
+    description: erro ou inconsistência com impacto real, mas que não impede a operação principal
+    usual_atlas_class: R2
+    typical_entry_channel: help_desk
+    risk_factors:
+      - inconsistência visível ao cliente
+      - retrabalho operacional
+      - risco de erro humano por contorno
+      - recorrência em cliente ou módulo importante
+    evidence_needed:
+      - descrição da inconsistência
+      - impacto operacional
+      - contorno existente
+      - exemplos de registros afetados
+      - frequência observada
+    routing_notes: fica em S2 quando há urgência real; pode descer para S3 se for planejável e sem janela crítica
+
+  - id: DT-005
+    slug: lentidao
+    name: Lentidão
+    description: degradação de desempenho percebida em módulo, rotina ou ambiente
+    usual_atlas_class: R2
+    typical_entry_channel: help_desk_monitoramento
+    risk_factors:
+      - plantão ou setor com fila crescente
+      - rotina crítica em horário de pico
+      - lentidão generalizada
+      - degradação recorrente sem causa conhecida
+    evidence_needed:
+      - módulo e rotina afetados
+      - horário e duração
+      - número de usuários afetados
+      - comparação com comportamento normal
+      - logs ou métricas quando disponíveis
+    routing_notes: pode ser S1 se equivaler a indisponibilidade operacional; pode virar S3 quando pede melhoria estrutural
+
+  - id: DT-006
+    slug: integracao_falhando
+    name: Integração falhando
+    description: falha de sincronização, API, contrato ou comunicação com sistema externo
+    usual_atlas_class: R2
+    typical_entry_channel: help_desk_monitoramento
+    risk_factors:
+      - exames, laudos ou faturamento dependem da integração
+      - mensagens acumulando
+      - contrato externo rejeitando dados
+      - terceiro indisponível
+    evidence_needed:
+      - sistema externo envolvido
+      - payload, protocolo ou mensagem de erro quando possível
+      - quantidade de registros afetados
+      - impacto operacional
+      - distinção entre falha interna e externa
+    routing_notes: exige triagem técnica C# ou integração; não assumir culpa interna sem evidência
+
+  - id: DT-007
+    slug: inconsistencia_dados
+    name: Inconsistência de dados
+    description: dado incorreto, duplicado, ausente ou incoerente afetando rotina operacional
+    usual_atlas_class: R2
+    typical_entry_channel: help_desk
+    risk_factors:
+      - bloqueio de atendimento ou faturamento
+      - impacto em múltiplos registros
+      - necessidade de script manual
+      - risco regulatório ou assistencial
+    evidence_needed:
+      - registros afetados
+      - origem provável da inconsistência
+      - módulo onde aparece
+      - impacto operacional
+      - necessidade de correção manual ou sistêmica
+    routing_notes: pode exigir S2 para correção de dados e S3 posterior para prevenir recorrência
+
+  - id: DT-008
+    slug: ajuste_regra_negocio
+    name: Ajuste de regra de negócio
+    description: alteração de regra existente por mudança operacional, convênio, legislação ou processo do hospital
+    usual_atlas_class: R3
+    typical_entry_channel: help_desk_produto
+    risk_factors:
+      - prazo externo próximo
+      - regra afeta fechamento financeiro
+      - múltiplos hospitais compartilham necessidade
+      - risco de customização específica demais
+    evidence_needed:
+      - regra atual
+      - regra desejada
+      - motivo da mudança
+      - prazo real
+      - hospitais ou convênios afetados
+    routing_notes: normalmente S3; vira S2 se houver janela crítica real e operação comprometida
+
+  - id: DT-009
+    slug: melhoria_usabilidade
+    name: Melhoria de usabilidade
+    description: alteração para reduzir atrito, erro humano, cliques, ambiguidade ou dificuldade de uso
+    usual_atlas_class: R3
+    typical_entry_channel: help_desk_produto
+    risk_factors:
+      - recorrência de dúvidas
+      - erro humano frequente
+      - impacto em vários hospitais
+      - rotina de alto volume
+    evidence_needed:
+      - exemplo do atrito
+      - frequência
+      - usuários ou setores afetados
+      - impacto esperado da melhoria
+      - relação com chamados recorrentes
+    routing_notes: candidato típico a S3 quando reduz demanda futura e protege capacidade
+
+  - id: DT-010
+    slug: melhoria_observabilidade
+    name: Melhoria de observabilidade
+    description: criação ou ajuste de logs, diagnósticos, painéis ou coleta automática de evidência
+    usual_atlas_class: R3
+    typical_entry_channel: tecnologia_sustentacao
+    risk_factors:
+      - tempo alto de identificação
+      - baixa qualidade de evidência
+      - recorrência sem causa clara
+      - dependência de especialista Delphi
+    evidence_needed:
+      - onde a investigação está cega
+      - quais dados faltam
+      - casos recentes afetados
+      - ganho esperado em identificação ou reação
+    routing_notes: S3 importante para reduzir atraso em S1/S2, especialmente no core Delphi/DataSnap
+
+  - id: DT-011
+    slug: correcao_preventiva
+    name: Correção preventiva
+    description: mudança pequena para evitar recorrência conhecida antes que volte como urgência
+    usual_atlas_class: R3
+    typical_entry_channel: learning_review
+    risk_factors:
+      - ocorrência repetida
+      - contorno manual conhecido
+      - baixo esforço relativo
+      - alto custo de suporte quando reaparece
+    evidence_needed:
+      - casos anteriores
+      - causa provável
+      - impacto acumulado
+      - proposta de prevenção
+      - critério de sucesso
+    routing_notes: nasce frequentemente de Learning Review; deve competir em S3 por redução de risco e recorrência
+
+  - id: DT-012
+    slug: script_correcao
+    name: Script ou correção manual de dados
+    description: intervenção controlada em dados ou rotina técnica para corrigir estado operacional
+    usual_atlas_class: R2
+    typical_entry_channel: help_desk_tecnologia
+    risk_factors:
+      - risco de alteração indevida
+      - urgência operacional
+      - múltiplos registros afetados
+      - ausência de rotina segura no produto
+    evidence_needed:
+      - registros exatos
+      - estado atual e estado esperado
+      - autorização ou validação necessária
+      - backup ou reversibilidade
+      - causa provável
+    routing_notes: pode resolver S2, mas deve gerar S3 quando a necessidade de script for recorrente
+
+  - id: DT-013
+    slug: solicitacao_customizacao
+    name: Solicitação de customização
+    description: pedido específico de um hospital para alterar fluxo, tela, relatório ou regra de acordo com preferência local
+    usual_atlas_class: R3
+    typical_entry_channel: produto_comercial_help_desk
+    risk_factors:
+      - cliente estratégico pressiona por prioridade
+      - demanda não beneficia outros hospitais
+      - pode criar variação difícil de sustentar
+      - confusão entre contrato, produto e suporte
+    evidence_needed:
+      - necessidade de negócio
+      - diferença entre preferência e risco operacional
+      - clientes potencialmente beneficiados
+      - alternativa sem customização
+      - impacto de manutenção futura
+    routing_notes: não deve entrar em S1/S2 sem risco real; exige decisão de produto
+
+  - id: DT-014
+    slug: requisito_regulatorio
+    name: Requisito regulatório ou legal
+    description: mudança exigida por norma, legislação, convênio ou obrigação formal
+    usual_atlas_class: R3
+    typical_entry_channel: produto_cliente
+    risk_factors:
+      - prazo legal próximo
+      - multa ou glosa possível
+      - múltiplos hospitais afetados
+      - obrigação de auditoria
+    evidence_needed:
+      - fonte da obrigação
+      - prazo
+      - clientes afetados
+      - regra atual e regra necessária
+      - consequência de não atender
+    routing_notes: normalmente S3 planejado; vira S2 quando a janela de prazo passa a comprometer operação ou conformidade
+
+  - id: DT-015
+    slug: falha_comunicacao
+    name: Falha de comunicação ou expectativa
+    description: problema percebido nasce de ausência de retorno, informação ambígua ou desalinhamento de expectativa
+    usual_atlas_class: suporte_sem_atlas
+    typical_entry_channel: help_desk_coordenação
+    risk_factors:
+      - cliente acredita que está sem atendimento
+      - urgência aumenta por falta de atualização
+      - múltiplos canais com informação divergente
+      - confiança operacional em queda
+    evidence_needed:
+      - histórico de comunicação
+      - compromisso assumido
+      - expectativa do cliente
+      - estado real da demanda
+    routing_notes: pode acompanhar S1/S2, mas não deve substituir classificação de risco técnico-operacional

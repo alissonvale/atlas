@@ -1,0 +1,399 @@
+version: 1.0.0
+kind: hygiatech_event_batch
+batch:
+  id: EVENTS-2026-W03
+  ticket_batch_id: BATCH-2026-W03
+  name: Eventos da Semana 03 da simulação HygiaTech
+  period:
+    start: '2026-06-15'
+    end: '2026-06-19'
+  intent: Histórico operacional fechado.
+events:
+- id: EVT-W03-01-01
+  ticket_id: TCK-2026-W03-001
+  occurred_at: '2026-06-15T06:55:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Pronto atendimento indisponível na Santa Casa de Veredas.'
+  mirror_used: false
+- id: EVT-W03-01-02
+  ticket_id: TCK-2026-W03-001
+  occurred_at: '2026-06-15T07:35:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s1_confirmed
+  from_class: incerta
+  to_class: R1
+  summary: S1 confirmado por triagem Atlas.
+  evidence: perda_imediata
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W03-01-03
+  ticket_id: TCK-2026-W03-001
+  occurred_at: '2026-06-15T08:55:00-03:00'
+  event_type: workaround_applied
+  actor_type: dev
+  actor_id: DEV-D-001
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W03-01-04
+  ticket_id: TCK-2026-W03-001
+  occurred_at: '2026-06-15T09:55:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-008
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W03-02-01
+  ticket_id: TCK-2026-W03-002
+  occurred_at: '2026-06-15T10:20:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Erro de dose fracionada retorna em outro hospital.'
+  mirror_used: false
+- id: EVT-W03-02-02
+  ticket_id: TCK-2026-W03-002
+  occurred_at: '2026-06-15T11:00:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_comprometida
+  mirror_used: false
+- id: EVT-W03-02-03
+  ticket_id: TCK-2026-W03-002
+  occurred_at: '2026-06-15T12:20:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-002
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W03-02-04
+  ticket_id: TCK-2026-W03-002
+  occurred_at: '2026-06-15T13:20:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-004
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W03-03-01
+  ticket_id: TCK-2026-W03-003
+  occurred_at: '2026-06-15T15:00:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: API de auditoria demora em consulta de grandes períodos.'
+  mirror_used: false
+- id: EVT-W03-03-02
+  ticket_id: TCK-2026-W03-003
+  occurred_at: '2026-06-15T15:40:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: false
+- id: EVT-W03-03-03
+  ticket_id: TCK-2026-W03-003
+  occurred_at: '2026-06-15T17:00:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-C-001
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W03-03-04
+  ticket_id: TCK-2026-W03-003
+  occurred_at: '2026-06-15T18:00:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-012
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W03-04-01
+  ticket_id: TCK-2026-W03-004
+  occurred_at: '2026-06-16T09:00:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Validação preventiva de guia entra em ciclo S3.'
+  mirror_used: false
+- id: EVT-W03-04-02
+  ticket_id: TCK-2026-W03-004
+  occurred_at: '2026-06-16T09:40:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W03-04-03
+  ticket_id: TCK-2026-W03-004
+  occurred_at: '2026-06-16T11:00:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W03-05-01
+  ticket_id: TCK-2026-W03-005
+  occurred_at: '2026-06-16T11:40:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Integração externa de imagem fora do ar gera chamados
+    duplicados.'
+  mirror_used: false
+- id: EVT-W03-05-02
+  ticket_id: TCK-2026-W03-005
+  occurred_at: '2026-06-16T12:20:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: operação_comprometida
+  mirror_used: false
+- id: EVT-W03-05-03
+  ticket_id: TCK-2026-W03-005
+  occurred_at: '2026-06-16T13:40:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-C-002
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W03-05-04
+  ticket_id: TCK-2026-W03-005
+  occurred_at: '2026-06-16T14:40:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-018
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W03-06-01
+  ticket_id: TCK-2026-W03-006
+  occurred_at: '2026-06-17T08:35:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Estoque apresenta divergência após transferência entre
+    setores.'
+  mirror_used: false
+- id: EVT-W03-06-02
+  ticket_id: TCK-2026-W03-006
+  occurred_at: '2026-06-17T09:15:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: false
+- id: EVT-W03-06-03
+  ticket_id: TCK-2026-W03-006
+  occurred_at: '2026-06-17T10:35:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-002
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W03-06-04
+  ticket_id: TCK-2026-W03-006
+  occurred_at: '2026-06-17T11:35:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-015
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W03-07-01
+  ticket_id: TCK-2026-W03-007
+  occurred_at: '2026-06-17T13:50:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Criar alerta para baixa duplicada em farmácia.'
+  mirror_used: false
+- id: EVT-W03-07-02
+  ticket_id: TCK-2026-W03-007
+  occurred_at: '2026-06-17T14:30:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W03-07-03
+  ticket_id: TCK-2026-W03-007
+  occurred_at: '2026-06-17T15:50:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W03-08-01
+  ticket_id: TCK-2026-W03-008
+  occurred_at: '2026-06-18T09:45:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Ambulatório pede simplificação de busca de histórico.'
+  mirror_used: false
+- id: EVT-W03-08-02
+  ticket_id: TCK-2026-W03-008
+  occurred_at: '2026-06-18T10:25:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s3_candidate
+  from_class: incerta
+  to_class: R3
+  summary: S3 confirmado por triagem Atlas.
+  evidence: incomodo
+  mirror_used: true
+  mirror_prompt_summary: apoiar classificação e comunicação inicial
+- id: EVT-W03-08-03
+  ticket_id: TCK-2026-W03-008
+  occurred_at: '2026-06-18T11:45:00-03:00'
+  event_type: s3_candidate_created
+  actor_type: produto
+  actor_id: PROD-001
+  from_status: s3_candidate
+  to_status: qualified
+  summary: Item qualificado para programação S3.
+  evidence: demanda planejável com potencial de reduzir recorrência ou adaptar regra
+  mirror_used: false
+- id: EVT-W03-09-01
+  ticket_id: TCK-2026-W03-009
+  occurred_at: '2026-06-18T15:20:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-002
+  to_status: new_signal
+  summary: 'Demanda aberta: Relatório financeiro com divergência de arredondamento.'
+  mirror_used: false
+- id: EVT-W03-09-02
+  ticket_id: TCK-2026-W03-009
+  occurred_at: '2026-06-18T16:00:00-03:00'
+  event_type: triage_decided
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  from_status: new_signal
+  to_status: s2_confirmed
+  from_class: incerta
+  to_class: R2
+  summary: S2 confirmado por triagem Atlas.
+  evidence: retrabalho
+  mirror_used: false
+- id: EVT-W03-09-03
+  ticket_id: TCK-2026-W03-009
+  occurred_at: '2026-06-18T17:20:00-03:00'
+  event_type: fix_completed
+  actor_type: dev
+  actor_id: DEV-D-003
+  from_status: correcting
+  to_status: delivering
+  summary: Resposta técnica aplicada ou contenção executada.
+  mirror_used: false
+- id: EVT-W03-09-04
+  ticket_id: TCK-2026-W03-009
+  occurred_at: '2026-06-18T18:20:00-03:00'
+  event_type: customer_validated
+  actor_type: customer
+  actor_id: HOS-005
+  from_status: delivering
+  to_status: closed
+  summary: Cliente confirma redução do risco operacional.
+  mirror_used: false
+- id: EVT-W03-10-01
+  ticket_id: TCK-2026-W03-010
+  occurred_at: '2026-06-19T10:10:00-03:00'
+  event_type: ticket_opened
+  actor_type: help_desk
+  actor_id: HD-004
+  to_status: new_signal
+  summary: 'Demanda aberta: Dúvida sobre cancelamento de guia já enviada.'
+  mirror_used: false
+- id: EVT-W03-10-02
+  ticket_id: TCK-2026-W03-010
+  occurred_at: '2026-06-19T10:35:00-03:00'
+  event_type: closed
+  actor_type: help_desk
+  actor_id: HD-004
+  from_status: new_signal
+  to_status: support_resolved
+  from_class: incerta
+  to_class: suporte_sem_atlas
+  summary: Help desk resolve sem entrada no Atlas.
+  mirror_used: false
+- id: EVT-W03-99-01
+  ticket_id: TCK-2026-W03-010
+  occurred_at: '2026-06-19T16:30:00-03:00'
+  event_type: learning_review_created
+  actor_type: gatekeeper
+  actor_id: COORD-001
+  summary: Revisão semanal week-03 consolida sinais para o relatório mensal.
+  evidence: volume, gargalos e candidatos S3 revisados
+  mirror_used: true
+  mirror_prompt_summary: sintetizar aprendizados da semana

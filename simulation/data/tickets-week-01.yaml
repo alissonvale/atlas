@@ -1,0 +1,391 @@
+version: "1.0.0"
+kind: hygiatech_ticket_batch
+
+batch:
+  id: BATCH-2026-W01
+  name: Semana 01 da simulação HygiaTech
+  period:
+    start: "2026-06-01"
+    end: "2026-06-05"
+  intent: >
+    Primeiro lote de demandas sintéticas para testar triagem Atlas, SLEs,
+    capacidade Delphi/C# e geração de aprendizado operacional.
+
+summary:
+  total_tickets: 14
+  expected_distribution:
+    S1: 2
+    S2: 6
+    S3: 5
+    suporte: 1
+  simulation_themes:
+    - pressão em faturamento no início do mês
+    - gargalo Delphi em rotinas críticas
+    - evidência fraca aumentando tempo de identificação
+    - integrações C# com impacto limitado, mas urgente
+    - demandas recorrentes que devem virar S3
+
+tickets:
+  - id: TCK-2026-W01-001
+    title: Servidor DataSnap indisponível para o Hospital Santa Aurora
+    hospital_id: HOS-002
+    demand_type: incidente_indisponibilidade
+    module: pronto_atendimento
+    opened_at: "2026-06-01T07:42:00-03:00"
+    source: telefone
+    reported_by: coordenação de TI hospitalar
+    description: Usuários do pronto atendimento não conseguem abrir o sistema; erro de conexão com servidor DataSnap.
+    perceived_urgency: critica
+    operational_impact: perda_imediata
+    affected_users: setor
+    workaround_available: nao
+    evidence_quality: alta
+    initial_atlas_class: R1
+    response_system: S1
+    status: s1_confirmed
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-001
+    sle_policy: S1
+    mirror_interactions:
+      - stage: triagem
+        actor_id: COORD-001
+        purpose: confirmar critérios R1 e preparar comunicação inicial
+        output_summary: perda imediata confirmada; sem contorno; acionar S1
+
+  - id: TCK-2026-W01-002
+    title: Prescrição não carrega na unidade de internação do Hospital Central das Araucárias
+    hospital_id: HOS-020
+    demand_type: defeito_bloqueante
+    module: prescricao
+    opened_at: "2026-06-01T10:18:00-03:00"
+    source: portal
+    reported_by: enfermeira supervisora
+    description: Prescrições ficam em tela branca para todos os usuários de uma unidade de internação.
+    perceived_urgency: critica
+    operational_impact: perda_imediata
+    affected_users: setor
+    workaround_available: parcial
+    evidence_quality: media
+    initial_atlas_class: R1
+    response_system: S1
+    status: mobilizing
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-001
+    sle_policy: S1
+    mirror_interactions:
+      - stage: chegada
+        actor_id: HD-005
+        purpose: organizar evidências clínicas sem exagerar causa técnica
+        output_summary: impacto assistencial alto; contorno parcial não elimina perda
+
+  - id: TCK-2026-W01-003
+    title: Fechamento de convênio trava no Hospital São Gabriel
+    hospital_id: HOS-001
+    demand_type: defeito_bloqueante
+    module: faturamento
+    opened_at: "2026-06-01T09:15:00-03:00"
+    source: telefone
+    reported_by: supervisora de faturamento
+    description: Ao fechar lote do convênio principal, o sistema retorna erro e impede continuidade.
+    perceived_urgency: critica
+    operational_impact: operação_bloqueada
+    affected_users: setor
+    workaround_available: nao
+    evidence_quality: media
+    initial_atlas_class: R2
+    response_system: S2
+    status: s2_confirmed
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-003
+    sle_policy: S2
+    mirror_interactions:
+      - stage: triagem
+        actor_id: COORD-001
+        purpose: separar urgência financeira de emergência operacional
+        output_summary: S2 confirmado por bloqueio de fechamento sem perda imediata generalizada
+
+  - id: TCK-2026-W01-004
+    title: Integração de laboratório não sincroniza resultados no Hospital Monte Azul
+    hospital_id: HOS-007
+    demand_type: integracao_falhando
+    module: laboratorio
+    opened_at: "2026-06-01T14:30:00-03:00"
+    source: monitoramento
+    reported_by: alerta interno de integração
+    description: Resultados de exames ficam pendentes para sincronização com o core desde o início da tarde.
+    perceived_urgency: alta
+    operational_impact: operação_comprometida
+    affected_users: setor
+    workaround_available: parcial
+    evidence_quality: alta
+    initial_atlas_class: R2
+    response_system: S2
+    status: investigating
+    version: "api-2.8.1"
+    environment: produção
+    primary_technology: csharp_api
+    assigned_team: csharp_api
+    assigned_staff: DEV-C-001
+    sle_policy: S2
+
+  - id: TCK-2026-W01-005
+    title: Lentidão no Delphi client durante busca de pacientes na Santa Casa de Veredas
+    hospital_id: HOS-008
+    demand_type: lentidao
+    module: internacao
+    opened_at: "2026-06-02T08:55:00-03:00"
+    source: telefone
+    reported_by: recepção do plantão
+    description: Busca de pacientes leva mais de 40 segundos e gera fila de atendimento no plantão.
+    perceived_urgency: alta
+    operational_impact: operação_comprometida
+    affected_users: setor
+    workaround_available: parcial
+    evidence_quality: baixa
+    initial_atlas_class: R2
+    response_system: S2
+    status: awaiting_evidence
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: help_desk
+    assigned_staff: HD-003
+    sle_policy: S2
+    mirror_interactions:
+      - stage: qualificacao
+        actor_id: HD-003
+        purpose: formular perguntas de evidência mínima
+        output_summary: pedir horários, estações afetadas, volume e comparação com rotina normal
+
+  - id: TCK-2026-W01-006
+    title: Laudos de imagem retornam sem anexos para o Hospital Vida Serena
+    hospital_id: HOS-009
+    demand_type: integracao_falhando
+    module: imagem
+    opened_at: "2026-06-02T11:20:00-03:00"
+    source: portal
+    reported_by: setor de diagnóstico
+    description: Laudos aparecem no core, mas os anexos de imagem não ficam disponíveis para consulta.
+    perceived_urgency: alta
+    operational_impact: operação_comprometida
+    affected_users: poucos_usuarios
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R2
+    response_system: S2
+    status: prioritized
+    version: "api-2.8.1"
+    environment: produção
+    primary_technology: csharp_api
+    assigned_team: csharp_api
+    assigned_staff: DEV-C-002
+    sle_policy: S2
+
+  - id: TCK-2026-W01-007
+    title: Saldo de estoque diverge após baixa de medicamentos no Hospital Esperança Norte
+    hospital_id: HOS-015
+    demand_type: inconsistencia_dados
+    module: estoque
+    opened_at: "2026-06-02T15:10:00-03:00"
+    source: email
+    reported_by: almoxarifado
+    description: Após baixa de medicamentos, saldo do estoque não confere com movimentações exibidas.
+    perceived_urgency: media
+    operational_impact: retrabalho
+    affected_users: poucos_usuarios
+    workaround_available: parcial
+    evidence_quality: media
+    initial_atlas_class: R2
+    response_system: S2
+    status: investigating
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-002
+    sle_policy: S2
+
+  - id: TCK-2026-W01-008
+    title: Relatório de auditoria exporta registros incompletos no Hospital Metropolitano Lumen
+    hospital_id: HOS-012
+    demand_type: defeito_nao_bloqueante
+    module: auditoria
+    opened_at: "2026-06-03T09:40:00-03:00"
+    source: portal
+    reported_by: auditoria interna
+    description: Exportação omite registros de uma faixa de datas específica, mas consulta em tela mostra os dados.
+    perceived_urgency: alta
+    operational_impact: operação_comprometida
+    affected_users: poucos_usuarios
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R2
+    response_system: S2
+    status: s2_confirmed
+    version: "api-2.8.1"
+    environment: produção
+    primary_technology: csharp_api
+    assigned_team: csharp_api
+    assigned_staff: DEV-C-001
+    sle_policy: S2
+
+  - id: TCK-2026-W01-009
+    title: Melhorar mensagem de erro no fechamento de conta hospitalar
+    hospital_id: HOS-003
+    demand_type: melhoria_usabilidade
+    module: faturamento
+    opened_at: "2026-06-03T13:10:00-03:00"
+    source: portal
+    reported_by: faturamento
+    description: Usuários não entendem erro exibido quando falta vínculo de convênio e abrem chamados repetidos.
+    perceived_urgency: media
+    operational_impact: retrabalho
+    affected_users: poucos_usuarios
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R3
+    response_system: S3
+    status: s3_candidate
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: produto
+    assigned_staff: PROD-001
+    sle_policy: S3
+    recurrence_group: REC-FAT-ERRO-CONVENIO
+
+  - id: TCK-2026-W01-010
+    title: Automatizar coleta de log DataSnap para incidentes de conexão
+    hospital_id: HOS-002
+    demand_type: melhoria_observabilidade
+    module: dados
+    opened_at: "2026-06-03T16:00:00-03:00"
+    source: interno_hygiatech
+    reported_by: coordenação de sustentação
+    description: Incidentes recentes consomem tempo de identificação porque logs precisam ser coletados manualmente.
+    perceived_urgency: baixa
+    operational_impact: retrabalho
+    affected_users: multiplos_setores
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R3
+    response_system: S3
+    status: qualified
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-002
+    sle_policy: S3
+    recurrence_group: REC-DATASNAP-CONEXAO
+    mirror_interactions:
+      - stage: aprendizado
+        actor_id: COORD-001
+        purpose: transformar atraso recorrente em candidato S3
+        output_summary: melhoria de observabilidade proposta para reduzir tempo de identificação
+
+  - id: TCK-2026-W01-011
+    title: Ajustar regra de convênio para novo contrato do Hospital Mar Azul
+    hospital_id: HOS-019
+    demand_type: ajuste_regra_negocio
+    module: faturamento
+    opened_at: "2026-06-04T10:05:00-03:00"
+    source: email
+    reported_by: analista financeiro do hospital
+    description: Novo contrato de convênio exige alteração de regra para guias geradas a partir do próximo ciclo.
+    perceived_urgency: media
+    operational_impact: incomodo
+    affected_users: poucos_usuarios
+    workaround_available: sim
+    evidence_quality: media
+    initial_atlas_class: R3
+    response_system: S3
+    status: s3_candidate
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: produto
+    assigned_staff: PROD-001
+    sle_policy: S3
+
+  - id: TCK-2026-W01-012
+    title: Criar validação preventiva antes de enviar guia sem código obrigatório
+    hospital_id: HOS-006
+    demand_type: correcao_preventiva
+    module: faturamento
+    opened_at: "2026-06-04T14:45:00-03:00"
+    source: learning_review
+    reported_by: coordenação de sustentação
+    description: Chamados recorrentes mostram que guias sem código obrigatório chegam tarde ao faturamento e geram correção manual.
+    perceived_urgency: baixa
+    operational_impact: retrabalho
+    affected_users: setor
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R3
+    response_system: S3
+    status: qualified
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: produto
+    assigned_staff: PROD-001
+    sle_policy: S3
+    recurrence_group: REC-FAT-GUIA-CODIGO
+
+  - id: TCK-2026-W01-013
+    title: Solicitação de tela customizada para agenda do Centro Médico Primavera
+    hospital_id: HOS-010
+    demand_type: solicitacao_customizacao
+    module: agenda
+    opened_at: "2026-06-05T09:30:00-03:00"
+    source: executivo_cliente
+    reported_by: direção administrativa
+    description: Cliente pede alteração visual na agenda para destacar médicos preferenciais.
+    perceived_urgency: media
+    operational_impact: incomodo
+    affected_users: poucos_usuarios
+    workaround_available: sim
+    evidence_quality: media
+    initial_atlas_class: R3
+    response_system: S3
+    status: s3_candidate
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: produto
+    assigned_staff: PROD-001
+    sle_policy: S3
+
+  - id: TCK-2026-W01-014
+    title: Usuário não sabe reabrir atendimento ambulatorial na Clínica São Bento
+    hospital_id: HOS-013
+    demand_type: duvida_operacional
+    module: ambulatorio
+    opened_at: "2026-06-05T11:15:00-03:00"
+    source: telefone
+    reported_by: recepção
+    description: Usuário pede orientação para reabrir atendimento cancelado por engano.
+    perceived_urgency: baixa
+    operational_impact: incomodo
+    affected_users: usuario_unico
+    workaround_available: sim
+    evidence_quality: media
+    initial_atlas_class: suporte_sem_atlas
+    response_system: suporte
+    status: support_resolved
+    version: "7.14.3"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: help_desk
+    assigned_staff: HD-007
+    sle_policy: suporte

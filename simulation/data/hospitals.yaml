@@ -1,0 +1,326 @@
+version: "1.0.0"
+kind: hygiatech_hospitals
+
+hospitals:
+  - id: HOS-001
+    name: Hospital São Gabriel
+    profile: grande
+    region: Sudeste
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - internacao
+      - prescricao
+      - faturamento
+    usage_profile: operação hospitalar intensiva, com alto volume diário e dependência forte do core Delphi
+    ticket_maturity: media
+    evidence_quality: baixa
+    urgency_bias: alta
+    notes: costuma abrir chamados com urgência elevada antes de reunir evidências completas
+
+  - id: HOS-002
+    name: Hospital Santa Aurora
+    profile: grande
+    region: Sul
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - pronto_atendimento
+      - internacao
+      - laboratorio
+    usage_profile: operação 24x7 com forte dependência de integração entre atendimento e exames
+    ticket_maturity: alta
+    evidence_quality: alta
+    urgency_bias: media
+    notes: equipe interna de TI ajuda a reproduzir problemas e enviar logs
+
+  - id: HOS-003
+    name: Instituto Clínico Horizonte
+    profile: medio
+    region: Centro-Oeste
+    operational_criticality: media
+    availability_tolerance: media
+    main_modules:
+      - ambulatorio
+      - agenda
+      - faturamento
+    usage_profile: alto volume ambulatorial, menor criticidade assistencial imediata que hospitais 24x7
+    ticket_maturity: media
+    evidence_quality: media
+    urgency_bias: media
+    notes: demandas misturam dúvidas operacionais e ajustes de regra de negócio
+
+  - id: HOS-004
+    name: Hospital Nossa Senhora do Vale
+    profile: medio
+    region: Sudeste
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - centro_cirurgico
+      - internacao
+      - farmacia
+    usage_profile: operação sensível a bloqueios em centro cirúrgico e dispensação de medicamentos
+    ticket_maturity: baixa
+    evidence_quality: baixa
+    urgency_bias: alta
+    notes: chamados chegam com forte pressão operacional e pouca separação entre sintoma e causa
+
+  - id: HOS-005
+    name: Clínica Integrada Atlântica
+    profile: pequeno
+    region: Nordeste
+    operational_criticality: media
+    availability_tolerance: alta
+    main_modules:
+      - ambulatorio
+      - agenda
+      - financeiro
+    usage_profile: uso concentrado em atendimento eletivo, agenda e rotinas financeiras simples
+    ticket_maturity: baixa
+    evidence_quality: media
+    urgency_bias: baixa
+    notes: tende a aceitar contornos operacionais quando há orientação clara do help desk
+
+  - id: HOS-006
+    name: Hospital São Lucas do Cerrado
+    profile: grande
+    region: Centro-Oeste
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - pronto_atendimento
+      - internacao
+      - prescricao
+      - faturamento
+    usage_profile: operação diária crítica, com pronto atendimento movimentado e fechamento financeiro relevante
+    ticket_maturity: media
+    evidence_quality: media
+    urgency_bias: alta
+    notes: incidentes em faturamento perto do fechamento mensal tendem a escalar rapidamente
+
+  - id: HOS-007
+    name: Hospital Monte Azul
+    profile: medio
+    region: Sudeste
+    operational_criticality: media
+    availability_tolerance: media
+    main_modules:
+      - laboratorio
+      - imagem
+      - integracoes
+    usage_profile: dependência forte de integrações e rotinas de apoio diagnóstico
+    ticket_maturity: alta
+    evidence_quality: alta
+    urgency_bias: baixa
+    notes: bons registros técnicos, mas impacto operacional às vezes é subestimado
+
+  - id: HOS-008
+    name: Santa Casa de Veredas
+    profile: pequeno
+    region: Norte
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - pronto_atendimento
+      - internacao
+      - faturamento
+    usage_profile: equipe reduzida, baixa redundância operacional e dependência alta do sistema no plantão
+    ticket_maturity: baixa
+    evidence_quality: baixa
+    urgency_bias: alta
+    notes: risco de classificar tudo como urgente por ausência de equipe local especializada
+
+  - id: HOS-009
+    name: Hospital Vida Serena
+    profile: medio
+    region: Sul
+    operational_criticality: media
+    availability_tolerance: media
+    main_modules:
+      - internacao
+      - farmacia
+      - estoque
+    usage_profile: operação estável, com maior sensibilidade a falhas em farmácia e estoque hospitalar
+    ticket_maturity: media
+    evidence_quality: alta
+    urgency_bias: media
+    notes: costuma validar correções com disciplina, mas demora para confirmar encerramento
+
+  - id: HOS-010
+    name: Centro Médico Primavera
+    profile: pequeno
+    region: Sudeste
+    operational_criticality: baixa
+    availability_tolerance: alta
+    main_modules:
+      - agenda
+      - ambulatorio
+      - financeiro
+    usage_profile: uso em horário comercial, com baixa exposição a incidentes assistenciais críticos
+    ticket_maturity: media
+    evidence_quality: media
+    urgency_bias: baixa
+    notes: bom cliente para demandas S3 de melhoria e usabilidade
+
+  - id: HOS-011
+    name: Hospital Regional Pedra Branca
+    profile: grande
+    region: Nordeste
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - pronto_atendimento
+      - internacao
+      - prescricao
+      - laboratorio
+    usage_profile: hospital regional com grande fluxo de pacientes e múltiplos setores dependentes do core
+    ticket_maturity: baixa
+    evidence_quality: baixa
+    urgency_bias: alta
+    notes: volume alto e baixa qualidade de evidência podem sobrecarregar o help desk
+
+  - id: HOS-012
+    name: Hospital Metropolitano Lumen
+    profile: grande
+    region: Sudeste
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - faturamento
+      - integracoes
+      - auditoria
+    usage_profile: operação sofisticada, com forte dependência de faturamento, auditoria e integrações externas
+    ticket_maturity: alta
+    evidence_quality: alta
+    urgency_bias: media
+    notes: pressiona por previsibilidade e comunicação executiva durante incidentes relevantes
+
+  - id: HOS-013
+    name: Clínica São Bento
+    profile: pequeno
+    region: Sul
+    operational_criticality: baixa
+    availability_tolerance: alta
+    main_modules:
+      - agenda
+      - ambulatorio
+    usage_profile: clínica eletiva com baixo volume técnico e muitos chamados de dúvida operacional
+    ticket_maturity: baixa
+    evidence_quality: media
+    urgency_bias: baixa
+    notes: boa fonte para separar suporte funcional de sustentação técnica
+
+  - id: HOS-014
+    name: Hospital Rio Dourado
+    profile: medio
+    region: Norte
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - pronto_atendimento
+      - internacao
+      - dados
+    usage_profile: dependência alta de rotinas de registro e disponibilidade em plantões
+    ticket_maturity: media
+    evidence_quality: baixa
+    urgency_bias: alta
+    notes: problemas de dados costumam chegar como incidente sem evidência suficiente
+
+  - id: HOS-015
+    name: Hospital Esperança Norte
+    profile: medio
+    region: Nordeste
+    operational_criticality: media
+    availability_tolerance: media
+    main_modules:
+      - farmacia
+      - estoque
+      - compras
+    usage_profile: forte dependência administrativa e logística, com menor volume assistencial imediato
+    ticket_maturity: media
+    evidence_quality: media
+    urgency_bias: media
+    notes: recorrências em estoque podem virar S3 para reduzir chamados repetidos
+
+  - id: HOS-016
+    name: Instituto Materno Clara Luz
+    profile: medio
+    region: Sudeste
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - internacao
+      - centro_cirurgico
+      - prescricao
+    usage_profile: operação especializada em maternidade, sensível a bloqueios em internação e prescrição
+    ticket_maturity: alta
+    evidence_quality: media
+    urgency_bias: media
+    notes: bom candidato para simular urgência real com comunicação clínica cuidadosa
+
+  - id: HOS-017
+    name: Hospital Santa Helena
+    profile: grande
+    region: Sul
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - pronto_atendimento
+      - integracoes
+      - prescricao
+      - faturamento
+    usage_profile: alta maturidade operacional, mas baixa tolerância a indisponibilidade e atrasos de comunicação
+    ticket_maturity: alta
+    evidence_quality: alta
+    urgency_bias: media
+    notes: cliente exigente para SLE, transparência e atualização de incidentes
+
+  - id: HOS-018
+    name: Centro Hospitalar Arvoredo
+    profile: medio
+    region: Centro-Oeste
+    operational_criticality: media
+    availability_tolerance: media
+    main_modules:
+      - imagem
+      - laboratorio
+      - ambulatorio
+    usage_profile: uso distribuído entre diagnóstico e atendimento eletivo
+    ticket_maturity: media
+    evidence_quality: media
+    urgency_bias: baixa
+    notes: bom cenário para falhas limitadas que permanecem em S2 sem escalar para S1
+
+  - id: HOS-019
+    name: Hospital Mar Azul
+    profile: pequeno
+    region: Nordeste
+    operational_criticality: media
+    availability_tolerance: media
+    main_modules:
+      - faturamento
+      - financeiro
+      - agenda
+    usage_profile: operação menor, mas com forte sensibilidade a prazos de faturamento
+    ticket_maturity: baixa
+    evidence_quality: baixa
+    urgency_bias: media
+    notes: problemas próximos ao fechamento podem mudar de S3 para S2 por janela crítica
+
+  - id: HOS-020
+    name: Hospital Central das Araucárias
+    profile: grande
+    region: Sul
+    operational_criticality: alta
+    availability_tolerance: baixa
+    main_modules:
+      - internacao
+      - prescricao
+      - farmacia
+      - dados
+    usage_profile: hospital complexo, dependente de múltiplos módulos do core Delphi e de integridade de dados
+    ticket_maturity: media
+    evidence_quality: media
+    urgency_bias: alta
+    notes: cenário forte para incidentes em cadeia e reclassificação entre S2 e S1

@@ -1,0 +1,256 @@
+version: "1.0.0"
+kind: hygiatech_ticket_batch
+
+batch:
+  id: BATCH-2026-CURRENT
+  name: Semana atual da simulação HygiaTech
+  period:
+    start: "2026-06-29"
+    end: "2026-07-03"
+  intent: >
+    Semana operacional viva da HygiaTech. Diferente das semanas históricas,
+    estes tickets não estão todos fechados. Eles existem para simular decisão,
+    triagem, comunicação, reclassificação e programação S3 em andamento.
+
+summary:
+  total_tickets: 9
+  expected_distribution:
+    S1: 1
+    S2: 4
+    S3: 3
+    suporte: 1
+  simulation_themes:
+    - S1 recém-contido aguardando aprendizado
+    - S2 em risco por capacidade Delphi
+    - demanda incerta aguardando evidência
+    - pressão comercial tentando virar urgência
+    - reclassificação potencial de S3 para S2
+    - programação S3 a decidir
+
+tickets:
+  - id: TCK-2026-CW-001
+    title: Prescrição não salva em unidade crítica do Hospital Santa Helena
+    hospital_id: HOS-017
+    demand_type: defeito_bloqueante
+    module: prescricao
+    opened_at: "2026-06-29T07:40:00-03:00"
+    source: telefone
+    reported_by: coordenação de enfermagem
+    description: Prescrições de uma unidade crítica falham ao salvar em todos os usuários do setor.
+    perceived_urgency: critica
+    operational_impact: perda_imediata
+    affected_users: setor
+    workaround_available: nao
+    evidence_quality: media
+    initial_atlas_class: R1
+    response_system: S1
+    status: delivering
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-001
+    sle_policy: S1
+
+  - id: TCK-2026-CW-002
+    title: Fechamento de convênio do Hospital Mar Azul pode perder prazo hoje
+    hospital_id: HOS-019
+    demand_type: requisito_regulatorio
+    module: faturamento
+    opened_at: "2026-06-29T09:05:00-03:00"
+    source: email
+    reported_by: financeiro
+    description: Regra regulatória já planejada em S3 precisa ser aplicada antes do envio do fechamento às 17h.
+    perceived_urgency: alta
+    operational_impact: operação_bloqueada
+    affected_users: setor
+    workaround_available: parcial
+    evidence_quality: media
+    initial_atlas_class: R2
+    response_system: S2
+    status: prioritized
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-003
+    sle_policy: S2
+    related_tickets:
+      - TCK-2026-W02-010
+
+  - id: TCK-2026-CW-003
+    title: Lentidão intermitente no pronto atendimento do Hospital Regional Pedra Branca
+    hospital_id: HOS-011
+    demand_type: lentidao
+    module: pronto_atendimento
+    opened_at: "2026-06-29T10:20:00-03:00"
+    source: telefone
+    reported_by: supervisão do pronto atendimento
+    description: Cliente relata lentidão, mas ainda não há evidência de escopo, estações afetadas ou horários precisos.
+    perceived_urgency: critica
+    operational_impact: operação_comprometida
+    affected_users: setor
+    workaround_available: desconhecido
+    evidence_quality: baixa
+    initial_atlas_class: R2
+    response_system: S2
+    status: awaiting_evidence
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: help_desk
+    assigned_staff: HD-003
+    sle_policy: S2
+
+  - id: TCK-2026-CW-004
+    title: API de imagem rejeita anexos grandes no Hospital Central das Araucárias
+    hospital_id: HOS-020
+    demand_type: integracao_falhando
+    module: imagem
+    opened_at: "2026-06-29T11:15:00-03:00"
+    source: portal
+    reported_by: diagnóstico por imagem
+    description: Anexos acima de determinado tamanho falham no envio para o core, mas laudos textuais continuam disponíveis.
+    perceived_urgency: alta
+    operational_impact: operação_comprometida
+    affected_users: poucos_usuarios
+    workaround_available: parcial
+    evidence_quality: alta
+    initial_atlas_class: R2
+    response_system: S2
+    status: investigating
+    version: "api-2.8.2"
+    environment: produção
+    primary_technology: csharp_api
+    assigned_team: csharp_api
+    assigned_staff: DEV-C-002
+    sle_policy: S2
+
+  - id: TCK-2026-CW-005
+    title: Diretoria do Centro Médico Primavera pede customização urgente da agenda
+    hospital_id: HOS-010
+    demand_type: solicitacao_customizacao
+    module: agenda
+    opened_at: "2026-06-30T08:50:00-03:00"
+    source: executivo_cliente
+    reported_by: direção administrativa
+    description: Cliente pede destaque visual de médicos preferenciais e solicita entrega ainda nesta semana.
+    perceived_urgency: alta
+    operational_impact: incomodo
+    affected_users: poucos_usuarios
+    workaround_available: sim
+    evidence_quality: media
+    initial_atlas_class: R3
+    response_system: S3
+    status: s3_candidate
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: produto
+    assigned_staff: PROD-001
+    sle_policy: S3
+    related_tickets:
+      - TCK-2026-W01-013
+
+  - id: TCK-2026-CW-006
+    title: Implementar alerta preventivo para expiração de token de laboratório
+    hospital_id: HOS-007
+    demand_type: melhoria_observabilidade
+    module: laboratorio
+    opened_at: "2026-06-30T10:30:00-03:00"
+    source: learning_review
+    reported_by: coordenação de sustentação
+    description: Recorrências no mês mostram que expiração de token gera S2 antes de qualquer alerta preventivo.
+    perceived_urgency: baixa
+    operational_impact: retrabalho
+    affected_users: setor
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R3
+    response_system: S3
+    status: qualified
+    version: "api-2.8.2"
+    environment: produção
+    primary_technology: csharp_api
+    assigned_team: csharp_api
+    assigned_staff: DEV-C-001
+    sle_policy: S3
+    recurrence_group: REC-LAB-TOKEN
+
+  - id: TCK-2026-CW-007
+    title: Piloto de validação preventiva de guia precisa decisão de expansão
+    hospital_id: HOS-006
+    demand_type: correcao_preventiva
+    module: faturamento
+    opened_at: "2026-06-30T14:00:00-03:00"
+    source: learning_review
+    reported_by: produto
+    description: Piloto reduziu chamados de guia incompleta em um hospital; precisa decisão para expandir a mais clientes.
+    perceived_urgency: baixa
+    operational_impact: retrabalho
+    affected_users: setor
+    workaround_available: sim
+    evidence_quality: alta
+    initial_atlas_class: R3
+    response_system: S3
+    status: qualified
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: produto
+    assigned_staff: PROD-001
+    sle_policy: S3
+    related_tickets:
+      - TCK-2026-W04-003
+
+  - id: TCK-2026-CW-008
+    title: Dúvida sobre reimpressão de etiqueta no Hospital Vida Serena
+    hospital_id: HOS-009
+    demand_type: duvida_operacional
+    module: laboratorio
+    opened_at: "2026-07-01T09:10:00-03:00"
+    source: telefone
+    reported_by: técnica de laboratório
+    description: Usuária pede orientação para reimprimir etiqueta após coleta cancelada.
+    perceived_urgency: baixa
+    operational_impact: incomodo
+    affected_users: usuario_unico
+    workaround_available: sim
+    evidence_quality: media
+    initial_atlas_class: suporte_sem_atlas
+    response_system: suporte
+    status: support_resolved
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: help_desk
+    assigned_staff: HD-007
+    sle_policy: suporte
+
+  - id: TCK-2026-CW-009
+    title: Divergência de estoque reaparece no Hospital Esperança Norte
+    hospital_id: HOS-015
+    demand_type: inconsistencia_dados
+    module: estoque
+    opened_at: "2026-07-01T10:45:00-03:00"
+    source: portal
+    reported_by: almoxarifado
+    description: Mesmo padrão de divergência entre baixa e saldo reaparece após transferência entre setores.
+    perceived_urgency: alta
+    operational_impact: operação_comprometida
+    affected_users: poucos_usuarios
+    workaround_available: parcial
+    evidence_quality: media
+    initial_atlas_class: R2
+    response_system: S2
+    status: s2_confirmed
+    version: "7.14.4"
+    environment: produção
+    primary_technology: delphi_2007_datasnap
+    assigned_team: delphi_core
+    assigned_staff: DEV-D-002
+    sle_policy: S2
+    recurrence_group: REC-ESTOQUE-DIVERGENCIA
+    related_tickets:
+      - TCK-2026-W01-007
+      - TCK-2026-W03-006

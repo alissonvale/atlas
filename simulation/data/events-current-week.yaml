@@ -1,0 +1,253 @@
+version: "1.0.0"
+kind: hygiatech_event_batch
+
+batch:
+  id: EVENTS-2026-CURRENT
+  ticket_batch_id: BATCH-2026-CURRENT
+  name: Eventos da semana atual da simulação HygiaTech
+  period:
+    start: "2026-06-29"
+    end: "2026-07-03"
+  intent: >
+    Timeline parcial da semana operacional viva. Alguns tickets permanecem
+    abertos para simular decisão, comunicação, reclassificação e programação.
+
+events:
+  - id: EVT-CW-001
+    ticket_id: TCK-2026-CW-001
+    occurred_at: "2026-06-29T07:40:00-03:00"
+    event_type: ticket_opened
+    actor_type: help_desk
+    actor_id: HD-005
+    to_status: new_signal
+    summary: Hospital Santa Helena relata falha ao salvar prescrição em unidade crítica.
+    mirror_used: true
+    mirror_prompt_summary: organizar relato assistencial e evidência mínima para triagem
+
+  - id: EVT-CW-002
+    ticket_id: TCK-2026-CW-001
+    occurred_at: "2026-06-29T07:55:00-03:00"
+    event_type: triage_decided
+    actor_type: gatekeeper
+    actor_id: COORD-001
+    from_status: new_signal
+    to_status: s1_confirmed
+    from_class: incerta
+    to_class: R1
+    summary: R1 confirmado por perda imediata em unidade crítica sem contorno.
+    evidence: prescrições não salvam para todos os usuários da unidade
+    mirror_used: true
+    mirror_prompt_summary: confirmar fronteira R1 e orientar comunicação de crise
+
+  - id: EVT-CW-003
+    ticket_id: TCK-2026-CW-001
+    occurred_at: "2026-06-29T08:20:00-03:00"
+    event_type: workaround_applied
+    actor_type: dev
+    actor_id: DEV-D-001
+    from_status: s1_confirmed
+    to_status: delivering
+    summary: Contenção aplicada com rollback de rotina de validação de prescrição.
+    evidence: prescrições voltaram a salvar no teste interno
+    mirror_used: false
+
+  - id: EVT-CW-004
+    ticket_id: TCK-2026-CW-002
+    occurred_at: "2026-06-29T09:05:00-03:00"
+    event_type: ticket_opened
+    actor_type: help_desk
+    actor_id: HD-004
+    to_status: new_signal
+    summary: Hospital Mar Azul informa risco de perder fechamento regulatório às 17h.
+    mirror_used: false
+
+  - id: EVT-CW-005
+    ticket_id: TCK-2026-CW-002
+    occurred_at: "2026-06-29T09:40:00-03:00"
+    event_type: triage_decided
+    actor_type: gatekeeper
+    actor_id: COORD-001
+    from_status: new_signal
+    to_status: prioritized
+    from_class: incerta
+    to_class: R2
+    summary: S2 confirmado por janela crítica real; item nasceu em S3, mas prazo operacional mudou o risco.
+    evidence: fechamento regulatório precisa envio até 17h
+    mirror_used: true
+    mirror_prompt_summary: avaliar reclassificação operacional sem confundir pressão com risco
+
+  - id: EVT-CW-006
+    ticket_id: TCK-2026-CW-003
+    occurred_at: "2026-06-29T10:20:00-03:00"
+    event_type: ticket_opened
+    actor_type: help_desk
+    actor_id: HD-003
+    to_status: new_signal
+    summary: Hospital Regional Pedra Branca relata lentidão sem evidência suficiente.
+    mirror_used: false
+
+  - id: EVT-CW-007
+    ticket_id: TCK-2026-CW-003
+    occurred_at: "2026-06-29T10:45:00-03:00"
+    event_type: evidence_requested
+    actor_type: help_desk
+    actor_id: HD-003
+    from_status: new_signal
+    to_status: awaiting_evidence
+    summary: Help desk solicita estações afetadas, horários, volume e comparação com rotina normal.
+    mirror_used: true
+    mirror_prompt_summary: formular perguntas para separar S1, S2 e lentidão localizada
+
+  - id: EVT-CW-008
+    ticket_id: TCK-2026-CW-004
+    occurred_at: "2026-06-29T11:15:00-03:00"
+    event_type: ticket_opened
+    actor_type: help_desk
+    actor_id: HD-006
+    to_status: new_signal
+    summary: Hospital Central das Araucárias relata falha em anexos grandes de imagem.
+    mirror_used: false
+
+  - id: EVT-CW-009
+    ticket_id: TCK-2026-CW-004
+    occurred_at: "2026-06-29T11:50:00-03:00"
+    event_type: triage_decided
+    actor_type: gatekeeper
+    actor_id: COORD-001
+    from_status: new_signal
+    to_status: s2_confirmed
+    from_class: incerta
+    to_class: R2
+    summary: S2 confirmado; laudo textual está disponível, mas anexos afetam diagnóstico.
+    evidence: impacto limitado, contorno parcial e evidência técnica suficiente
+    mirror_used: false
+
+  - id: EVT-CW-010
+    ticket_id: TCK-2026-CW-004
+    occurred_at: "2026-06-29T13:30:00-03:00"
+    event_type: investigation_started
+    actor_type: dev
+    actor_id: DEV-C-002
+    from_status: s2_confirmed
+    to_status: investigating
+    summary: Investigação C# iniciada em limite de tamanho de payload.
+    mirror_used: false
+
+  - id: EVT-CW-011
+    ticket_id: TCK-2026-CW-005
+    occurred_at: "2026-06-30T08:50:00-03:00"
+    event_type: ticket_opened
+    actor_type: comercial
+    actor_id: executivo_cliente
+    to_status: new_signal
+    summary: Diretoria do cliente pede customização de agenda como urgência executiva.
+    mirror_used: false
+
+  - id: EVT-CW-012
+    ticket_id: TCK-2026-CW-005
+    occurred_at: "2026-06-30T09:30:00-03:00"
+    event_type: triage_decided
+    actor_type: produto
+    actor_id: PROD-001
+    from_status: new_signal
+    to_status: s3_candidate
+    from_class: incerta
+    to_class: R3
+    summary: Pedido mantido em S3; não há evidência de risco operacional apesar da pressão comercial.
+    evidence: impacto é incômodo e há contorno; urgência é percebida, não operacional
+    mirror_used: true
+    mirror_prompt_summary: proteger fronteira entre pressão executiva e risco Atlas
+
+  - id: EVT-CW-013
+    ticket_id: TCK-2026-CW-006
+    occurred_at: "2026-06-30T10:30:00-03:00"
+    event_type: ticket_opened
+    actor_type: gatekeeper
+    actor_id: COORD-001
+    to_status: s3_candidate
+    summary: Coordenação abre item de observabilidade para expiração de token de laboratório.
+    mirror_used: true
+    mirror_prompt_summary: conectar recorrências mensais com programação S3
+
+  - id: EVT-CW-014
+    ticket_id: TCK-2026-CW-006
+    occurred_at: "2026-06-30T11:15:00-03:00"
+    event_type: s3_candidate_created
+    actor_type: produto
+    actor_id: PROD-001
+    from_status: s3_candidate
+    to_status: qualified
+    summary: Item qualificado para S3 por reduzir recorrência de integrações S2.
+    evidence: múltiplas semanas tiveram falhas de token ou sincronização
+    mirror_used: false
+
+  - id: EVT-CW-015
+    ticket_id: TCK-2026-CW-007
+    occurred_at: "2026-06-30T14:00:00-03:00"
+    event_type: ticket_opened
+    actor_type: produto
+    actor_id: PROD-001
+    to_status: s3_candidate
+    summary: Produto abre decisão de expansão do piloto de validação preventiva de guia.
+    mirror_used: false
+
+  - id: EVT-CW-016
+    ticket_id: TCK-2026-CW-007
+    occurred_at: "2026-06-30T15:00:00-03:00"
+    event_type: s3_candidate_created
+    actor_type: produto
+    actor_id: PROD-001
+    from_status: s3_candidate
+    to_status: qualified
+    summary: Item qualificado, mas depende de decisão de programação S3 e capacidade Delphi.
+    evidence: piloto reduziu chamados em um hospital; expansão disputa com urgências Delphi
+    mirror_used: true
+    mirror_prompt_summary: preparar decisão de programação considerando capacidade Delphi
+
+  - id: EVT-CW-017
+    ticket_id: TCK-2026-CW-008
+    occurred_at: "2026-07-01T09:10:00-03:00"
+    event_type: ticket_opened
+    actor_type: help_desk
+    actor_id: HD-007
+    to_status: new_signal
+    summary: Usuária pede orientação de reimpressão de etiqueta.
+    mirror_used: false
+
+  - id: EVT-CW-018
+    ticket_id: TCK-2026-CW-008
+    occurred_at: "2026-07-01T09:30:00-03:00"
+    event_type: closed
+    actor_type: help_desk
+    actor_id: HD-007
+    from_status: new_signal
+    to_status: support_resolved
+    from_class: incerta
+    to_class: suporte_sem_atlas
+    summary: Help desk orienta reimpressão; sem entrada no Atlas.
+    mirror_used: false
+
+  - id: EVT-CW-019
+    ticket_id: TCK-2026-CW-009
+    occurred_at: "2026-07-01T10:45:00-03:00"
+    event_type: ticket_opened
+    actor_type: help_desk
+    actor_id: HD-008
+    to_status: new_signal
+    summary: Divergência de estoque reaparece no Hospital Esperança Norte.
+    mirror_used: false
+
+  - id: EVT-CW-020
+    ticket_id: TCK-2026-CW-009
+    occurred_at: "2026-07-01T11:20:00-03:00"
+    event_type: triage_decided
+    actor_type: gatekeeper
+    actor_id: COORD-001
+    from_status: new_signal
+    to_status: s2_confirmed
+    from_class: incerta
+    to_class: R2
+    summary: S2 confirmado por recorrência com operação comprometida e risco logístico.
+    evidence: padrão já apareceu em semanas anteriores; contorno parcial existe
+    mirror_used: true
+    mirror_prompt_summary: avaliar recorrência e possível item S3 preventivo após contenção

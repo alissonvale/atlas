@@ -10,6 +10,7 @@ Ele parte de uma mudança de linguagem: não se trata de manutenção, entendida
 - [Modelo conceitual](conceptual-model.md)
 - [Sistemas de resposta](response-systems.md)
 - [Workflows das demandas](workflows.md)
+- [Gramática visual](visual-grammar.md)
 - [Triagem e gatekeeper](triage-and-gatekeeper.md)
 - [Métricas e sinais de saúde](metrics.md)
 - [Princípios](principles.md)
